@@ -3979,6 +3979,12 @@ class PlayState extends MusicBeatState
 			{
 				char.playAnim(animToPlay, true);
 				char.holdTimer = 0;
+				
+				if (curStage == 'pegmeplease')
+				{
+					circ2.angle += 5;
+					circ1.angle += 5;
+				}
 			}
 		}
 
