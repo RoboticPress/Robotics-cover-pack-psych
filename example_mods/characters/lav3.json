@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Lav Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-240
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Lav Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				360,
+				-290
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Lav Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-140,
+				220
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "LavDown",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				-166
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Lav Up",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/lavphase3",
+	"position": [
+		0,
+		-570
+	],
+	"healthicon": "lav3",
+	"flip_x": false,
+	"healthbar_colors": [
+		242,
+		168,
+		248
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}
