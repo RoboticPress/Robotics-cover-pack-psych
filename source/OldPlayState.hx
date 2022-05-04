@@ -813,7 +813,6 @@ class PlayState extends MusicBeatState
 					rectanglemf.updateHitbox();
 					rectanglemf.antialiasing = false;
 					add(rectanglemf);
-					rectanglemf.alpha = 0.8;
 					funniVariable[funniRects.length] = FlxG.random.int(100, 200);
 					funniRects.push(rectanglemf);
 				}
@@ -2406,9 +2405,9 @@ class PlayState extends MusicBeatState
 		switch (curStage)
 		{
 			case 'pegmeplease':
-				pillarsThing(funniRects, 0, 1, 600, false, 2, true, 25);
+				pillarsThing(funniRects, 0, 1, 600, false, 2, true);
 				if (curStep > 119)
-					pillarsThing(moreRects, 1, 1, 600, false, 2, true, 25);
+					pillarsThing(moreRects, 1, 1, 600, false, 2, true);
 				if (curStep >= 1184 && curStep < 1193)
 				{
 					movePillars(moreRects, ((1192-curStep)/8)*15 + 5, aaaaaaaaclose);
@@ -2902,7 +2901,7 @@ class PlayState extends MusicBeatState
 		
 				if ((curBeat < rotEndBeat) && !(curBeat < rotBeat) && !(curBeat < rotUpBeat))
 					dumbasstext.visible = true;
-				gf.x = 650 - Math.sin(rotTime / 40 * rotSpd) * 80 * rotLen;
+				gf.x = 450 - Math.sin(rotTime / 40 * rotSpd) * 80 * rotLen;
 				gf.y = 350 + Math.cos(rotTime / 50 * rotSpd) * 80 * rotXLen;
 				dumbasstext.x = gf.x + 351.5 - dumbasstext.width/2;
 				dumbasstext.y = gf.y - 20;
@@ -4536,79 +4535,71 @@ class PlayState extends MusicBeatState
 	}
 	function movePillars(?pillarArray:Array<FlxSprite> = null, ?movespeed:Float = 10, ?endplace:Float = 1000)
 	{
-		var startedCounting:Bool = false;
-		var smallestX:Float = 0;
-		var highestX:Float = 0;
-		var theSmallestI:Int = 0;
-		var theHighestI:Int = 0;
 		for (i in 0...pillarArray.length)
 		{
-			if (!startedCounting)
-			{
-				startedCounting = true;
-				smallestX = pillarArray[i].x;
-				highestX = pillarArray[i].x;
-			}
-			else
-			{
-				if (pillarArray[i].x < smallestX)
-				{
-					smallestX = pillarArray[i].x;
-					theSmallestI = i;
-				}
-				if (pillarArray[i].x > highestX)
-				{
-					highestX = pillarArray[i].x;
-					theHighestI = i;
-				}
-			}
-		}
-		trace(theSmallestI);
-		trace(theHighestI);
-		for (i in 0...pillarArray.length)
-		{
-			var beforeI = i - 1;
-			if (beforeI < 0)
-				beforeI = pillarArray.length-1;
-			var afterI = i + 1;
-			if (afterI >= pillarArray.length)
-				afterI = 0;
+			var j = i - 1;
+			if (j <= 0)
+				j = pillarArray.length-1;
+			var k = i + 1;
+			if (k >= pillarArray.length)
+				k = 0;
 			if (movespeed >= 0)
 			{
-				if (i == theHighestI)
+				if (pillarArray[i].x > pillarArray[j].x)
 				{
-					pillarArray[i].x += movespeed;
+					//trace('true?');
+					if (pillarArray[i].x > pillarArray[k].x)
+					{
+						//trace('true');
+						pillarArray[i].x += movespeed * (120/ClientPrefs.framerate);
+					}
+					else
+					{
+						pillarArray[i].x = pillarArray[k].x - pillarArray[i].width;
+					}
 				}
 				else
 				{
-					pillarArray[i].x = pillarArray[afterI].x - pillarArray[i].width;
+					pillarArray[i].x = pillarArray[k].x - pillarArray[i].width;
 				}
 				if (pillarArray[i].x > endplace)
 				{
-					pillarArray[i].x = pillarArray[afterI].x - pillarArray[i].width;
-					theHighestI = beforeI;
+					pillarArray[i].x = pillarArray[j].x - pillarArray[j].width;
 				}
 			}
 			else
 			{
-				if (i == theSmallestI)
+				//trace(i);
+				//trace('1 ${pillarArray[i]}');
+				//trace('2 ${pillarArray[j]}');
+				//trace('3 ${pillarArray[k]}');
+				if (pillarArray[i].x < pillarArray[j].x)
 				{
-					pillarArray[i].x += movespeed;
+					//trace('true?');
+					if (pillarArray[i].x < pillarArray[k].x)
+					{
+						//trace('true');
+						pillarArray[i].x += movespeed * (120/ClientPrefs.framerate);
+					}
+					else
+					{
+						pillarArray[i].x = pillarArray[j].x + pillarArray[j].width;
+					}
 				}
 				else
 				{
-					pillarArray[i].x = pillarArray[beforeI].x + pillarArray[beforeI].width;
+					pillarArray[i].x = pillarArray[j].x + pillarArray[j].width;
 				}
 				if (pillarArray[i].x < endplace)
 				{
-					theSmallestI = afterI;
-					pillarArray[i].x = pillarArray[beforeI].x + pillarArray[beforeI].width;
+					pillarArray[i].x = pillarArray[j].x + pillarArray[j].width;
 				}
 			}
+			//trace(pillarArray[pillarArray.length - 1].x);
 		}
 	}
 	var audioBuffers:Array<AudioBuffer> = [null, null];
-	function pillarsThing(?pillarArray:Array<FlxSprite> = null, isVocals:Int = 0, theBase:Int = 0, basevalue:Float = 600, smooththing:Bool = false, heightValue:Float = 2, ?goweeee:Bool = true, ?speedValue:Float = 50)
+	function pillarsThing(?pillarArray:Array<FlxSprite> = null, isvocals:Int = 0, theBase:Int = 0, basevalue:Float = 600, smooththing:Bool = false, heightValue:Float = 2, ?goweeee:Bool = true)
 	{
 		var increasething = 1;
 		if (smooththing)
@@ -4621,11 +4612,11 @@ class PlayState extends MusicBeatState
 		//for (i in 0...pillarArray.length)
 		if (!smooththing || (smooththing && i % 2 == 0))
 		{
-			var sampleMult:Float = audioBuffers[isVocals].sampleRate / 44100;
+			var sampleMult:Float = audioBuffers[isvocals].sampleRate / 44100;
 			var index:Int = Std.int(FlxG.sound.music.time * 44.0875 * sampleMult);
 			var drawIndex:Int = 0;
 			var samplesPerRow = 1;
-			var waveBytes:Bytes = audioBuffers[isVocals].data.toBytes();
+			var waveBytes:Bytes = audioBuffers[isvocals].data.toBytes();
 			
 			var min:Float = 0;
 			var max:Float = 0;
@@ -4663,16 +4654,8 @@ class PlayState extends MusicBeatState
 					{
 						//trace('GREEN');
 						//trace((Math.abs(min) + Math.abs(max)) * 1000);
-						if (isVocals == 1)
-						{
-							if (((pillarArray[i].y > basevalue - (Math.abs(min) + Math.abs(max)) * 1000 * heightValue * vocals.volume * FlxG.sound.volume) && goweeee) || !goweeee)
-								pillarArray[i].y = basevalue - (Math.abs(min) + Math.abs(max)) * 1000 * heightValue * vocals.volume * FlxG.sound.volume;
-						}
-						else
-						{
-							if (((pillarArray[i].y > basevalue - (Math.abs(min) + Math.abs(max)) * 1000 * heightValue * FlxG.sound.volume) && goweeee) || !goweeee)
-								pillarArray[i].y = basevalue - (Math.abs(min) + Math.abs(max)) * 1000 * heightValue * FlxG.sound.volume;
-						}
+						if (((pillarArray[i].y > basevalue - (Math.abs(min) + Math.abs(max)) * 1000 * heightValue) && goweeee) || !goweeee)
+							pillarArray[i].y = basevalue - (Math.abs(min) + Math.abs(max)) * 1000 * heightValue;
 					}
 					else
 					{
@@ -4705,12 +4688,12 @@ class PlayState extends MusicBeatState
 				if (theBase == 1)
 				{
 					if (pillarArray[j].y < basevalue)
-						pillarArray[j].y += (basevalue - pillarArray[j].y) / (120/ClientPrefs.framerate * speedValue);
+						pillarArray[j].y += (basevalue - pillarArray[j].y) / (120/ClientPrefs.framerate * 50);
 				}
 				else
 				{
 					if (pillarArray[j].y > basevalue)
-						pillarArray[j].y += (basevalue - pillarArray[j].y) / (120/ClientPrefs.framerate * speedValue);
+						pillarArray[j].y += (basevalue - pillarArray[j].y) / (120/ClientPrefs.framerate * 50);
 				}
 			}
 		}
