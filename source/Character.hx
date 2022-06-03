@@ -258,14 +258,16 @@ class Character extends FlxSprite
 					if(specialAnim && animation.curAnim.name == 'hey' || animation.curAnim.name == 'cheer')
 					{
 						specialAnim = false;
-						dance();
+						if (!stunned)
+							dance();
 					}
 					heyTimer = 0;
 				}
 			} else if(specialAnim && animation.curAnim.finished)
 			{
 				specialAnim = false;
-				dance();
+				if (!stunned)
+					dance();
 			}
 
 			if (!isPlayer)
@@ -277,7 +279,8 @@ class Character extends FlxSprite
 
 				if (holdTimer >= Conductor.stepCrochet * 0.001 * singDuration)
 				{
-					dance();
+					if (!stunned)
+						dance();
 					holdTimer = 0;
 				}
 			}

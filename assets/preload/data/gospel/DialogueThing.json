@@ -1,0 +1,456 @@
+{
+	"dialogues": [
+		{
+			"line": "Huh?",
+			"characterName": "Sarv",
+			"events": [
+				{
+					"value1": "dad",
+					"value2": "value2",
+					"event": "Camera Follow",
+					"index": 0,
+					"value3": "value3"
+				}
+			]
+		},
+		{
+			"line": "Who are you both?",
+			"characterName": "Sarv",
+			"events": [
+				{
+					"value1": "dad",
+					"value2": "true",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				}
+			]
+		},
+		{
+			"line": "Where am I?????",
+			"characterName": "Lav",
+			"events": [
+				{
+					"value1": "dad",
+					"value2": "false",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "bf",
+					"value2": "true",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "characters/lav",
+					"value2": "true",
+					"event": "Change Sound",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "bf",
+					"value2": "singLEFT",
+					"event": "Change Character Animation",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "bf",
+					"value2": "singLEFT",
+					"event": "Camera Follow",
+					"index": 0,
+					"value3": "value3"
+				}
+			]
+		},
+		{
+			"characterName": "robo",
+			"line": "HAHAHA, hi there ladiesssss",
+			"events": [
+				{
+					"value1": "gf",
+					"value2": "value2",
+					"index": 0,
+					"value3": "value3",
+					"event": "Camera Follow"
+				},
+				{
+					"value1": "bf",
+					"value2": "false",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "gf",
+					"value2": "true",
+					"index": 0,
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"value1": "characters/robo",
+					"value2": "true",
+					"index": 0,
+					"value3": "value3",
+					"event": "Change Sound"
+				},
+				{
+					"value1": "characters/robo",
+					"value2": "true",
+					"index": 0,
+					"value3": "value3",
+					"event": "Change Sound"
+				},
+				{
+					"value1": "2.5",
+					"value2": "true",
+					"index": 0,
+					"value3": "value3",
+					"event": "Shake On"
+				},
+				{
+					"value1": "2.5",
+					"value2": "true",
+					"index": 6,
+					"value3": "value3",
+					"event": "Shake Off"
+				}
+			]
+		},
+		{
+			"characterName": "robo",
+			"line": "IT IS I",
+			"events": [
+				{
+					"value1": "5",
+					"value2": "5",
+					"index": 6,
+					"value3": "value3",
+					"event": "Wave On"
+				},
+				{
+					"value1": "gf",
+					"value2": "singUP",
+					"index": 0,
+					"value3": "value3",
+					"event": "Change Character Animation"
+				}
+			]
+		},
+		{
+			"characterName": "robo",
+			"line": "ROBO",
+			"events": [
+				{
+					"value1": "1",
+					"value2": "singUP",
+					"index": 0,
+					"value3": "value3",
+					"event": "Change Letter Size"
+				},
+				{
+					"value1": "5",
+					"value2": "5",
+					"index": 0,
+					"value3": "value3",
+					"event": "Wave On"
+				},
+				{
+					"value1": "2.5",
+					"value2": "5",
+					"index": 0,
+					"value3": "value3",
+					"event": "Shake On"
+				},
+				{
+					"value1": "B200FF",
+					"value2": "5",
+					"index": 0,
+					"value3": "value3",
+					"event": "Text Color"
+				}
+			]
+		},
+		{
+			"line": "Who?",
+			"characterName": "sarv",
+			"events": [
+				{
+					"value1": "dad",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Camera Follow",
+					"index": 0
+				},
+				{
+					"value1": "dad",
+					"value2": "true",
+					"value3": "value3",
+					"event": "Set if Character singing",
+					"index": 0
+				},
+				{
+					"value1": "gf",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing",
+					"index": 0
+				}
+			]
+		},
+		{
+			"line": "Oh, yeah I should probably introduce myself properly",
+			"characterName": "robo",
+			"events": [
+				{
+					"value1": "dad",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing",
+					"index": 0
+				},
+				{
+					"value1": "gf",
+					"value2": "true",
+					"value3": "value3",
+					"event": "Set if Character singing",
+					"index": 0
+				},
+				{
+					"value1": "gf",
+					"value2": "singLEFT",
+					"value3": "value3",
+					"event": "Change Character Animation",
+					"index": 0
+				}
+			]
+		},
+		{
+			"characterName": "Robo",
+			"line": "I am Robo, a character made by Robotic Press",
+			"events": [
+				{
+					"value1": "gf",
+					"value2": "value2",
+					"event": "Camera Follow",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "gf",
+					"value2": "singDOWN",
+					"event": "Change Character Animation",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "5",
+					"value2": "0",
+					"event": "Wave On",
+					"index": 31,
+					"value3": "value3"
+				}
+			]
+		},
+		{
+			"line": "Unlike what some might think, we are not the same person\nand I don't represent Robotic either.",
+			"characterName": "robo",
+			"events": [
+				{
+					"value1": "gf",
+					"value2": "singUP",
+					"index": 0,
+					"value3": "value3",
+					"event": "Change Character Animation"
+				}
+			]
+		},
+		{
+			"line": "I am here to make covers of songs of this game so like,\ncan you both sing Gospel?",
+			"characterName": "robo",
+			"events": [
+				{
+					"value1": "gf",
+					"value2": "singDOWN",
+					"index": 0,
+					"value3": "value3",
+					"event": "Change Character Animation"
+				},
+				{
+					"value1": "gf",
+					"value2": "singLEFT",
+					"index": 57,
+					"value3": "value3",
+					"event": "Change Character Animation"
+				},
+				{
+					"value1": "gf",
+					"value2": "singRIGHT",
+					"index": 65,
+					"value3": "value3",
+					"event": "Change Character Animation"
+				},
+				{
+					"value1": "gf",
+					"value2": "singDOWN",
+					"index": 75,
+					"value3": "value3",
+					"event": "Change Character Animation"
+				}
+			]
+		},
+		{
+			"line": "And what forces us to sing?",
+			"characterName": "lav funni",
+			"events": [
+				{
+					"value1": "gf",
+					"value2": "false",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "bf",
+					"value2": "true",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "bf",
+					"value2": "true",
+					"event": "Camera Follow",
+					"index": 0,
+					"value3": "value3"
+				}
+			]
+		},
+		{
+			"line": "Hwell it's the fact I can tell Robotic to completely remove you two\nfrom this pack's existance",
+			"characterName": "robo",
+			"events": [
+				{
+					"value1": "gf",
+					"value2": "true",
+					"event": "Camera Follow",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "gf",
+					"value2": "true",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "bf",
+					"value2": "false",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "gf",
+					"value2": "singUP",
+					"event": "Change Character Animation",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "5",
+					"value2": "0",
+					"event": "Wave On",
+					"index": 31,
+					"value3": "value3"
+				},
+				{
+					"value1": "5",
+					"value2": "0",
+					"event": "Wave Off",
+					"index": 38,
+					"value3": "value3"
+				}
+			]
+		},
+		{
+			"events": [
+				{
+					"value1": "gf",
+					"value2": "false",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				}],
+			"characterName": "robotic",
+			"line": "True."
+		},
+		{
+			"line": "NOW SING.",
+			"characterName": "robo",
+			"events": [
+				{
+					"value1": "gf",
+					"value2": "singDOWN",
+					"event": "Change Character Animation",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "gf",
+					"value2": "true",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "ff0000",
+					"value2": "singDOWN",
+					"event": "Text Color",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "2.5",
+					"value2": "singDOWN",
+					"event": "Shake On",
+					"index": 0,
+					"value3": "value3"
+				}
+			]
+		},
+		{
+			"line": "God damn it....",
+			"characterName": "sarv",
+			"events": [
+				{
+					"value1": "dad",
+					"value2": "singDOWN",
+					"event": "Camera Follow",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "dad",
+					"value2": "true",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "gf",
+					"value2": "false",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				}
+			]
+		}
+	]
+}

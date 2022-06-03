@@ -1,5 +1,11 @@
 package;
 
+import flixel.ui.FlxButton;
+import flixel.addons.ui.FlxUINumericStepper;
+import lime.system.Clipboard;
+import flixel.addons.ui.FlxUI;
+import flixel.addons.ui.FlxUIInputText;
+import flixel.addons.ui.FlxUITabMenu;
 import flixel.graphics.FlxGraphic;
 #if desktop
 import Discord.DiscordClient;
@@ -44,6 +50,9 @@ import openfl.display.BlendMode;
 import openfl.display.StageQuality;
 import openfl.filters.BitmapFilter;
 import openfl.utils.Assets as OpenFlAssets;
+import openfl.net.FileReference;
+import openfl.events.Event;
+import openfl.events.IOErrorEvent;
 import editors.ChartingState;
 import editors.CharacterEditorState;
 import flixel.group.FlxSpriteGroup;
@@ -55,13 +64,23 @@ import Achievements;
 import StageData;
 import FunkinLua;
 import DialogueBoxPsych;
+import robotic.TextBox;
 import lime.media.AudioBuffer;
 import haxe.io.Bytes;
 #if sys
 import sys.FileSystem;
 #end
+#if MODS_ALLOWED
+import sys.io.File;
+import sys.FileSystem;
+import flash.media.Sound;
+#end
 
 using StringTools;
+typedef Jdialogue =
+{
+	var dialogues:Array<robotic.TextBox.DialogueLine>;
+}
 
 class PlayState extends MusicBeatState
 {
@@ -122,6 +141,7 @@ class PlayState extends MusicBeatState
 	public static var storyDifficulty:Int = 1;
 
 	public var vocals:FlxSound;
+	public var dialogueMusic:FlxSound;
 
 	public var dad:Character = null;
 	public var gf:Character = null;
@@ -134,7 +154,7 @@ class PlayState extends MusicBeatState
 	private var strumLine:FlxSprite;
 
 	//Handles the new epic mega sexy cam code that i've done
-	private var camFollow:FlxPoint;
+	public var camFollow:FlxPoint;
 	private var camFollowPos:FlxObject;
 	private static var prevCamFollow:FlxPoint;
 	private static var prevCamFollowPos:FlxObject;
@@ -183,6 +203,7 @@ class PlayState extends MusicBeatState
 	public var iconP1:HealthIcon;
 	public var iconP2:HealthIcon;
 	public var camHUD:FlxCamera;
+	public var camHUDier:FlxCamera;
 	public var camGame:FlxCamera;
 	public var camOther:FlxCamera;
 	public var cameraSpeed:Float = 1;
@@ -284,6 +305,51 @@ class PlayState extends MusicBeatState
 		var aaaaaaaaclose4:Float = 0;
 		var camXAddition = 0;
 		var camYAddition = 0;
+		var songBackSprite:FlxSprite;
+		var songBackSpriteWidth:Int = 1;
+		var songNameDistance:Float = 0;
+		var displaySongName:FlxText;
+		var displayArtistName:FlxText;
+		var iconSongName:FlxSprite;
+		var textBox:TextBox;
+			//Dialogue Editting
+			public static var dialogueEditing:Bool = false;
+			var Dialogue_box:FlxUITabMenu;
+			var senteneceInputText:FlxUIInputText;
+			var characterInputText:FlxUIInputText;
+			var valueInputText1:FlxUIInputText;
+			var valueInputText2:FlxUIInputText;
+			var valueInputText3:FlxUIInputText;
+			var indexStepper:FlxUINumericStepper;
+			var effectDropDown:FlxUIDropDownMenuCustom;
+			var theOptionsText:FlxText;
+			var theIndexText:FlxText;
+			var theEffect:String = 'Wave';
+			var pageStepper:FlxUINumericStepper;
+			var thePageNumber:FlxText;
+			var eventStepper:FlxUINumericStepper;
+			var event1:FlxText;
+			var event2:FlxText;
+			var event3:FlxText;
+			var event4:FlxText;
+			var event5:FlxText;
+			var event6:FlxText;
+			var event7:FlxText;
+			var event8:FlxText;
+			var event9:FlxText;
+			var pageStepperLine:FlxUINumericStepper;
+			var thePageNumberLine:FlxText;
+			var lineStepper:FlxUINumericStepper;
+			var line1:FlxText;
+			var line2:FlxText;
+			var line3:FlxText;
+			var roboticDialogues:Array<DialogueLine> = [];
+			var pageStepperSwitchLine1:FlxUINumericStepper;
+			var pageStepperSwitchLine2:FlxUINumericStepper;
+
+			var _file:FileReference;
+			var didIstartDialogue:Bool = false;
+
 			//GOSPEL
 			var circ1:FlxSprite;
 			var circ2:FlxSprite;
@@ -299,6 +365,7 @@ class PlayState extends MusicBeatState
 	override public function create()
 	{
 		Paths.clearStoredMemory();
+		didIstartDialogue = false;
 
 		// for lua
 		instance = this;
@@ -333,12 +400,15 @@ class PlayState extends MusicBeatState
 		// var gameCam:FlxCamera = FlxG.camera;
 		camGame = new FlxCamera();
 		camHUD = new FlxCamera();
+		camHUDier = new FlxCamera();
 		camOther = new FlxCamera();
 		camHUD.bgColor.alpha = 0;
+		camHUDier.bgColor.alpha = 0;
 		camOther.bgColor.alpha = 0;
 
 		FlxG.cameras.reset(camGame);
 		FlxG.cameras.add(camHUD);
+		FlxG.cameras.add(camHUDier);
 		FlxG.cameras.add(camOther);
 		grpNoteSplashes = new FlxTypedGroup<NoteSplash>();
 
@@ -377,6 +447,41 @@ class PlayState extends MusicBeatState
 
 		curStage = PlayState.SONG.stage;
 		//trace('stage is: ' + curStage);
+
+
+		songBackSprite = new FlxSprite(0, 400).makeGraphic(0, 125, FlxColor.WHITE);
+		songBackSprite.alpha = 0.8;
+		add(songBackSprite);
+		songBackSprite.cameras = [camHUD];
+		
+		displaySongName = new FlxText(0, songBackSprite.y - 40, 0, SONG.song.toUpperCase(), 40);
+		displaySongName.setFormat(Paths.font("Friday Night Funkin Font.ttf"), 40, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+		displaySongName.alignment = "center";
+		displaySongName.alpha = 0;
+		add(displaySongName);
+		displaySongName.cameras = [camHUD];
+
+		displaySongName.screenCenter(X);
+		displaySongName.x -= songNameDistance;
+		
+		iconSongName = new FlxSprite(0,0);
+		iconSongName.y = songBackSprite.y;
+		iconSongName.alpha = 0;
+		add(iconSongName);
+		iconSongName.cameras = [camHUD];
+
+		var dumb = CoolUtil.coolTextFile(Paths.txt(SONG.song.toLowerCase().replace(' ', '-') + '/artist'));
+		displayArtistName = new FlxText(0, songBackSprite.y + 20, 0, dumb[0], 40);
+		displayArtistName.setFormat(Paths.font("Friday Night Funkin Font.ttf"), 20, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+		displayArtistName.alignment = "center";
+		displayArtistName.alpha = 0;
+		add(displayArtistName);
+		displayArtistName.cameras = [camHUD];
+
+		displayArtistName.screenCenter(X);
+
+
+		
 		if(PlayState.SONG.stage == null || PlayState.SONG.stage.length < 1) {
 			switch (songName)
 			{
@@ -805,9 +910,9 @@ class PlayState extends MusicBeatState
 				{
 					var rectanglemf:BGSprite;
 					if (i == 0)
-						rectanglemf = new BGSprite('pillar', 150, 0, 0.9, 0.9);
+						rectanglemf = new BGSprite('pillar', 150, 1200, 0.9, 0.9);
 					else
-						rectanglemf = new BGSprite('pillar', funniRects[i-1].x + funniRects[i-1].width, 0, 0.9, 0.9);
+						rectanglemf = new BGSprite('pillar', funniRects[i-1].x + funniRects[i-1].width, 1200, 0.9, 0.9);
 					rectanglemf.color = FlxColor.YELLOW;
 					rectanglemf.setGraphicSize(Std.int(rectanglemf.width * 5));
 					rectanglemf.updateHitbox();
@@ -1015,12 +1120,35 @@ class PlayState extends MusicBeatState
 		dad = new Character(0, 0, SONG.player2);
 		startCharacterPos(dad, true);
 		dadGroup.add(dad);
+		
+		
 		startCharacterLua(dad.curCharacter);
 		
 		boyfriend = new Boyfriend(0, 0, SONG.player1);
 		startCharacterPos(boyfriend);
 		boyfriendGroup.add(boyfriend);
 		startCharacterLua(boyfriend.curCharacter);
+		
+		{
+			songBackSprite.color = FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]);
+			displaySongName.color = FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]);
+			var name:String = 'icons/' + dad.healthIcon;
+			if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-' + dad.healthIcon; //Older versions of psych engine's support
+			if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-face'; //Prevents crash from missing icon
+			var file:Dynamic = Paths.image(name);
+
+			iconSongName.loadGraphic(file); //Load stupidly first for getting the file size
+			iconSongName.loadGraphic(file, true, Math.floor(iconSongName.width / 2), Math.floor(iconSongName.height)); //Then load it fr
+			iconSongName.offset.x = (iconSongName.width - 150) / 2;
+			iconSongName.offset.y = (iconSongName.width - 150) / 2;
+			iconSongName.setGraphicSize(Std.int(iconSongName.width * 0.8));
+			iconSongName.updateHitbox();
+
+			iconSongName.animation.add(dad.healthIcon, [0, 1], 0, false, false);
+			iconSongName.animation.play(dad.healthIcon);
+
+			iconSongName.antialiasing = ClientPrefs.globalAntialiasing;
+		}
 		
 		var camPos:FlxPoint = new FlxPoint(girlfriendCameraOffset[0], girlfriendCameraOffset[1]);
 		if(gf != null)
@@ -1225,7 +1353,7 @@ class PlayState extends MusicBeatState
 		iconP2.alpha = ClientPrefs.healthBarAlpha;
 		add(iconP2);
 		reloadHealthBarColors();
-
+		
 		dumbasstext = new FlxText(0, 0, 0, "Yo I love this", 40);
 		dumbasstext.setFormat(Paths.font("vcr.ttf"), 40, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		dumbasstext.alignment = "center";
@@ -1400,6 +1528,439 @@ class PlayState extends MusicBeatState
 		Paths.clearUnusedMemory();
 		CustomFadeTransition.nextCamera = camOther;
 		loadAudioBuffer();
+
+		if (dialogueEditing)
+		{
+			var randomTextThing = ['hi', 'nooo', 'sans serif', 'sans', 'Subscribe to the best FNF youtuber ever,\nRobotic Press', 'drowning drowning sinking sinking', 'My pants have exploded in the dishwasher.', '"in the notepad"'];
+			var theRandom = randomTextThing[FlxG.random.int(0, randomTextThing.length-1)];
+			textBox = new TextBox(0, 500, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), 0.2, theRandom);
+
+			var theEvent:TextBoxEvent = {
+				index: 40,
+				event: 'Wave On',
+				value1: '5',
+				value2: '5',
+				value3: ''
+			};
+			if (theRandom == 'Subscribe to the best FNF youtuber ever,\nRobotic Press')
+				textBox.events.push(theEvent);
+			add(textBox);
+			textBox.cameras = [camHUD];
+			textBox.appear();
+			camHUD.zoom = 1;
+			FlxG.mouse.visible = true;
+			var tabs = [
+				//{name: 'Offsets', label: 'Offsets'},
+				{name: 'Add Event', label: 'Add Event'},
+				{name: 'Events', label: 'Events'},
+				{name: 'DialogueNot', label: 'DialogueNot'},
+			];
+			Dialogue_box = new FlxUITabMenu(null, tabs, true);
+
+			Dialogue_box.cameras = [camHUD];
+	
+			Dialogue_box.resize(1200, 120);
+			Dialogue_box.x = 0;
+			Dialogue_box.y = 25;
+			Dialogue_box.scrollFactor.set();
+
+			var tab_group = new FlxUI(null, Dialogue_box);
+
+			var saveDialogueButton:FlxButton = new FlxButton(1000, 5, "Save ig", function()
+			{
+				saveDialogue();
+			});
+			var loadDialogueButton:FlxButton = new FlxButton(1100, 5, "Load ig", function()
+			{
+				var songName:String = Paths.formatToSongPath(SONG.song);
+				var file:String = Paths.json(songName + '/DialogueThing');
+				#if sys
+				if (#if MODS_ALLOWED FileSystem.exists(Paths.modsJson(songName + '/DialogueThing')) || #end FileSystem.exists(file))
+				#else
+				if (OpenFlAssets.exists(file))
+				#end
+				{
+					//clearEvents();
+					var events = parseDialogue(file);
+					roboticDialogues = events.dialogues.copy();
+				}
+			});
+
+			var addLine:FlxButton = new FlxButton(200, 5, "Add Line", function()
+			{
+				var theLine:DialogueLine = {
+					characterName: characterInputText.text,
+					line: textBox.typeThis,
+					events: textBox.events.copy()
+				};
+				roboticDialogues.push(theLine);
+				for (thedialogue in roboticDialogues)
+					trace(thedialogue.events);
+			});
+
+
+			pageStepperLine = new FlxUINumericStepper(400, 10, 1, 0, 0, 999, 0);
+			lineStepper = new FlxUINumericStepper(pageStepperLine.x + 120, 10, 1, 0, 0, 999, 0);
+			pageStepperSwitchLine1 = new FlxUINumericStepper(pageStepperLine.x + 390, 10, 1, 0, 0, 999, 0);
+			pageStepperSwitchLine2 = new FlxUINumericStepper(pageStepperLine.x + 460, 10, 1, 0, 0, 999, 0);
+			
+			var textSize:Int = 16;
+
+			line1 = new FlxText(0, 0, 0, '', textSize);
+			line1.setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+			line1.alignment = "center";
+
+			tab_group.add(line1);
+
+			line2 = new FlxText(0, 0, 0, '', textSize);
+			line2.setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+			line2.alignment = "center";
+
+			tab_group.add(line2);
+
+			line3 = new FlxText(0, 0, 0, '', textSize);
+			line3.setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+			line3.alignment = "center";
+
+			tab_group.add(line3);
+	
+			var deleteLine:FlxButton = new FlxButton(pageStepperLine.x + 210, pageStepperLine.y - 5, "Delete Line", function()
+			{
+				if (lineStepper.value >= roboticDialogues.length)
+					return;
+				roboticDialogues.splice(Std.int(lineStepper.value), 1);
+			});
+			var reloadPageLine:FlxButton = new FlxButton(pageStepperLine.x + 300, pageStepperLine.y - 5, "Reload Page", function()
+			{
+				var eventTextArray = [line1, line2, line3];
+				for (eventText in eventTextArray)
+				{
+					eventText.text = '';
+				}
+				thePageNumberLine.text = 'Page Number: ' + pageStepperLine.value;
+				var i:Int = Std.int(0 + 3 * pageStepperLine.value);
+				while (i < roboticDialogues.length)
+				{
+					if (i > 2 + 3 * pageStepperLine.value)
+						break;
+
+					var event = roboticDialogues[i];
+
+					var theText:FlxText = line1;
+					switch (i%3)
+					{
+						case 0:
+							theText = line1;
+						case 1:
+							theText = line2;
+						case 2:
+							theText = line3;
+					}
+					
+					theText.text = (i) + '."' + roboticDialogues[i].line + '" with ' + roboticDialogues[i].events.length + ' events.';
+					i++;
+				}
+			});
+			var switchLines:FlxButton = new FlxButton(pageStepperLine.x + 520, pageStepperLine.y - 5, "Switch Lines", function()
+			{
+				if (pageStepperSwitchLine1.value >= roboticDialogues.length)
+					return;
+				if (pageStepperSwitchLine2.value >= roboticDialogues.length)
+					return;
+				var dialoguething = roboticDialogues[Std.int(pageStepperSwitchLine1.value)];
+				roboticDialogues[Std.int(pageStepperSwitchLine1.value)] = roboticDialogues[Std.int(pageStepperSwitchLine2.value)];
+				roboticDialogues[Std.int(pageStepperSwitchLine2.value)] = dialoguething;
+			});
+			line1.x = 0;
+			line1.y = 20;
+			line2.x = 0;
+			line2.y = 40;
+			line3.x = 0;
+			line3.y = 60;
+
+			thePageNumberLine = new FlxText(0, 0, 0, 'Page Number: load a page', 24);
+			thePageNumberLine.setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+			thePageNumberLine.alignment = "center";
+
+			tab_group.name = "DialogueNot";
+			tab_group.add(pageStepperLine);
+			tab_group.add(new FlxText(pageStepperLine.x - 75, pageStepperLine.y, 0, 'Page Number:'));
+			tab_group.add(lineStepper);
+			tab_group.add(new FlxText(pageStepperLine.x + 80, pageStepperLine.y, 0, 'Event:'));
+			tab_group.add(reloadPageLine);
+			tab_group.add(deleteLine);
+			tab_group.add(switchLines);
+			tab_group.add(pageStepperSwitchLine1);
+			tab_group.add(pageStepperSwitchLine2);
+
+			tab_group.add(thePageNumberLine);
+			tab_group.add(saveDialogueButton);
+			tab_group.add(loadDialogueButton);
+			tab_group.add(addLine);
+			Dialogue_box.addGroup(tab_group);
+
+
+
+			var tab_groupAddEvent = new FlxUI(null, Dialogue_box);
+
+
+			senteneceInputText = new FlxUIInputText(15, 45, 800, 'PRESS A LITTLE BELOW FOR FOCUS', 8);
+			senteneceInputText.updateHitbox();
+			senteneceInputText.scrollFactor.set();
+			characterInputText = new FlxUIInputText(15, 85, 800, 'robo', 8);
+			characterInputText.updateHitbox();
+			characterInputText.scrollFactor.set();
+			valueInputText1 = new FlxUIInputText(1000, 25, 100, 'value1', 8);
+			valueInputText1.updateHitbox();
+			valueInputText1.scrollFactor.set();
+			valueInputText2 = new FlxUIInputText(valueInputText1.x, 50, 100, 'value2', 8);
+			valueInputText2.updateHitbox();
+			valueInputText2.scrollFactor.set();
+			valueInputText3 = new FlxUIInputText(valueInputText1.x, 75, 100, 'value3', 8);
+			valueInputText3.updateHitbox();
+			valueInputText3.scrollFactor.set();
+
+			indexStepper = new FlxUINumericStepper(500, 10, 1, 0, 0, 999, 0);
+			var effectArray:Array<String> = ['Wave On', 'Wave Off', 'Shake On', 'Shake Off', 'Camera Follow', 'Box Color', 'Text Color', 'Camera Skake', 'Change Box Size', 'Change Letter Size', 'Change Character Animation', 'Set if Character singing', 'Change Icon', 'Change Sound'];
+
+			effectDropDown = new FlxUIDropDownMenuCustom(indexStepper.x + 120, indexStepper.y - 5, FlxUIDropDownMenuCustom.makeStrIdLabelArray(effectArray, true), function(effect:String)
+			{
+				theEffect = effectArray[Std.parseInt(effect)];
+			});
+			effectDropDown.selectedLabel = 'Wave On';
+
+			var addEffect:FlxButton = new FlxButton(indexStepper.x + 240, indexStepper.y - 5, "Add Event", function()
+			{
+				trace(Std.int(indexStepper.value));
+				trace((effectDropDown.selectedLabel));
+				var theEvent:TextBoxEvent = {
+					index: Std.int(indexStepper.value),
+					event: effectDropDown.selectedLabel,
+					value1: valueInputText1.text,
+					value2: valueInputText2.text,
+					value3: valueInputText3.text,
+				};
+				textBox.events.push(theEvent);
+			});
+			var addLine:FlxButton = new FlxButton(indexStepper.x + 240, indexStepper.y + 15, "Add Line", function()
+			{
+				senteneceInputText.text = senteneceInputText.text + '\\n';
+			});
+			//blockPressWhileScrolling.push(effectDropDown);
+			
+			tab_groupAddEvent.name = "Add Event";
+			tab_groupAddEvent.add(new FlxText(15, senteneceInputText.y - 18, 0, 'Dialogue text:'));
+			tab_groupAddEvent.add(senteneceInputText);
+			tab_groupAddEvent.add(new FlxText(15, characterInputText.y - 18, 0, 'Character text:'));
+			tab_groupAddEvent.add(characterInputText);
+			tab_groupAddEvent.add(new FlxText(valueInputText1.x - 80, valueInputText1.y, 0, 'Value 1:'));
+			tab_groupAddEvent.add(valueInputText1);
+			tab_groupAddEvent.add(new FlxText(valueInputText2.x - 80, valueInputText2.y, 0, 'Value 2:'));
+			tab_groupAddEvent.add(valueInputText2);
+			tab_groupAddEvent.add(new FlxText(valueInputText3.x - 80, valueInputText3.y, 0, 'Value 3:'));
+			tab_groupAddEvent.add(valueInputText3);
+			tab_groupAddEvent.add(new FlxText(indexStepper.x - 70, indexStepper.y, 0, 'Event Index'));
+			tab_groupAddEvent.add(indexStepper);
+			tab_groupAddEvent.add(new FlxText(indexStepper.x + 80, indexStepper.y, 0, 'Event:'));
+			tab_groupAddEvent.add(effectDropDown);
+			tab_groupAddEvent.add(addEffect);
+			tab_groupAddEvent.add(addLine);
+
+			theIndexText = new FlxText(0, 0, 0, 'Current Index: ' + (senteneceInputText.text.length), 24);
+			theIndexText.setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+			theIndexText.alignment = "center";
+			tab_groupAddEvent.add(theIndexText);
+			theOptionsText = new FlxText(0, 500, 0, 'The Options Text: value1 is wave Intensity, value2 is wave Distance', 12);
+			theOptionsText.setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+			theOptionsText.alignment = "center";
+			tab_groupAddEvent.add(theOptionsText);
+
+	
+			Dialogue_box.addGroup(tab_groupAddEvent);
+
+
+
+
+			var tab_groupEvents = new FlxUI(null, Dialogue_box);
+			tab_groupEvents.name = "Events";
+
+			pageStepper = new FlxUINumericStepper(500, 10, 1, 0, 0, 999, 0);
+			eventStepper = new FlxUINumericStepper(pageStepper.x + 120, 10, 1, 0, 0, 999, 0);
+
+			var deleteEvent:FlxButton = new FlxButton(pageStepper.x + 210, pageStepper.y - 5, "Delete Event", function()
+			{
+				if (eventStepper.value >= textBox.events.length)
+					return;
+				//textBox.events[Std.int(eventStepper.value)].destroy();
+				//var l = 0;//because I took the L
+				//var newVariable = [];
+				//while (l < textBox.events.length)
+				//{
+				//	if (l != Std.int(eventStepper.value))
+				//		newVariable.push(textBox.events[l]);
+				//	l++;
+				//}
+				//textBox.events = newVariable;
+				//textBox.events[Std.int(eventStepper.value)].destroy;
+				textBox.events.splice(Std.int(eventStepper.value), 1);
+				//textBox.events[Std.int(eventStepper.value)].kill();
+			});
+			//var texts:Array<FlxText> = [];
+
+			event1 = new FlxText(0, 0, 0, '', textSize);
+			event1.setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+			event1.alignment = "center";
+
+			tab_groupEvents.add(event1);
+
+			event2 = new FlxText(0, 0, 0, '', textSize);
+			event2.setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+			event2.alignment = "center";
+
+			tab_groupEvents.add(event2);
+
+			event3 = new FlxText(0, 0, 0, '', textSize);
+			event3.setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+			event3.alignment = "center";
+
+			tab_groupEvents.add(event3);
+
+			event4 = new FlxText(0, 0, 0, '', textSize);
+			event4.setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+			event4.alignment = "center";
+
+			tab_groupEvents.add(event4);
+
+			event5 = new FlxText(0, 0, 0, '', textSize);
+			event5.setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+			event5.alignment = "center";
+
+			tab_groupEvents.add(event5);
+
+			event6 = new FlxText(0, 0, 0, '', textSize);
+			event6.setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+			event6.alignment = "center";
+
+			tab_groupEvents.add(event6);
+
+			event7 = new FlxText(0, 0, 0, '', textSize);
+			event7.setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+			event7.alignment = "center";
+
+			tab_groupEvents.add(event7);
+
+			event8 = new FlxText(0, 0, 0, '', textSize);
+			event8.setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+			event8.alignment = "center";
+
+			tab_groupEvents.add(event8);
+
+			event9 = new FlxText(0, 0, 0, '', textSize);
+			event9.setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+			event9.alignment = "center";
+
+			tab_groupEvents.add(event9);
+			var eventTextArray = [event1, event2, event3, event4, event5, event6, event7, event8, event9];
+			for (eventText in eventTextArray)
+			{
+				eventText.text = '';
+			}
+			var textK = new FlxText(200, 0, 0, 'THE EVENTS:', 14);
+			tab_groupEvents.add(textK);
+			var reloadPage:FlxButton = new FlxButton(pageStepper.x + 300, pageStepper.y - 5, "Reload Page", function()
+			{
+				var eventTextArray = [event1, event2, event3, event4, event5, event6, event7, event8, event9];
+				for (eventText in eventTextArray)
+				{
+					eventText.text = '';
+				}
+				thePageNumber.text = 'Page Number: ' + pageStepper.value;
+				var i:Int = Std.int(0 + 9 * pageStepper.value);
+				//for (text in texts)
+				//{
+				//	text.destroy();
+				//	texts = [];
+				//}
+				//texts.push(textK);
+				while (i < textBox.events.length)
+				{
+					var theX = 0;
+					if (i > 2 + 9 * pageStepper.value && i < 6 + 9 * pageStepper.value)
+						theX = 1;
+					else if (i > 5 + 9 * pageStepper.value)
+						theX = 2;
+					if (i > 8 + 9 * pageStepper.value)
+						break;
+
+					var event = textBox.events[i];
+					//var textJ = new FlxText(0 + 400 * theX, 30 + (i%3) * 20, 0, (i) + '.' + event.event + ' at index ' + event.index, 14);
+					//tab_groupEvents.add(textJ);
+					//texts.push(textJ);
+					//trace(i + '. ${textJ.x},${textJ.y}');
+
+					var theText:FlxText = event1;
+					switch (i%9)
+					{
+						case 0:
+							theText = event1;
+						case 1:
+							theText = event2;
+						case 2:
+							theText = event3;
+						case 3:
+							theText = event4;
+						case 4:
+							theText = event5;
+						case 5:
+							theText = event6;
+						case 6:
+							theText = event7;
+						case 7:
+							theText = event8;
+						case 8:
+							theText = event9;
+					}
+					
+					theText.text = (i) + '.' + event.event + ' at index ' + event.index;
+					i++;
+				}
+			});
+	
+			tab_groupEvents.name = "Events";
+			tab_groupEvents.add(new FlxText(pageStepper.x - 75, pageStepper.y, 0, 'Page Number:'));
+			tab_groupEvents.add(pageStepper);
+			tab_groupEvents.add(eventStepper);
+			tab_groupEvents.add(new FlxText(pageStepper.x + 80, pageStepper.y, 0, 'Event:'));
+			tab_groupEvents.add(reloadPage);
+			tab_groupEvents.add(deleteEvent);
+			event1.x = 0;
+			event1.y = 20;
+			event2.x = 0;
+			event2.y = 40;
+			event3.x = 0;
+			event3.y = 60;
+			event4.x = 400;
+			event4.y = 20;
+			event5.x = 400;
+			event5.y = 40;
+			event6.x = 400;
+			event6.y = 60;
+			event7.x = 800;
+			event7.y = 20;
+			event8.x = 800;
+			event8.y = 40;
+			event9.x = 800;
+			event9.y = 60;
+			thePageNumber = new FlxText(0, 0, 0, 'Page Number: load a page', 24);
+			thePageNumber.setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+			thePageNumber.alignment = "center";
+
+			tab_groupEvents.add(thePageNumber);
+	
+			Dialogue_box.addGroup(tab_groupEvents);
+
+			add(Dialogue_box);
+		}
 	}
 
 	function set_songSpeed(value:Float):Float
@@ -1710,10 +2271,85 @@ class PlayState extends MusicBeatState
 
 	public function startCountdown():Void
 	{
+		var songName:String = Paths.formatToSongPath(SONG.song);
+		var doIstartDialogue:Bool = false;
+		var file:String = Paths.json(songName + '/DialogueThing');
+		#if sys
+		if (#if MODS_ALLOWED FileSystem.exists(Paths.modsJson(songName + '/DialogueThing')) || #end FileSystem.exists(file))
+		#else
+		if (OpenFlAssets.exists(file))
+		#end
+		{
+			//clearEvents();
+			var events = parseDialogue(file);
+			roboticDialogues = events.dialogues.copy();
+			doIstartDialogue = true;
+		}
+		if (dialogueEditing)
+			return;
+		if(doIstartDialogue && !didIstartDialogue) {
+			textBox = new TextBox(0, 500, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), 0.2, roboticDialogues[0].line);
+			textBox.allDialogues = roboticDialogues;
+			add(textBox);
+			textBox.cameras = [camHUDier];
+			textBox.appear();
+			textBox.goToNextDialogue();
+			textBox.onComplete = startCountdown;
+			didIstartDialogue = true;
+			camHUD.alpha = 0;
+			dialogueMusic = new FlxSound();
+			dialogueMusic.loadEmbedded(Paths.music(Paths.formatToSongPath('breakfast')), true, true);
+			//dialogueMusic.play(false, FlxG.random.int(0, Std.int(dialogueMusic.length / 2)));
+	
+			FlxG.sound.list.add(dialogueMusic);
+			return;
+		}
+		dialogueMusic.stop();
 		if(startedCountdown) {
 			callOnLuas('onStartCountdown', []);
 			return;
 		}
+		FlxTween.tween(camHUD, {alpha: 1}, 0.5, {
+			ease: FlxEase.quadInOut
+		});
+		
+		FlxTween.tween(this, {songBackSpriteWidth: FlxG.width}, 1.25,
+			{
+				onComplete: function(twn:FlxTween)
+				{
+					FlxTween.tween(displaySongName, {y: songBackSprite.y + 30, alpha: 1}, 0.80, {
+						ease: FlxEase.quadInOut,
+						onComplete: function(twn:FlxTween)
+						{
+							FlxTween.tween(this, {songNameDistance: 70}, 0.5, {
+								ease: FlxEase.quadInOut
+							});
+							FlxTween.tween(iconSongName, {alpha: 1}, 0.5, {
+								ease: FlxEase.quadInOut
+							});
+							FlxTween.tween(displayArtistName, {y: displaySongName.y + 50, alpha: 1}, 0.5, {
+								ease: FlxEase.quadInOut
+							});
+							
+							new FlxTimer().start(4, function(tmr:FlxTimer)
+							{
+								FlxTween.tween(songBackSprite, {y: songBackSprite.y - 100, alpha: 0}, 0.5, {
+									ease: FlxEase.quadInOut
+								});
+								FlxTween.tween(displayArtistName, {y: displayArtistName.y - 100, alpha: 0}, 0.5, {
+									ease: FlxEase.quadInOut
+								});
+								FlxTween.tween(displaySongName, {y: displaySongName.y - 100, alpha: 0}, 0.5, {
+									ease: FlxEase.quadInOut
+								});
+								FlxTween.tween(iconSongName, {y: iconSongName.y - 100, alpha: 0}, 0.5, {
+									ease: FlxEase.quadInOut
+								});
+							});
+						}
+					});
+				}
+			});
 
 		inCutscene = false;
 		var ret:Dynamic = callOnLuas('onStartCountdown', []);
@@ -2370,9 +3006,103 @@ class PlayState extends MusicBeatState
 	var startedCountdown:Bool = false;
 	var canPause:Bool = true;
 	var limoSpeed:Float = 0;
+	var cointhing:Float = 0;
 
 	override public function update(elapsed:Float)
 	{
+		cointhing += 0.01;
+		#if debug
+		if (dialogueEditing && !(senteneceInputText.hasFocus || characterInputText.hasFocus || valueInputText1.hasFocus || valueInputText2.hasFocus || valueInputText3.hasFocus))
+		{
+			if (FlxG.keys.justPressed.T) {
+				LoadingState.loadAndSwitchState(new PlayState());
+				dialogueEditing = false;
+			}
+			if (FlxG.keys.justPressed.F) {
+				var thingything = -1;
+				dad.scale.set(thingything,1);
+				dad.updateHitbox();
+		
+				for (anim in dad.animOffsets.keys())
+				{
+					dad.animOffsets[anim] = [dad.animOffsets[anim][0]*thingything,dad.animOffsets[anim][1]];
+				}
+				textBox.changeHeight(50, 5);
+			}
+			if (FlxG.keys.justPressed.G) {
+				var thingything = 1;
+				dad.scale.set(thingything,1);
+				dad.updateHitbox();
+		
+				for (anim in dad.animOffsets.keys())
+				{
+					dad.animOffsets[anim] = [dad.animOffsets[anim][0]*thingything,dad.animOffsets[anim][1]];
+				}
+			}
+			if (FlxG.keys.pressed.C) {
+				var dad2 = new Character(0, 0, SONG.player2);
+				var thingything = -1;
+				dad.scale.set(Math.sin(cointhing),1);
+				dad.updateHitbox();
+		
+				for (anim in dad.animOffsets.keys())
+				{
+					dad.animOffsets[anim] = [dad2.animOffsets[anim][0]*Math.sin(cointhing),dad2.animOffsets[anim][1]];
+				}
+			}
+			if (FlxG.keys.justPressed.J) {
+				textBox = new TextBox(0, 500, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), 0.2);
+				add(textBox);
+				textBox.cameras = [camHUDier];
+				textBox.appear();
+			}
+			if (FlxG.keys.justPressed.K) {
+				textBox.startText(senteneceInputText.text);
+			}
+		}
+		#end
+		
+		if (dialogueEditing)
+		{
+			theIndexText.text = 'Current Index: ' + (senteneceInputText.text.length);
+			switch (effectDropDown.selectedLabel)
+			{
+				case 'Wave On':
+					theOptionsText.text = 'The Options Text: value1 is wave Intensity, value2 is wave Distance';
+				case 'Wave Off':
+					theOptionsText.text = 'The Options Text: Nothing';
+				case 'Shake On':
+					theOptionsText.text = 'The Options Text: value1 is shake Intensity';
+				case 'Shake Off':
+					theOptionsText.text = 'The Options Text: Nothing';
+				case 'Camera Follow':
+					theOptionsText.text = 'The Options Text: value1 is character (dad, bf, gf)';
+				case 'Box Color':
+					theOptionsText.text = 'The Options Text: value1 is color in HEX';
+				case 'Text Color':
+					theOptionsText.text = 'The Options Text: value1 is color in HEX';
+				case 'Camera Skake':
+					theOptionsText.text = 'The Options Text: value1 is intensity, value2 is duration';
+				case 'Change Box Size':
+					theOptionsText.text = 'The Options Text: value1 is size in pixels';
+				case 'Change Letter Size':
+					theOptionsText.text = 'The Options Text: value1 is the scale';
+				case 'Change Character Animation':
+					theOptionsText.text = 'The Options Text: value1 is character (dad, bf, gf), value2 is the animation';
+				case 'Set if Character singing':
+					theOptionsText.text = 'The Options Text: value1 is character (dad, bf, gf), value2 is the Bool (true or false)';
+				case 'Change Icon':
+					theOptionsText.text = 'The Options Text: value1 is icon file name';
+				case 'Change Sound':
+					theOptionsText.text = 'The Options Text: value1 is sound file directory';
+			}
+		}
+		songBackSprite.makeGraphic(songBackSpriteWidth, 125, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]));
+		displaySongName.screenCenter(X);
+		iconSongName.screenCenter(X);
+		displaySongName.x -= songNameDistance;
+		iconSongName.x += songNameDistance + 20;
+
 		camXAddition = 0;
 		camYAddition = 0;
 		if (generatedMusic && PlayState.SONG.notes[Std.int(curStep / 16)] != null && !PlayState.SONG.notes[Std.int(curStep / 16)].mustHitSection && !endingSong && !isCameraOnForcedPos)
@@ -2403,10 +3133,12 @@ class PlayState extends MusicBeatState
 			camFollow.x -= boyfriend.cameraPosition[0] - boyfriendCameraOffset[0];
 			camFollow.y += boyfriend.cameraPosition[1] + boyfriendCameraOffset[1];
 		}
+
 		switch (curStage)
 		{
 			case 'pegmeplease':
-				pillarsThing(funniRects, 0, 1, 600, false, 2, true, 25);
+				if (curStep > 0)
+					pillarsThing(funniRects, 0, 1, 600, false, 2, true, 25);
 				if (curStep > 119)
 					pillarsThing(moreRects, 1, 1, 600, false, 2, true, 25);
 				if (curStep >= 1184 && curStep < 1193)
@@ -2560,6 +3292,33 @@ class PlayState extends MusicBeatState
 		}
 
 		super.update(elapsed);
+		if (dialogueEditing)
+		{
+			var theNOOOOOOOO = false;
+			var inputTexts:Array<FlxUIInputText> = [senteneceInputText, characterInputText, valueInputText1, valueInputText2, valueInputText3];
+			for (i in 0...inputTexts.length) {
+				if(inputTexts[i].hasFocus) {
+					theNOOOOOOOO = true;
+					FlxG.debugger.toggleKeys = [F2];
+					if(FlxG.keys.pressed.CONTROL && FlxG.keys.justPressed.V && Clipboard.text != null) { //Copy paste
+						inputTexts[i].text = ClipboardAdd(inputTexts[i].text);
+						inputTexts[i].caretIndex = inputTexts[i].text.length;
+						getEvent(FlxUIInputText.CHANGE_EVENT, inputTexts[i], null, []);
+					}
+					if(FlxG.keys.justPressed.ENTER) {
+						inputTexts[i].hasFocus = false;
+					}
+					FlxG.sound.muteKeys = [];
+					FlxG.sound.volumeDownKeys = [];
+					FlxG.sound.volumeUpKeys = [];
+					super.update(elapsed);
+					return;
+				}
+			}
+			if (!theNOOOOOOOO)
+				FlxG.debugger.toggleKeys = [F2, GRAVEACCENT, BACKSLASH];
+
+		}
 
 		if(ratingName == '?') {
 			scoreTxt.text = 'Score: ' + songScore + ' | Misses: ' + songMisses + ' | Rating: ' + ratingName;
@@ -2917,6 +3676,7 @@ class PlayState extends MusicBeatState
 		setOnLuas('cameraY', camFollowPos.y);
 		setOnLuas('botPlay', cpuControlled);
 		callOnLuas('onUpdatePost', [elapsed]);
+		camHUDier.zoom = camHUD.zoom;
 	}
 
 	function openChartEditor()
@@ -3363,12 +4123,12 @@ class PlayState extends MusicBeatState
 
 		if (!SONG.notes[id].mustHitSection)
 		{
-			moveCamera(true);
+			//moveCamera(true);
 			callOnLuas('onMoveCamera', ['dad']);
 		}
 		else
 		{
-			moveCamera(false);
+			//moveCamera(false);
 			callOnLuas('onMoveCamera', ['boyfriend']);
 		}
 	}
@@ -3378,16 +4138,16 @@ class PlayState extends MusicBeatState
 	{
 		if(isDad)
 		{
-			//camFollow.set(dad.getMidpoint().x + 150, dad.getMidpoint().y - 100);
-			//camFollow.x += dad.cameraPosition[0] + opponentCameraOffset[0];
-			//camFollow.y += dad.cameraPosition[1] + opponentCameraOffset[1];
+			camFollow.set(dad.getMidpoint().x + 150, dad.getMidpoint().y - 100);
+			camFollow.x += dad.cameraPosition[0] + opponentCameraOffset[0];
+			camFollow.y += dad.cameraPosition[1] + opponentCameraOffset[1];
 			tweenCamIn();
 		}
 		else
 		{
-			//camFollow.set(boyfriend.getMidpoint().x - 100, boyfriend.getMidpoint().y - 100);
-			//camFollow.x -= boyfriend.cameraPosition[0] - boyfriendCameraOffset[0];
-			//camFollow.y += boyfriend.cameraPosition[1] + boyfriendCameraOffset[1];
+			camFollow.set(boyfriend.getMidpoint().x - 100, boyfriend.getMidpoint().y - 100);
+			camFollow.x -= boyfriend.cameraPosition[0] - boyfriendCameraOffset[0];
+			camFollow.y += boyfriend.cameraPosition[1] + boyfriendCameraOffset[1];
 
 			if (Paths.formatToSongPath(SONG.song) == 'tutorial' && cameraTwn == null && FlxG.camera.zoom != 1)
 			{
@@ -4061,6 +4821,15 @@ class PlayState extends MusicBeatState
 			if(daNote.noteType == 'Alt Animation') daAlt = '-alt';
 
 			var animToPlay:String = singAnimations[Std.int(Math.abs(daNote.noteData))] + 'miss' + daAlt;
+			
+			if (char.scale.x < 0)
+			{
+				if (Std.int(Math.abs(daNote.noteData)) == 3)
+					animToPlay = singAnimations[0] + daAlt;
+				
+				if (Std.int(Math.abs(daNote.noteData)) == 0)
+					animToPlay = singAnimations[3] + daAlt;
+			}
 			char.playAnim(animToPlay, true);
 		}
 
@@ -4134,6 +4903,14 @@ class PlayState extends MusicBeatState
 
 			var char:Character = dad;
 			var animToPlay:String = singAnimations[Std.int(Math.abs(note.noteData))] + altAnim;
+			if (char.scale.x < 0)
+			{
+				if (Std.int(Math.abs(note.noteData)) == 3)
+					animToPlay = singAnimations[0] + altAnim;
+				
+				if (Std.int(Math.abs(note.noteData)) == 0)
+					animToPlay = singAnimations[3] + altAnim;
+			}
 			if(note.gfNote) {
 				char = gf;
 			}
@@ -4219,9 +4996,18 @@ class PlayState extends MusicBeatState
 				if(note.noteType == 'Alt Animation') daAlt = '-alt';
 	
 				var animToPlay:String = singAnimations[Std.int(Math.abs(note.noteData))];
+				
 
 				if(note.gfNote) 
 				{
+					if (gf.scale.x < 0)
+					{
+						if (Std.int(Math.abs(note.noteData)) == 3)
+							animToPlay = singAnimations[0] + daAlt;
+						
+						if (Std.int(Math.abs(note.noteData)) == 0)
+							animToPlay = singAnimations[3] + daAlt;
+					}
 					if(gf != null)
 					{
 						gf.playAnim(animToPlay + daAlt, true);
@@ -4230,11 +5016,27 @@ class PlayState extends MusicBeatState
 				}
 				else
 				{
+					if (gf.scale.x < 0)
+					{
+						if (Std.int(Math.abs(note.noteData)) == 3)
+							animToPlay = singAnimations[0] + daAlt;
+						
+						if (Std.int(Math.abs(note.noteData)) == 0)
+							animToPlay = singAnimations[3] + daAlt;
+					}
 					boyfriend.playAnim(animToPlay + daAlt, true);
 					boyfriend.holdTimer = 0;
 				}
 
 				if(note.noteType == 'Hey!') {
+					if (gf.scale.x < 0)
+					{
+						if (Std.int(Math.abs(note.noteData)) == 3)
+							animToPlay = singAnimations[0] + daAlt;
+						
+						if (Std.int(Math.abs(note.noteData)) == 0)
+							animToPlay = singAnimations[3] + daAlt;
+					}
 					if(boyfriend.animOffsets.exists('hey')) {
 						boyfriend.playAnim('hey', true);
 						boyfriend.specialAnim = true;
@@ -4563,8 +5365,6 @@ class PlayState extends MusicBeatState
 				}
 			}
 		}
-		trace(theSmallestI);
-		trace(theHighestI);
 		for (i in 0...pillarArray.length)
 		{
 			var beforeI = i - 1;
@@ -4976,6 +5776,82 @@ class PlayState extends MusicBeatState
 		setOnLuas('ratingFC', ratingFC);
 	}
 
+	private function saveDialogue()
+	{
+		var json = {
+			"dialogues": roboticDialogues,
+		};
+
+		var data:String = Json.stringify(json, "\t");
+
+		if ((data != null) && (data.length > 0))
+		{
+			_file = new FileReference();
+			_file.addEventListener(Event.COMPLETE, onSaveComplete);
+			_file.addEventListener(Event.CANCEL, onSaveCancel);
+			_file.addEventListener(IOErrorEvent.IO_ERROR, onSaveError);
+			_file.save(data.trim(), Paths.formatToSongPath(SONG.song) + ".json");
+		}
+	}
+
+	function ClipboardAdd(prefix:String = ''):String {
+		if(prefix.toLowerCase().endsWith('v')) //probably copy paste attempt
+		{
+			prefix = prefix.substring(0, prefix.length-1);
+		}
+
+		var text:String = prefix + Clipboard.text.replace('\n', '');
+		return text;
+	}
+
+	function onSaveComplete(_):Void
+	{
+		//didAThing = true;
+		_file.removeEventListener(Event.COMPLETE, onSaveComplete);
+		_file.removeEventListener(Event.CANCEL, onSaveCancel);
+		_file.removeEventListener(IOErrorEvent.IO_ERROR, onSaveError);
+		_file = null;
+		FlxG.log.notice("Successfully saved TEXTBOX DATA.");
+	}
+
+	/**
+	 * Called when the save file dialog is cancelled.
+	 */
+	function onSaveCancel(_):Void
+	{
+		_file.removeEventListener(Event.COMPLETE, onSaveComplete);
+		_file.removeEventListener(Event.CANCEL, onSaveCancel);
+		_file.removeEventListener(IOErrorEvent.IO_ERROR, onSaveError);
+		_file = null;
+	}
+
+	/**
+	 * Called if there is an error while saving the gameplay recording.
+	 */
+	function onSaveError(_):Void
+	{
+		_file.removeEventListener(Event.COMPLETE, onSaveComplete);
+		_file.removeEventListener(Event.CANCEL, onSaveCancel);
+		_file.removeEventListener(IOErrorEvent.IO_ERROR, onSaveError);
+		_file = null;
+		FlxG.log.error("Problem saving Level data");
+	}
+
+	public static function parseDialogue(path:String):Jdialogue {
+		#if MODS_ALLOWED
+		if(FileSystem.exists(path))
+		{
+			return cast Json.parse(File.getContent(path));
+		}
+		#end
+		return cast Json.parse(Assets.getText(path));
+	}
+
+	public static function parseJSONshit(rawJson:String):Jdialogue
+	{
+		var swagShit:Jdialogue = cast Json.parse(rawJson);
+		return swagShit;
+	}
 	#if ACHIEVEMENTS_ALLOWED
 	private function checkForAchievement(achievesToCheck:Array<String> = null):String
 	{
