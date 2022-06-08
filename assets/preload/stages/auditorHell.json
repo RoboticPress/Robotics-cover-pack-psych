@@ -1,0 +1,15 @@
+{
+	"directory": "pegmeplease",
+	"defaultZoom": 0.9,
+	"isPixelStage": false,
+
+	"boyfriend": [1400, -200],
+	"girlfriend": [600, -700],
+	"opponent": [100, -200],
+	"hide_girlfriend": false,
+
+	"camera_boyfriend": [-200, 0],
+	"camera_opponent": [0, 0],
+	"camera_girlfriend": [0, 0],
+	"camera_speed": 1
+}

@@ -79,6 +79,7 @@ class Note extends FlxSprite
 	public var noAnimation:Bool = false;
 	public var hitCausesMiss:Bool = false;
 	public var distance:Float = 2000; //plan on doing scroll directions soon -bb
+	public var xOffsetFunni:Float = 0;
 
 	public var hitsoundDisabled:Bool = false;
 
@@ -115,6 +116,19 @@ class Note extends FlxSprite
 					noAnimation = true;
 				case 'GF Sing':
 					gfNote = true;
+				case 'TikyHat Note':
+					ignoreNote = mustPress;
+					reloadNote('notes/tikyhat_');
+					colorSwap.hue = 0;
+					colorSwap.saturation = 0;
+					colorSwap.brightness = 0;
+					if(isSustainNote) {
+						missHealth = 0.1;
+					} else {
+						missHealth = 0.3;
+					}
+					hitCausesMiss = true;
+					xOffsetFunni = -165;
 			}
 			noteType = value;
 		}

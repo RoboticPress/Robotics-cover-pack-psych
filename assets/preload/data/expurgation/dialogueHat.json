@@ -1,0 +1,17 @@
+{
+	"dialogues": [
+		{
+			"events": [
+				{
+					"index": 0,
+					"value1": "2.5",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Shake On"
+				}
+			],
+			"characterName": "hat kid tiky",
+			"line": "DOWN WITH THE MAFIA!!!!!!!"
+		}
+	]
+}

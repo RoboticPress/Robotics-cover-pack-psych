@@ -170,7 +170,13 @@ class Character extends FlxSprite
 
 				if(json.scale != 1) {
 					jsonScale = json.scale;
-					setGraphicSize(Std.int(width * jsonScale));
+					var thingything = jsonScale;
+					scale.set(thingything,thingything);
+			
+					for (anim in animOffsets.keys())
+					{
+						animOffsets[anim] = [animOffsets[anim][0]*thingything,animOffsets[anim][1]];
+					}
 					updateHitbox();
 				}
 

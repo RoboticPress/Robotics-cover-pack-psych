@@ -62,7 +62,8 @@ class ChartingState extends MusicBeatState
 		'Hey!',
 		'Hurt Note',
 		'GF Sing',
-		'No Animation'
+		'No Animation',
+		'TikyHat Note',
 	];
 	private var noteTypeIntMap:Map<Int, String> = new Map<Int, String>();
 	private var noteTypeMap:Map<String, Null<Int>> = new Map<String, Null<Int>>();
@@ -830,6 +831,28 @@ class ChartingState extends MusicBeatState
 			
 			updateGrid();
 		});
+		var roboticButton:FlxButton = new FlxButton(10, 500, "Robotic Button", function()
+		{
+			var duetNotes:Array<Array<Dynamic>> = [];
+			for (note in _song.notes[curSection].sectionNotes)
+			{
+				var boob = note[1];
+				if (boob>7){
+					boob -= 8;
+					var copiedNote:Array<Dynamic> = [note[0], boob, note[2], 'TikyHat Note'];
+					duetNotes.push(copiedNote);
+					_song.notes[curSection].sectionNotes.remove(note);
+				}
+				
+			}
+			
+			for (i in duetNotes){
+			_song.notes[curSection].sectionNotes.push(i);
+				
+			}
+			
+			updateGrid();
+		});
 		var mirrorButton:FlxButton = new FlxButton(10, 350, "Mirror Notes", function()
 		{
 			var duetNotes:Array<Array<Dynamic>> = [];
@@ -868,6 +891,7 @@ class ChartingState extends MusicBeatState
 		tab_group_section.add(copyLastButton);
 		tab_group_section.add(duetButton);
 		tab_group_section.add(mirrorButton);
+		tab_group_section.add(roboticButton);
 
 		UI_box.addGroup(tab_group_section);
 	}

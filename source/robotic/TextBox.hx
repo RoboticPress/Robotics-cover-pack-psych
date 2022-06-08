@@ -55,6 +55,7 @@ typedef DialogueLine =
 class TextBox extends FlxSpriteGroup
 {
 	var daName:FlxText;
+	var skipText:FlxText;
 	var bg:FlxSprite;
 	var iconSongName:FlxSprite;
 	var dad:Character;
@@ -90,19 +91,25 @@ class TextBox extends FlxSpriteGroup
 	var animationToPlayGf:String = "singRIGHT";
 	var soundToPlay:String = "characters/sarv";
 	var animationPlayDad:Bool = false;
+	var animationPlayDadAgain:Bool = false;
 	var animationPlayBf:Bool = false;
 	var animationPlayGf:Bool = false;
 	var letterColor:FlxColor = FlxColor.WHITE;
 	var theJ:Bool = PlayState.dialogueEditing;
+	var autoPlay:Bool = false;
+	var timeToSkip:Float = 4;
 
-	public function new(rectx:Float = 0, recty:Float = 0, color:FlxColor = FlxColor.WHITE, letterSpeed:Float = 1, textmoment:String = '') {
+	public function new(rectx:Float = 0, recty:Float = 0, theHeight:Int = 125, color:FlxColor = FlxColor.WHITE, letterSpeed:Float = 1, textmoment:String = '', startingIcon:String = 'robo-gf', theAutoPlay:Bool = false, theTimeToSkip:Float = 4) {
 		super();
 
 		if (textmoment != '')
 			typeThis = textmoment;
 		dad = PlayState.instance.dad;
 		this.letterSpeed = letterSpeed;
+		autoPlay = theAutoPlay;
+		timeToSkip = theTimeToSkip;
 
+		thisThingsHeight = theHeight;
 		bg = new FlxSprite(rectx, recty);
 		bg.makeGraphic(FlxG.width, thisThingsHeight, color);
 		bg.alpha = 0;
@@ -110,7 +117,7 @@ class TextBox extends FlxSpriteGroup
 		boxColor = color;
 
 		iconSongName = new FlxSprite(0,0);
-		changeIcon(dad.healthIcon);
+		changeIcon(startingIcon);
 		
 		iconSongName.x = 200 - iconSongName.width/2;
 
@@ -119,22 +126,37 @@ class TextBox extends FlxSpriteGroup
 		add(iconSongName);
 		daName = new FlxText(bg.x + 80, bg.y - 10, 0, 'Robo', 24);
 		add(daName);
+		daName.alpha = 0;
+		skipText = new FlxText(bg.x + 80, bg.y + bg.height, 0, 'Press S to skip dialogue', 24);
+		if (!autoPlay)
+			add(skipText);
+		skipText.alpha = 0;
 		thefunniSound = new FlxSound().loadEmbedded(Paths.sound(soundToPlay));
+		if (autoPlay)
+			new FlxTimer().start(timeToSkip, function(tmr:FlxTimer)
+			{
+				goToNextDialogue();
+			}, allDialogues.length);
 	}
 	var fard:Float = 0;
 	var limitThing:Float = 0;
 	override function update(elapsed:Float)
 	{
-		if (FlxG.keys.justPressed.ANY && !theJ)
+		if (FlxG.keys.justPressed.ANY && !theJ && !FlxG.keys.justPressed.S && !autoPlay)
 			goToNextDialogue();
+		if (FlxG.keys.justPressed.S && !autoPlay && !PlayState.dialogueEditing)
+			skipDialogue();
 		//if (events.length == 1)
 			//trace(events[0].index);
 		bg.makeGraphic(FlxG.width, thisThingsHeight, boxColor);
-		iconSongName.setGraphicSize(Std.int(bg.height), Std.int(bg.height));
+		var ratio = iconSongName.height/iconSongName.width;
+		iconSongName.setGraphicSize(Std.int(bg.height/ratio), Std.int(bg.height));
 		iconSongName.x = 200 - iconSongName.width/2;
 		iconSongName.updateHitbox();
 		daName.x = bg.x + 80;
 		daName.y = bg.y - 10;
+		skipText.x = bg.x + 80;
+		skipText.y = bg.y + bg.height;
 		waveNumber += 0.1 * (120/ClientPrefs.framerate);
 		iconSongName.y = bg.y;
 		if (arrived && !dontStartNewText)
@@ -196,6 +218,13 @@ class TextBox extends FlxSpriteGroup
 								else
 									animationPlayDad = false;
 							}
+							if (event.value1.toLowerCase() == 'dadagain')
+							{
+								if (event.value2 == 'true')
+									animationPlayDadAgain = true;
+								else
+									animationPlayDadAgain = false;
+							}
 							else if (event.value1.toLowerCase() == 'bf')
 							{
 								if (event.value2 == 'true')
@@ -221,6 +250,8 @@ class TextBox extends FlxSpriteGroup
 			}
 			if (animationPlayDad)
 				PlayState.instance.dad.playAnim(animationToPlayDad);
+			if (animationPlayDadAgain)
+				PlayState.instance.dad.playAnim('singRIGHT');
 			if (animationPlayBf)
 				PlayState.instance.boyfriend.playAnim(animationToPlayBf);
 			if (animationPlayGf)
@@ -287,6 +318,12 @@ class TextBox extends FlxSpriteGroup
 		FlxTween.tween(iconSongName, {alpha: 1}, 0.5, {
 			ease: FlxEase.quadInOut
 		});
+		FlxTween.tween(daName, {alpha: 1}, 0.5, {
+			ease: FlxEase.quadInOut
+		});
+		FlxTween.tween(skipText, {alpha: 1}, 0.5, {
+			ease: FlxEase.quadInOut
+		});
 	}
 
 	public function changeHeight(value:Int, time:Float)
@@ -348,9 +385,7 @@ class TextBox extends FlxSpriteGroup
 			noMoreDialogues = true;
 		if (noMoreDialogues)
 		{
-			arrived = false;
-			onComplete();
-			disappear();
+			skipDialogue();
 			return;
 		}
 		startText(allDialogues[currentDialogue].line);
@@ -398,6 +433,12 @@ class TextBox extends FlxSpriteGroup
 			}
 		});
 		FlxTween.tween(iconSongName, {alpha: 0}, 0.5, {
+			ease: FlxEase.quadInOut
+		});
+		FlxTween.tween(daName, {alpha: 0}, 0.5, {
+			ease: FlxEase.quadInOut
+		});
+		FlxTween.tween(skipText, {alpha: 0}, 0.5, {
 			ease: FlxEase.quadInOut
 		});
 	}
@@ -455,5 +496,13 @@ class TextBox extends FlxSpriteGroup
 		}
 		#end
 		return cast Json.parse(Assets.getText(path));
+	}
+
+	public function skipDialogue()
+	{
+		arrived = false;
+		onComplete();
+		disappear();
+		return;
 	}
 }

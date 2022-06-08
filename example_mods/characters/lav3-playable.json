@@ -1,25 +1,47 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "Lav Idle"
+			"fps": 24,
+			"name": "Lav Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				110
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "LavDown",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				-166
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Lav Up",
+			"indices": []
 		},
 		{
 			"offsets": [
 				380,
 				-240
 			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singLEFT",
 			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
 			"name": "Lav Left"
 		},
 		{
@@ -27,33 +49,11 @@
 				130,
 				-290
 			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singRIGHT",
 			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
 			"name": "Lav Right"
-		},
-		{
-			"offsets": [
-				-50,
-				110
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singDOWN",
-			"indices": [],
-			"name": "LavDown"
-		},
-		{
-			"offsets": [
-				-50,
-				-166
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singUP",
-			"indices": [],
-			"name": "Lav Up"
 		}
 	],
 	"no_antialiasing": false,

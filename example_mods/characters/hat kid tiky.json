@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "BF idle dance instance ",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				1,
+				-3
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "BF NOTE RIGHT instance ",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				16,
+				-8
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "BF NOTE LEFT instance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				-29
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "BF NOTE DOWN instance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				24,
+				-10
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "BF NOTE UP instance",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/expurgation/Hatkid_assets",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "expurgation/hat kid tiky",
+	"flip_x": true,
+	"healthbar_colors": [
+		128,
+		128,
+		128
+	],
+	"camera_position": [
+		-300,
+		300
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}
