@@ -60,7 +60,7 @@
 	"image": "characters/knockout/taeyai",
 	"position": [
 		0,
-		0
+		-20
 	],
 	"healthicon": "knockout/taeyai",
 	"flip_x": false,
