@@ -98,6 +98,7 @@ class TextBox extends FlxSpriteGroup
 	var theJ:Bool = PlayState.dialogueEditing;
 	var autoPlay:Bool = false;
 	var timeToSkip:Float = 4;
+	var currentFont:String = "Bsans";
 
 	public function new(rectx:Float = 0, recty:Float = 0, theHeight:Int = 125, color:FlxColor = FlxColor.WHITE, letterSpeed:Float = 1, textmoment:String = '', startingIcon:String = 'robo-gf', theAutoPlay:Bool = false, theTimeToSkip:Float = 4) {
 		super();
@@ -163,7 +164,8 @@ class TextBox extends FlxSpriteGroup
 			fard += letterSpeed * (120/ClientPrefs.framerate);
 		if (letterIndex < typeThis.length && arrived && fard >= limitThing)
 		{
-			thefunniSound.play(true);
+			if (!autoPlay)
+				thefunniSound.play(true);
 			limitThing += 1;
 			for (event in events)
 			{
@@ -184,11 +186,35 @@ class TextBox extends FlxSpriteGroup
 							shakeTheLetters = false;
 						case 'Camera Follow':
 							if (event.value1.toLowerCase() == 'dad')
-								PlayState.instance.camFollow.set(dad.getMidpoint().x + 150, dad.getMidpoint().y - 100);
+							{
+								if (PlayState.instance.betadciuMoment)
+									PlayState.instance.camFollow.set(PlayState.instance.dadBETADCIU.getMidpoint().x + 150, PlayState.instance.dadBETADCIU.getMidpoint().y - 100);
+								else
+									PlayState.instance.camFollow.set(dad.getMidpoint().x + 150, dad.getMidpoint().y - 100);
+								PlayState.instance.camFollow.x += dad.cameraPosition[0] + PlayState.instance.opponentCameraOffset[0];
+								PlayState.instance.camFollow.y += dad.cameraPosition[1] + PlayState.instance.opponentCameraOffset[1];
+							}
 							else if (event.value1.toLowerCase() == 'bf')
-								PlayState.instance.camFollow.set(PlayState.instance.boyfriend.getMidpoint().x - 100, PlayState.instance.boyfriend.getMidpoint().y - 100);
+							{
+								if (PlayState.instance.betadciuMoment)
+									PlayState.instance.camFollow.set(PlayState.instance.boyfriendBETADCIU.getMidpoint().x - 100, PlayState.instance.boyfriendBETADCIU.getMidpoint().y - 100);
+								else
+									PlayState.instance.camFollow.set(PlayState.instance.boyfriend.getMidpoint().x - 100, PlayState.instance.boyfriend.getMidpoint().y - 100);
+								PlayState.instance.camFollow.x += PlayState.instance.boyfriend.cameraPosition[0] + PlayState.instance.boyfriendCameraOffset[0];
+								PlayState.instance.camFollow.y += PlayState.instance.boyfriend.cameraPosition[1] + PlayState.instance.boyfriendCameraOffset[1];
+							}
 							else if (event.value1.toLowerCase() == 'gf')
+							{
 								PlayState.instance.camFollow.set(PlayState.instance.gf.getMidpoint().x, PlayState.instance.gf.getMidpoint().y);
+								PlayState.instance.camFollow.x += PlayState.instance.gf.cameraPosition[0] + PlayState.instance.girlfriendCameraOffset[0];
+								PlayState.instance.camFollow.y += PlayState.instance.gf.cameraPosition[1] + PlayState.instance.girlfriendCameraOffset[1];
+							}
+							else if (event.value1.toLowerCase() == 'dadagain')
+							{
+								PlayState.instance.camFollow.set(PlayState.instance.dadAgain.getMidpoint().x + 150, PlayState.instance.dadAgain.getMidpoint().y - 100);
+								PlayState.instance.camFollow.x += PlayState.instance.dadAgain.cameraPosition[0] + PlayState.instance.opponentAgainCameraOffset[0];
+								PlayState.instance.camFollow.y += PlayState.instance.dadAgain.cameraPosition[1] + PlayState.instance.opponentAgainCameraOffset[1];
+							}
 						case 'Box Color':
 							changeBoxColor(event.value1);
 						case 'Text Color':
@@ -245,15 +271,27 @@ class TextBox extends FlxSpriteGroup
 							soundToPlay = event.value1;
 							thefunniSound = new FlxSound().loadEmbedded(Paths.sound(soundToPlay));
 							FlxG.sound.list.add(thefunniSound);
+						case 'Change Font':
+							currentFont = event.value1;
 					}
 				}
 			}
 			if (animationPlayDad)
-				PlayState.instance.dad.playAnim(animationToPlayDad);
+			{
+				if (PlayState.instance.betadciuMoment)
+					PlayState.instance.dadBETADCIU.playAnim(animationToPlayDad);
+				else
+					PlayState.instance.dad.playAnim(animationToPlayDad);
+			}
 			if (animationPlayDadAgain)
-				PlayState.instance.dad.playAnim('singRIGHT');
+				PlayState.instance.dadAgain.playAnim('singRIGHT');
 			if (animationPlayBf)
-				PlayState.instance.boyfriend.playAnim(animationToPlayBf);
+			{
+				if (PlayState.instance.betadciuMoment)
+					PlayState.instance.boyfriendBETADCIU.playAnim(animationToPlayBf);
+				else
+					PlayState.instance.boyfriend.playAnim(animationToPlayBf);
+			}
 			if (animationPlayGf)
 				PlayState.instance.gf.playAnim(animationToPlayGf);
 			var letterToType = typeThis.charAt(letterIndex);
@@ -267,7 +305,7 @@ class TextBox extends FlxSpriteGroup
 						startingLine = false;
 						firstInTheLine.push(letterIndex);
 					}
-					letter = new TextBoxLetter(this, 300, bg.y, letterToType, 'Bsans', sizeTheLetters, letterColor, letterIndex, waveTheLetters, waveIntensity, waveDistance, shakeTheLetters, shakeIntensity);
+					letter = new TextBoxLetter(this, 300, bg.y, letterToType, currentFont, sizeTheLetters, letterColor, letterIndex, waveTheLetters, waveIntensity, waveDistance, shakeTheLetters, shakeIntensity);
 				}
 				else
 				{
@@ -275,12 +313,12 @@ class TextBox extends FlxSpriteGroup
 					{
 						startingLine = false;
 						firstInTheLine.push(letterIndex-letterLine);
-						letter = new TextBoxLetter(this, letters[firstInTheLine[letterLine-1]].x, letters[firstInTheLine[letterLine-1]].y + letters[firstInTheLine[letterLine-1]].height - letterOffset, letterToType, 'Bsans', sizeTheLetters, letterColor, letterIndex, waveTheLetters, waveIntensity, waveDistance, shakeTheLetters, shakeIntensity);
+						letter = new TextBoxLetter(this, letters[firstInTheLine[letterLine-1]].x, letters[firstInTheLine[letterLine-1]].y + letters[firstInTheLine[letterLine-1]].height - letterOffset, letterToType, currentFont, sizeTheLetters, letterColor, letterIndex, waveTheLetters, waveIntensity, waveDistance, shakeTheLetters, shakeIntensity);
 						letter.y = letters[firstInTheLine[letterLine-1]].y + letters[firstInTheLine[letterLine-1]].height/2 - letter.height/2;
 					}
 					else
 					{
-						letter = new TextBoxLetter(this, letters[letters.length-1].x + letters[letters.length-1].width, letters[firstInTheLine[letterLine]].y, letterToType, 'Bsans', sizeTheLetters, letterColor, letterIndex, waveTheLetters, waveIntensity, waveDistance, shakeTheLetters, shakeIntensity);
+						letter = new TextBoxLetter(this, letters[letters.length-1].x + letters[letters.length-1].width, letters[firstInTheLine[letterLine]].y, letterToType, currentFont, sizeTheLetters, letterColor, letterIndex, waveTheLetters, waveIntensity, waveDistance, shakeTheLetters, shakeIntensity);
 						letter.y = letters[letters.length-1].y + letters[letters.length-1].height/2 - letter.height/2;
 					}
 				}
@@ -355,6 +393,7 @@ class TextBox extends FlxSpriteGroup
 		clearText();
 		new FlxTimer().start(0.6, function(tmr:FlxTimer)
 		{
+			currentFont = 'Bsans';
 			waveIntensity = 5;
 			waveDistance = 5;
 			shakeIntensity = 2.5;

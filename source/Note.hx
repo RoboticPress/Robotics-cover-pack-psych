@@ -129,6 +129,9 @@ class Note extends FlxSprite
 					}
 					hitCausesMiss = true;
 					xOffsetFunni = -165;
+				case 'Parry Note':
+					reloadNote('parry_');
+					noteSplashTexture = 'notes/ParryNOTE_assetsSplash';
 			}
 			noteType = value;
 		}

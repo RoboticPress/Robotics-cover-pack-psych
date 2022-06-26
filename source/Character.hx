@@ -33,6 +33,7 @@ typedef CharacterFile = {
 	var flip_x:Bool;
 	var no_antialiasing:Bool;
 	var healthbar_colors:Array<Int>;
+	var playable:Bool;
 }
 
 typedef AnimArray = {
@@ -74,6 +75,7 @@ class Character extends FlxSprite
 	//Used on Character Editor
 	public var imageFile:String = '';
 	public var jsonScale:Float = 1;
+	public var playable:Bool = false;
 	public var noAntialiasing:Bool = false;
 	public var originalFlipX:Bool = false;
 	public var healthColorArray:Array<Int> = [255, 0, 0];
@@ -167,6 +169,7 @@ class Character extends FlxSprite
 						frames = AtlasFrameMaker.construct(json.image);
 				}
 				imageFile = json.image;
+				playable = json.playable || false;
 
 				if(json.scale != 1) {
 					jsonScale = json.scale;

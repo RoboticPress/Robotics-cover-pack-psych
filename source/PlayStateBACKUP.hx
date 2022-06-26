@@ -498,6 +498,7 @@ class PlayState extends MusicBeatState
 			superCard.animation.addByPrefix('used', 'Card Used instance 1', 24, false);
 			superCard.animation.addByPrefix('flipped', 'Card but flipped instance 1', 24, false);
 			superCard.animation.play('flipped');
+			add(superCard);
 
 		// for lua
 		instance = this;
@@ -579,8 +580,6 @@ class PlayState extends MusicBeatState
 
 		curStage = PlayState.SONG.stage;
 		//trace('stage is: ' + curStage);
-		if (curStage == 'knockout')
-			add(superCard);
 
 
 		songBackSprite = new FlxSprite(0, 400).makeGraphic(0, 125, FlxColor.WHITE);
@@ -1509,6 +1508,7 @@ class PlayState extends MusicBeatState
 					superCuphead.animation.play('Hadolen');
 					superCuphead.blend = ADD;
 					//BigShotYOffset = -50
+					add(superCuphead);
 					superCircleCuphead = new FlxSprite(dad.x + 2500,dad.y - 125);
 					superCircleCuphead.frames = Paths.getSparrowAtlas('knockout/shootstuff/roundabout');
 					superCircleCuphead.animation.addByPrefix('spinnnnnn','Roundabout instance 1', 24, true);
@@ -1996,22 +1996,6 @@ class PlayState extends MusicBeatState
 				dadBETADCIU.y = dad.y;
 				add(boyfriendBETADCIU);
 				add(dadBETADCIU);
-				add(superCuphead);
-				boyfriend.alpha = 0;
-				dad.alpha = 0;
-				betadciuMoment = true;
-				boyfriendBETADCIU.visible = true;
-				dadBETADCIU.visible = true;
-			case 'knockout':
-				iconDistance = 100;
-				boyfriendBETADCIU.x = boyfriend.x;
-				boyfriendBETADCIU.y = boyfriend.y;
-				//dadAgain.x = dad.x + 100;
-				dadBETADCIU.x = dad.x;
-				dadBETADCIU.y = dad.y;
-				insert(this.members.indexOf(rain1) -1 , boyfriendBETADCIU);
-				insert(this.members.indexOf(boyfriendBETADCIU) -1 , dadBETADCIU);
-				add(superCuphead);
 				boyfriend.alpha = 0;
 				dad.alpha = 0;
 				betadciuMoment = true;
@@ -3792,30 +3776,26 @@ class PlayState extends MusicBeatState
 			{
 				if (!superMove)
 				{
-					if (dadBETADCIU.animation.curAnim.name == 'Hadoken!!' && dadBETADCIU.animation.curAnim.curFrame == 7 && superType == 'normal')
+					if (dad.animation.curAnim.name == 'Hadoken!!' && dad.animation.curAnim.curFrame == 7 && superType == 'normal')
 					{
 						cupheadShoot();
 					}
-					if (dadBETADCIU.animation.curAnim.name == 'Hadoken!!' && dadBETADCIU.animation.curAnim.curFrame == 7 && superType == 'round')
+					if (dad.animation.curAnim.name == 'Hadoken!!' && dad.animation.curAnim.curFrame == 7 && superType == 'round')
 					{
 						cupheadShootCircle();
 					}
 				}
-				if ((dadBETADCIU.animation.curAnim.name == 'Hadoken!!' || dadBETADCIU.animation.curAnim.name == 'hurt') && dadBETADCIU.animation.curAnim.finished)
+				if ((dad.animation.curAnim.name == 'Hadoken!!' || dad.animation.curAnim.name == 'hurt') && dad.animation.curAnim.finished)
 				{
-					dadBETADCIU.specialAnim = false;
-					dadBETADCIU.dance();
 					dad.specialAnim = false;
 					dad.dance();
 				}
-				if (boyfriendBETADCIU.animation.curAnim.name == 'attack' && boyfriendBETADCIU.animation.curAnim.finished)
+				if (boyfriend.animation.curAnim.name == 'attack' && boyfriend.animation.curAnim.finished)
 				{
-					boyfriendBETADCIU.specialAnim = false;
-					boyfriendBETADCIU.dance();
 					boyfriend.specialAnim = false;
 					boyfriend.dance();
 				}
-				if (boyfriendBETADCIU.animation.curAnim.name == 'attack' && boyfriendBETADCIU.animation.curAnim.curFrame == 11)
+				if (boyfriend.animation.curAnim.name == 'attack' && boyfriend.animation.curAnim.curFrame == 11)
 				{
 					if (!hurtSound.playing)
 					{
@@ -3825,8 +3805,6 @@ class PlayState extends MusicBeatState
 					}
 					dad.playAnim('hurt');
 					dad.specialAnim = true;
-					dadBETADCIU.playAnim('hurt');
-					dadBETADCIU.specialAnim = true;
 					cupheadShooting = false;
 				}
 				if (FlxG.keys.justPressed.SPACE)
@@ -3836,13 +3814,13 @@ class PlayState extends MusicBeatState
 				}
 				if (superMove)
 				{
-					bfHitBox.x = boyfriendBETADCIU.x + 100;
-					bfHitBox.y = boyfriendBETADCIU.y + 80;
+					bfHitBox.x = boyfriend.x + 100;
+					bfHitBox.y = boyfriend.y + 80;
 					bfHitBox.makeGraphic(250, 250, FlxColor.RED);
 					bfHitBox.updateHitbox();
 					superCuphead.x += 10 * (120/ClientPrefs.framerate);
 					//superCircleCuphead.x += 10 * (120/ClientPrefs.framerate);
-					superCircleCuphead.y = dadBETADCIU.y - 25 + Math.sin(floatyFloat) * 30;
+					superCircleCuphead.y = dad.y - 25 + Math.sin(floatyFloat) * 30;
 					superHitBox.x = superCuphead.x + 520;
 					superHitBox.y = superCuphead.y + 100;
 					superHitBox.makeGraphic(660, 300, FlxColor.RED);
@@ -3852,11 +3830,12 @@ class PlayState extends MusicBeatState
 					superCircleHitBox.makeGraphic(300, 300, FlxColor.RED);
 					superCircleHitBox.updateHitbox();
 
-					if ((superCuphead.x > FlxG.width * 3 && superType == 'normal') || (superCircleCuphead.x > FlxG.width * 3 && superType == 'round'))
+					if ((superCuphead.x > FlxG.width * 2 + 100 && superType == 'normal') || (superCircleCuphead.x > FlxG.width * 3 && superType == 'round'))
 						superMove = false;
 	
 					if (!bfDodgin)
 					{
+						trace('woAH WOAH WOAH HEY EY HEY HEY');
 						if ((superCircleHitBox.x + superCircleHitBox.width > bfHitBox.x) && !(superCircleHitBox.x > bfHitBox.x + bfHitBox.width))
 							health = -11.8;
 						if ((superHitBox.x + superHitBox.width > bfHitBox.x) && !(superHitBox.x > bfHitBox.x + bfHitBox.width))
@@ -3868,34 +3847,25 @@ class PlayState extends MusicBeatState
 						{
 							boyfriend.specialAnim = true;
 							boyfriend.playAnim('dodge');
-							boyfriendBETADCIU.specialAnim = true;
-							boyfriendBETADCIU.playAnim('dodge');
 						}
 						else if ((superCircleHitBox.x + superCircleHitBox.width > bfHitBox.x) && !(superCircleHitBox.x > bfHitBox.x + bfHitBox.width))
 						{
 							boyfriend.specialAnim = true;
 							boyfriend.playAnim('dodge');
-							boyfriendBETADCIU.specialAnim = true;
-							boyfriendBETADCIU.playAnim('dodge');
 						}
 						else
 						{
 							if (boyfriend.animation.curAnim.name != 'attack')
-							{
 								boyfriend.specialAnim = false;
-								boyfriendBETADCIU.specialAnim = false;
-							}
 						}
 					}
 				}
 				if (warning.animation.curAnim != null && warning.animation.curAnim.finished)
 					warning.visible = false;
-				if (FlxG.keys.justPressed.SHIFT && (superCard.animation.curAnim.name == 'normal' || superCard.animation.curAnim.name == 'parry') && (superCardTween == null || !superCardTween.active))
+				if (FlxG.keys.justPressed.SHIFT && (superCard.animation.curAnim.name == 'normal' || superCard.animation.curAnim.name == 'parry') && superCard.animation.curAnim.finished && (superCardTween == null || !superCardTween.active))
 				{
 					boyfriend.playAnim('attack');
 					boyfriend.specialAnim = true;
-					boyfriendBETADCIU.playAnim('attack');
-					boyfriendBETADCIU.specialAnim = true;
 					
 					if(superCardTween != null) {
 						superCardTween.cancel();
@@ -3998,15 +3968,15 @@ class PlayState extends MusicBeatState
 			}
 			if (FlxG.keys.justPressed.C) {
 				superType = 'normal';
-				dadBETADCIU.playAnim('Hadoken!!');
-				dadBETADCIU.specialAnim = true;
+				dad.playAnim('Hadoken!!');
+				dad.specialAnim = true;
 				cupheadAlert();
 				bfDodgin = false;
 			}
 			if (FlxG.keys.justPressed.B) {
 				superType = 'round';
-				dadBETADCIU.playAnim('Hadoken!!');
-				dadBETADCIU.specialAnim = true;
+				dad.playAnim('Hadoken!!');
+				dad.specialAnim = true;
 				cupheadAlert();
 				bfDodgin = false;
 			}
@@ -4860,16 +4830,14 @@ class PlayState extends MusicBeatState
 	{
 		if (isBlue)
 		{
-			var shot = new Shot(dadBETADCIU.x  + 400, dadBETADCIU.y - 220 + FlxG.random.float(-30, 30));
+			var shot = new Shot(dad.x  + 400, dad.y - 220 + FlxG.random.float(-30, 30));
 			add(shot);
 			dad.playAnim('DIE');
 			dad.specialAnim = true;
-			dadBETADCIU.playAnim('DIE');
-			dadBETADCIU.specialAnim = true;
 		}
 		else
 		{
-			var shot = new ShotGreen(dadBETADCIU.x  + 400, dadBETADCIU.y - 70);
+			var shot = new ShotGreen(dad.x  + 400, dad.y - 70);
 			add(shot);
 		}
 	}
@@ -4929,8 +4897,8 @@ class PlayState extends MusicBeatState
 
 
 		superMove = true;
-		superCuphead.x = dadBETADCIU.x - 500;
-		superCuphead.y = dadBETADCIU.y - 125;
+		superCuphead.x = dad.x - 500;
+		superCuphead.y = dad.y - 125;
 		FlxG.sound.play(Paths.sound('knockout/shootfunni/super'));
 		var dumb = CoolUtil.coolTextFile(Paths.txt('dumb'));
 		superHitBox.alpha = 0;
@@ -4952,7 +4920,7 @@ class PlayState extends MusicBeatState
 
 
 		remove(superCircleCuphead);
-		insert(this.members.indexOf(boyfriendBETADCIU) - 1, superCircleCuphead);
+		insert(this.members.indexOf(boyfriendGroup) - 1, superCircleCuphead);
 
 		FlxTween.tween(superCircleCuphead, {x: boyfriend.x + 600}, 2, {
 			ease: FlxEase.quadOut,
@@ -4961,7 +4929,7 @@ class PlayState extends MusicBeatState
 				remove(superCircleCuphead);
 				insert(this.members.indexOf(boyfriendGroup) + 1, superCircleCuphead);
 
-				FlxTween.tween(superCircleCuphead, {x: -600}, 2.5, {
+				FlxTween.tween(superCircleCuphead, {x: -300}, 2, {
 					ease: FlxEase.quadIn,
 					onComplete: function(twn:FlxTween) {
 						superMove = false;
@@ -4992,8 +4960,8 @@ class PlayState extends MusicBeatState
 
 
 		superMove = true;
-		superCircleCuphead.x = dadBETADCIU.x + 50;
-		superCircleCuphead.y = dadBETADCIU.y - 25;
+		superCircleCuphead.x = dad.x + 50;
+		superCircleCuphead.y = dad.y - 25;
 		FlxG.sound.play(Paths.sound('knockout/shootfunni/super'));
 		var dumb = CoolUtil.coolTextFile(Paths.txt('dumb'));
 		superCircleHitBox.alpha = 0;
@@ -5491,11 +5459,6 @@ class PlayState extends MusicBeatState
 			case 'hide DadAgain':
 				dadAgain.visible = false;
 				iconP2Again.visible = false;
-				dadAgainSinging = false;
-			case 'hide BoyfriendAgain':
-				boyfriendAgain.visible = false;
-				iconP1Again.visible = false;
-				boyfriendAgainSinging = false;
 			case 'boyfriendAgain Singing':
 				if (value1 == 'true')
 					boyfriendAgainSinging = true;
@@ -6266,19 +6229,9 @@ class PlayState extends MusicBeatState
 			switch (betadciuMoment)
 			{
 				case true:
-					if (curStage == 'knockout')
-					{
-						if (!boyfriendBETADCIU.specialAnim)
-							boyfriendBETADCIU.playAnim(animToPlay, true);
-						if (((char != gf && char.curCharacter != boyfriendBETADCIU.curCharacter) || (char == gf)) && !char.specialAnim)
-							char.playAnim(animToPlay, true);
-					}
-					else
-					{
-						boyfriendBETADCIU.playAnim(animToPlay, true);
-						if ((char != gf && char.curCharacter != boyfriendBETADCIU.curCharacter) || (char == gf))
-							char.playAnim(animToPlay, true);
-					}
+					boyfriendBETADCIU.playAnim(animToPlay, true);
+					if ((char != gf && char.curCharacter != boyfriendBETADCIU.curCharacter) || (char == gf))
+						char.playAnim(animToPlay, true);
 
 				default:
 					if (curStage == 'knockout')
@@ -6444,43 +6397,12 @@ class PlayState extends MusicBeatState
 						switch (betadciuMoment)
 						{
 							case true:
-								if (curStage == 'knockout')
+								dadBETADCIU.playAnim(animToPlay.replace('-together', ''), true);
+								dadBETADCIU.holdTimer = 0;
+								if (dadBETADCIU.curCharacter != dad.curCharacter)
 								{
-									if (!char.specialAnim)
-									{
-										if (!dadBETADCIU.specialAnim)
-										if (shotType == 'green' && !note.isSustainNote)
-										{
-											dadBETADCIU.playAnim(animToPlay + '-alt', true);
-											dadBETADCIU.holdTimer = 0;
-											if (dadBETADCIU.curCharacter != dad.curCharacter)
-											{
-												char.playAnim(animToPlay + '-alt', true);
-												char.holdTimer = 0;
-											}
-											cupheadShootAShot(false);
-										}
-										else
-										{
-											dadBETADCIU.playAnim(animToPlay.replace('-together', ''), true);
-											dadBETADCIU.holdTimer = 0;
-											if (dadBETADCIU.curCharacter != dad.curCharacter)
-											{
-												char.playAnim(animToPlay, true);
-												char.holdTimer = 0;
-											}
-										}
-									}
-								}
-								else
-								{
-									dadBETADCIU.playAnim(animToPlay.replace('-together', ''), true);
-									dadBETADCIU.holdTimer = 0;
-									if (dadBETADCIU.curCharacter != dad.curCharacter)
-									{
-										char.playAnim(animToPlay, true);
-										char.holdTimer = 0;
-									}
+									char.playAnim(animToPlay, true);
+									char.holdTimer = 0;
 								}
 
 							default:
@@ -6537,16 +6459,10 @@ class PlayState extends MusicBeatState
 
 	function goodNoteHit(note:Note):Void
 	{
-		if (note.noteType == 'Parry Note')
+		if (note.noteType == 'Parry Note' && !(superCard.animation.curAnim.name == 'normal' || superCard.animation.curAnim.name == 'parry'))
 		{
-			FlxG.sound.play(Paths.sound('knockout/shootfunni/parry'), 1);
-		}
-		if (note.noteType == 'Parry Note' && (!(superCard.animation.curAnim.name == 'normal' || superCard.animation.curAnim.name == 'parry') && !(superCardTween != null && superCardTween.active)))
-		{
-			if(superCardTween != null) {
-				superCardTween.cancel();
-			}
 			superCard.animation.play('parry');
+			FlxG.sound.play(Paths.sound('knockout/shootfunni/parry'), 1);
 			superCardCharge = 147;
 		}
 		if (!note.wasGoodHit)
@@ -6642,43 +6558,21 @@ class PlayState extends MusicBeatState
 					switch (betadciuMoment)
 					{
 						case true:
-							if (curStage == 'knockout')
+							boyfriendBETADCIU.playAnim(animToPlay, true);
+							if (boyfriendAgainSinging)
+								boyfriendAgain.playAnim(animToPlay, true);
+							boyfriendBETADCIU.holdTimer = 0;
+							if (boyfriendBETADCIU.curCharacter != boyfriend.curCharacter)
 							{
-								if (superCardTween == null || !superCardTween.active)
-									superCardCharge += 1;
-								if (!boyfriendBETADCIU.specialAnim)
-								{
-									boyfriendBETADCIU.playAnim(animToPlay, true);
-									boyfriendBETADCIU.holdTimer = 0;
-									boyfriendBETADCIU.playAnim(animToPlay, true);
-									if (boyfriendAgainSinging)
-										boyfriendAgain.playAnim(animToPlay, true);
-									boyfriendBETADCIU.holdTimer = 0;
-									if (boyfriendBETADCIU.curCharacter != boyfriend.curCharacter)
-									{
-										boyfriend.playAnim(animToPlay + daAlt, true);
-										boyfriend.holdTimer = 0;
-									}
-								}
-							}
-							else
-							{
-								boyfriendBETADCIU.playAnim(animToPlay, true);
-								if (boyfriendAgainSinging)
-									boyfriendAgain.playAnim(animToPlay, true);
-								boyfriendBETADCIU.holdTimer = 0;
-								if (boyfriendBETADCIU.curCharacter != boyfriend.curCharacter)
-								{
-									boyfriend.playAnim(animToPlay + daAlt, true);
-									boyfriend.holdTimer = 0;
-								}
+								boyfriend.playAnim(animToPlay + daAlt, true);
+								boyfriend.holdTimer = 0;
 							}
 
 						default:
 							if (curStage == 'knockout')
 							{
 								if (superCardTween == null || !superCardTween.active)
-									superCardCharge += 1;
+									superCardCharge += 2;
 								if (!boyfriend.specialAnim)
 								{
 									boyfriend.playAnim(animToPlay + daAlt, true);
@@ -8224,32 +8118,14 @@ class PlayState extends MusicBeatState
 	}
 	public function betadciuMomentBF():Void
 	{
-		switch (curStage)
-		{
-			case 'knockout':
-				FlxTween.tween(boyfriend, {alpha: 1}, 0.6, {ease: FlxEase.quadInOut});
-				FlxTween.tween(boyfriendGroup, {x: boyfriendGroup.x + 300}, 0.6, {ease: FlxEase.quadInOut});
-				FlxTween.tween(boyfriendBETADCIU, {alpha: 0.6}, 0.6, {ease: FlxEase.quadInOut});
-				boyfriendGroupAgain.x += 300;
-			default:
-				FlxTween.tween(boyfriend, {alpha: 1}, 0.6, {ease: FlxEase.quadInOut});
-				FlxTween.tween(boyfriendBETADCIU, {alpha: 0.6, x: boyfriendBETADCIU.x + 500}, 0.6, {ease: FlxEase.quadInOut});
-		}
+		FlxTween.tween(boyfriend, {alpha: 1}, 0.6, {ease: FlxEase.quadInOut});
+		FlxTween.tween(boyfriendBETADCIU, {alpha: 0.6, x: boyfriendBETADCIU.x + 500}, 0.6, {ease: FlxEase.quadInOut});
 	}
 	public function betadciuMomentDAD():Void
 	{
-		switch (curStage)
-		{
-			case 'knockout':
-				FlxTween.tween(dadBETADCIU, {alpha: 0.6}, 0.6, {ease: FlxEase.quadInOut});
-				FlxTween.tween(dad, {alpha: 1}, 0.6, {ease: FlxEase.quadInOut});
-				FlxTween.tween(dadGroup, {x: dadGroup.x - 500}, 0.6, {ease: FlxEase.quadInOut});
-				dadGroupAgain.x -= 400;
-			default:
-				FlxTween.tween(dad, {alpha: 1}, 0.6, {ease: FlxEase.quadInOut});
-				FlxTween.tween(dadBETADCIU, {alpha: 0.6, x: dadBETADCIU.x - 500}, 0.6, {ease: FlxEase.quadInOut});
-				//dadAgain.y = dad.y + 280;
-		}
+		FlxTween.tween(dad, {alpha: 1}, 0.6, {ease: FlxEase.quadInOut});
+		FlxTween.tween(dadBETADCIU, {alpha: 0.6, x: dadBETADCIU.x - 500}, 0.6, {ease: FlxEase.quadInOut});
+		//dadAgain.y = dad.y + 280;
 	}
 
 	/**

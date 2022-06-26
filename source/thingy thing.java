@@ -498,6 +498,8 @@ class PlayState extends MusicBeatState
 			superCard.animation.addByPrefix('used', 'Card Used instance 1', 24, false);
 			superCard.animation.addByPrefix('flipped', 'Card but flipped instance 1', 24, false);
 			superCard.animation.play('flipped');
+			if (curStage == 'knockout')
+				add(superCard);
 
 		// for lua
 		instance = this;
@@ -579,8 +581,6 @@ class PlayState extends MusicBeatState
 
 		curStage = PlayState.SONG.stage;
 		//trace('stage is: ' + curStage);
-		if (curStage == 'knockout')
-			add(superCard);
 
 
 		songBackSprite = new FlxSprite(0, 400).makeGraphic(0, 125, FlxColor.WHITE);
@@ -1509,6 +1509,7 @@ class PlayState extends MusicBeatState
 					superCuphead.animation.play('Hadolen');
 					superCuphead.blend = ADD;
 					//BigShotYOffset = -50
+					add(superCuphead);
 					superCircleCuphead = new FlxSprite(dad.x + 2500,dad.y - 125);
 					superCircleCuphead.frames = Paths.getSparrowAtlas('knockout/shootstuff/roundabout');
 					superCircleCuphead.animation.addByPrefix('spinnnnnn','Roundabout instance 1', 24, true);
@@ -1987,7 +1988,7 @@ class PlayState extends MusicBeatState
 				iconP2Again.visible = true;
 				iconSongNameAgain.visible = true;
 				iconDistance = 100;
-			case 'garAlley':
+			case 'garAlley' | 'knockout':
 				iconDistance = 100;
 				boyfriendBETADCIU.x = boyfriend.x;
 				boyfriendBETADCIU.y = boyfriend.y;
@@ -1996,22 +1997,6 @@ class PlayState extends MusicBeatState
 				dadBETADCIU.y = dad.y;
 				add(boyfriendBETADCIU);
 				add(dadBETADCIU);
-				add(superCuphead);
-				boyfriend.alpha = 0;
-				dad.alpha = 0;
-				betadciuMoment = true;
-				boyfriendBETADCIU.visible = true;
-				dadBETADCIU.visible = true;
-			case 'knockout':
-				iconDistance = 100;
-				boyfriendBETADCIU.x = boyfriend.x;
-				boyfriendBETADCIU.y = boyfriend.y;
-				//dadAgain.x = dad.x + 100;
-				dadBETADCIU.x = dad.x;
-				dadBETADCIU.y = dad.y;
-				insert(this.members.indexOf(rain1) -1 , boyfriendBETADCIU);
-				insert(this.members.indexOf(boyfriendBETADCIU) -1 , dadBETADCIU);
-				add(superCuphead);
 				boyfriend.alpha = 0;
 				dad.alpha = 0;
 				betadciuMoment = true;
@@ -3842,7 +3827,7 @@ class PlayState extends MusicBeatState
 					bfHitBox.updateHitbox();
 					superCuphead.x += 10 * (120/ClientPrefs.framerate);
 					//superCircleCuphead.x += 10 * (120/ClientPrefs.framerate);
-					superCircleCuphead.y = dadBETADCIU.y - 25 + Math.sin(floatyFloat) * 30;
+					superCircleCuphead.y = dad.y - 25 + Math.sin(floatyFloat) * 30;
 					superHitBox.x = superCuphead.x + 520;
 					superHitBox.y = superCuphead.y + 100;
 					superHitBox.makeGraphic(660, 300, FlxColor.RED);
@@ -3852,11 +3837,12 @@ class PlayState extends MusicBeatState
 					superCircleHitBox.makeGraphic(300, 300, FlxColor.RED);
 					superCircleHitBox.updateHitbox();
 
-					if ((superCuphead.x > FlxG.width * 3 && superType == 'normal') || (superCircleCuphead.x > FlxG.width * 3 && superType == 'round'))
+					if ((superCuphead.x > FlxG.width * 2 + 100 && superType == 'normal') || (superCircleCuphead.x > FlxG.width * 3 && superType == 'round'))
 						superMove = false;
 	
 					if (!bfDodgin)
 					{
+						trace('woAH WOAH WOAH HEY EY HEY HEY');
 						if ((superCircleHitBox.x + superCircleHitBox.width > bfHitBox.x) && !(superCircleHitBox.x > bfHitBox.x + bfHitBox.width))
 							health = -11.8;
 						if ((superHitBox.x + superHitBox.width > bfHitBox.x) && !(superHitBox.x > bfHitBox.x + bfHitBox.width))
@@ -3998,15 +3984,15 @@ class PlayState extends MusicBeatState
 			}
 			if (FlxG.keys.justPressed.C) {
 				superType = 'normal';
-				dadBETADCIU.playAnim('Hadoken!!');
-				dadBETADCIU.specialAnim = true;
+				dad.playAnim('Hadoken!!');
+				dad.specialAnim = true;
 				cupheadAlert();
 				bfDodgin = false;
 			}
 			if (FlxG.keys.justPressed.B) {
 				superType = 'round';
-				dadBETADCIU.playAnim('Hadoken!!');
-				dadBETADCIU.specialAnim = true;
+				dad.playAnim('Hadoken!!');
+				dad.specialAnim = true;
 				cupheadAlert();
 				bfDodgin = false;
 			}
@@ -4952,7 +4938,7 @@ class PlayState extends MusicBeatState
 
 
 		remove(superCircleCuphead);
-		insert(this.members.indexOf(boyfriendBETADCIU) - 1, superCircleCuphead);
+		insert(this.members.indexOf(boyfriendGroup) - 1, superCircleCuphead);
 
 		FlxTween.tween(superCircleCuphead, {x: boyfriend.x + 600}, 2, {
 			ease: FlxEase.quadOut,
@@ -4961,7 +4947,7 @@ class PlayState extends MusicBeatState
 				remove(superCircleCuphead);
 				insert(this.members.indexOf(boyfriendGroup) + 1, superCircleCuphead);
 
-				FlxTween.tween(superCircleCuphead, {x: -600}, 2.5, {
+				FlxTween.tween(superCircleCuphead, {x: -300}, 2, {
 					ease: FlxEase.quadIn,
 					onComplete: function(twn:FlxTween) {
 						superMove = false;
@@ -5491,11 +5477,6 @@ class PlayState extends MusicBeatState
 			case 'hide DadAgain':
 				dadAgain.visible = false;
 				iconP2Again.visible = false;
-				dadAgainSinging = false;
-			case 'hide BoyfriendAgain':
-				boyfriendAgain.visible = false;
-				iconP1Again.visible = false;
-				boyfriendAgainSinging = false;
 			case 'boyfriendAgain Singing':
 				if (value1 == 'true')
 					boyfriendAgainSinging = true;
@@ -6448,7 +6429,7 @@ class PlayState extends MusicBeatState
 								{
 									if (!char.specialAnim)
 									{
-										if (!dadBETADCIU.specialAnim)
+										
 										if (shotType == 'green' && !note.isSustainNote)
 										{
 											dadBETADCIU.playAnim(animToPlay + '-alt', true);
@@ -6537,16 +6518,13 @@ class PlayState extends MusicBeatState
 
 	function goodNoteHit(note:Note):Void
 	{
-		if (note.noteType == 'Parry Note')
-		{
-			FlxG.sound.play(Paths.sound('knockout/shootfunni/parry'), 1);
-		}
-		if (note.noteType == 'Parry Note' && (!(superCard.animation.curAnim.name == 'normal' || superCard.animation.curAnim.name == 'parry') && !(superCardTween != null && superCardTween.active)))
+		if (note.noteType == 'Parry Note' && !(superCard.animation.curAnim.name == 'normal' || superCard.animation.curAnim.name == 'parry'))
 		{
 			if(superCardTween != null) {
 				superCardTween.cancel();
 			}
 			superCard.animation.play('parry');
+			FlxG.sound.play(Paths.sound('knockout/shootfunni/parry'), 1);
 			superCardCharge = 147;
 		}
 		if (!note.wasGoodHit)
@@ -8227,10 +8205,8 @@ class PlayState extends MusicBeatState
 		switch (curStage)
 		{
 			case 'knockout':
-				FlxTween.tween(boyfriend, {alpha: 1}, 0.6, {ease: FlxEase.quadInOut});
-				FlxTween.tween(boyfriendGroup, {x: boyfriendGroup.x + 300}, 0.6, {ease: FlxEase.quadInOut});
+				FlxTween.tween(boyfriend, {alpha: 1, x: boyfriend.x + 400}, 0.6, {ease: FlxEase.quadInOut});
 				FlxTween.tween(boyfriendBETADCIU, {alpha: 0.6}, 0.6, {ease: FlxEase.quadInOut});
-				boyfriendGroupAgain.x += 300;
 			default:
 				FlxTween.tween(boyfriend, {alpha: 1}, 0.6, {ease: FlxEase.quadInOut});
 				FlxTween.tween(boyfriendBETADCIU, {alpha: 0.6, x: boyfriendBETADCIU.x + 500}, 0.6, {ease: FlxEase.quadInOut});
@@ -8242,9 +8218,7 @@ class PlayState extends MusicBeatState
 		{
 			case 'knockout':
 				FlxTween.tween(dadBETADCIU, {alpha: 0.6}, 0.6, {ease: FlxEase.quadInOut});
-				FlxTween.tween(dad, {alpha: 1}, 0.6, {ease: FlxEase.quadInOut});
-				FlxTween.tween(dadGroup, {x: dadGroup.x - 500}, 0.6, {ease: FlxEase.quadInOut});
-				dadGroupAgain.x -= 400;
+				FlxTween.tween(dad, {alpha: 1, x: dad.x - 500}, 0.6, {ease: FlxEase.quadInOut});
 			default:
 				FlxTween.tween(dad, {alpha: 1}, 0.6, {ease: FlxEase.quadInOut});
 				FlxTween.tween(dadBETADCIU, {alpha: 0.6, x: dadBETADCIU.x - 500}, 0.6, {ease: FlxEase.quadInOut});

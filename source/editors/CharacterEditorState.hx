@@ -47,6 +47,7 @@ class CharacterEditorState extends MusicBeatState
 {
 	var char:Character;
 	var ghostChar:Character;
+	var ghostboyfriend:Boyfriend;
 	var textAnim:FlxText;
 	var bgLayer:FlxTypedGroup<FlxSprite>;
 	var charLayer:FlxTypedGroup<Character>;
@@ -137,6 +138,10 @@ class CharacterEditorState extends MusicBeatState
 		add(textAnim);
 
 		genBoyOffsets();
+		ghostboyfriend = new Boyfriend(char.x, char.y, 'bf');
+		//add(ghostboyfriend);
+		ghostboyfriend.dance();
+		ghostboyfriend.alpha = 0.5;
 
 		camFollow = new FlxObject(0, 0, 2, 2);
 		camFollow.screenCenter();
@@ -412,11 +417,11 @@ class CharacterEditorState extends MusicBeatState
 		}';
 
 	var charDropDown:FlxUIDropDownMenuCustom;
+	var check_player = new FlxUICheckBox(10, 60, null, null, "Playable Character", 100);
 	function addSettingsUI() {
 		var tab_group = new FlxUI(null, UI_box);
 		tab_group.name = "Settings";
 
-		var check_player = new FlxUICheckBox(10, 60, null, null, "Playable Character", 100);
 		check_player.checked = daAnim.startsWith('bf');
 		check_player.callback = function()
 		{
@@ -1290,7 +1295,8 @@ class CharacterEditorState extends MusicBeatState
 		
 			"flip_x": char.originalFlipX,
 			"no_antialiasing": char.noAntialiasing,
-			"healthbar_colors": char.healthColorArray
+			"healthbar_colors": char.healthColorArray,
+			"playable": check_player.checked
 		};
 
 		var data:String = Json.stringify(json, "\t");
