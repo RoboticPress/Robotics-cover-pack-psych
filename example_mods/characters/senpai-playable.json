@@ -1,0 +1,90 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-36,
+				30
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Up pose",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-9,
+				-7
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Right pose",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-66,
+				10
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Left pose",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-46,
+				-34
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Down pose ",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-47,
+				3
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "Cheer",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/headache/senpai_2VPLUS",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "headache/icon-2V-senpai",
+	"flip_x": false,
+	"healthbar_colors": [
+		254,
+		169,
+		111
+	],
+	"playable": false,
+	"camera_position": [
+		-230,
+		-80
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

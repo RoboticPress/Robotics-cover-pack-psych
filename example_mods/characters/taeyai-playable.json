@@ -1,0 +1,79 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "TaeYai Idle"
+		},
+		{
+			"offsets": [
+				-47,
+				-9
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "TaeYai left"
+		},
+		{
+			"offsets": [
+				-8,
+				35
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "TaeYai up"
+		},
+		{
+			"offsets": [
+				80,
+				-30
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "SingLeft",
+			"loop": false,
+			"name": "TaeYai right"
+		},
+		{
+			"offsets": [
+				50,
+				-100
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "TaeYai Down"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/knockout/taeyai",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "knockout/taeyai",
+	"flip_x": false,
+	"healthbar_colors": [
+		102,
+		102,
+		102
+	],
+	"playable": true,
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

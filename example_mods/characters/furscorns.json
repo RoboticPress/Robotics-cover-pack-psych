@@ -1,0 +1,79 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				-142
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "furscorns idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				130,
+				-173
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "furscorns left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-150,
+				-140
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "furscorns right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-70,
+				-150
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "furscorns down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				14,
+				-89
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "furscorns up",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/knockout/furscorns",
+	"position": [
+		20,
+		90
+	],
+	"healthicon": "knockout/icon-furscorns",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		90,
+		255
+	],
+	"playable": false,
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1.3
+}

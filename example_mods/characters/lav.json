@@ -1,0 +1,79 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-4
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "LavR Legs instance 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-15,
+				-2
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Lav Left instance 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				12,
+				-23
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Lav Right instance 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-30,
+				-51
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "LavDown instance 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-51,
+				-20
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "LavUp instance 1",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/headache/LavPhase1",
+	"position": [
+		30,
+		140
+	],
+	"healthicon": "headache/lav",
+	"flip_x": true,
+	"healthbar_colors": [
+		242,
+		168,
+		248
+	],
+	"playable": false,
+	"camera_position": [
+		-170,
+		40
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

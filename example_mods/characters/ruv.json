@@ -1,0 +1,79 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				40,
+				-60
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "RuvLeft"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "RuvIdle"
+		},
+		{
+			"offsets": [
+				50,
+				10
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "RuvDown"
+		},
+		{
+			"offsets": [
+				61,
+				4
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "RuvUp"
+		},
+		{
+			"offsets": [
+				30,
+				4
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "RuvRight"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/headache/ruv_sheet",
+	"position": [
+		70,
+		-75
+	],
+	"healthicon": "headache/ruv",
+	"flip_x": false,
+	"healthbar_colors": [
+		151,
+		138,
+		166
+	],
+	"playable": false,
+	"camera_position": [
+		-70,
+		-50
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

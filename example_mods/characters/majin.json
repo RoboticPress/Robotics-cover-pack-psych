@@ -1,0 +1,79 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "SONICFUNIDLE instance 1"
+		},
+		{
+			"offsets": [
+				323,
+				-123
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "SONICFUNLEFT instance 1"
+		},
+		{
+			"offsets": [
+				82,
+				15
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "SONICFUNUP instance 1"
+		},
+		{
+			"offsets": [
+				-70,
+				-50
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "SONICFUNRIGHT instance 1"
+		},
+		{
+			"offsets": [
+				90,
+				-140
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "SONICFUNDOWN instance 1"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/knockout/SonicFunAssetsNEW",
+	"position": [
+		0,
+		60
+	],
+	"healthicon": "knockout/majin",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		0,
+		215
+	],
+	"playable": false,
+	"camera_position": [
+		0,
+		50
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

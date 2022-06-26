@@ -1,0 +1,79 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				226,
+				588
+			],
+			"loop": false,
+			"anim": "idle",
+			"fps": 24,
+			"name": "Idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				402,
+				586
+			],
+			"loop": false,
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Left",
+			"indices": []
+		},
+		{
+			"offsets": [
+				288,
+				573
+			],
+			"loop": false,
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				262,
+				661
+			],
+			"loop": false,
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Up",
+			"indices": []
+		},
+		{
+			"offsets": [
+				274,
+				438
+			],
+			"loop": false,
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Down",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/knockout/ChampionKnightEX",
+	"position": [
+		360,
+		660
+	],
+	"healthicon": "knockout/icon-ChampionKnightEX",
+	"flip_x": false,
+	"healthbar_colors": [
+		102,
+		54,
+		88
+	],
+	"playable": false,
+	"camera_position": [
+		-210,
+		-490
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

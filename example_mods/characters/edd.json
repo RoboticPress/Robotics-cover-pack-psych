@@ -1,0 +1,143 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "EddIdle"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle-loop",
+			"indices": [
+				8,
+				9,
+				10,
+				11
+			],
+			"name": "EddIdle"
+		},
+		{
+			"offsets": [
+				20,
+				4
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "EddLeft"
+		},
+		{
+			"offsets": [
+				20,
+				4
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singLEFT-loop",
+			"indices": [
+				3,
+				4,
+				5,
+				6
+			],
+			"name": "EddLeft"
+		},
+		{
+			"offsets": [
+				-11,
+				-66
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "EddDown"
+		},
+		{
+			"offsets": [
+				-11,
+				-66
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singDOWN-loop",
+			"indices": [
+				3,
+				4,
+				5,
+				6
+			],
+			"name": "EddDown"
+		},
+		{
+			"offsets": [
+				-5,
+				31
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "EddUp"
+		},
+		{
+			"offsets": [
+				-11,
+				10
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "EddRight"
+		},
+		{
+			"offsets": [
+				-11,
+				10
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singRIGHT-loop",
+			"indices": [
+				3,
+				4,
+				5,
+				6
+			],
+			"name": "EddRight"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/knockout/Edd",
+	"position": [
+		-50,
+		0
+	],
+	"healthicon": "knockout/icon-edd",
+	"flip_x": false,
+	"healthbar_colors": [
+		51,
+		173,
+		51
+	],
+	"playable": false,
+	"camera_position": [
+		100,
+		50
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

@@ -1,0 +1,79 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "rebecca idle dance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				1
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "rebecca Sing Note LEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				32
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "rebecca Sing Note UP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-5
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "rebecca Sing Note RIGHT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "rebecca Sing Note DOWN",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/headache/rebecca_asset4",
+	"position": [
+		0,
+		50
+	],
+	"healthicon": "headache/rebecca",
+	"flip_x": false,
+	"healthbar_colors": [
+		113,
+		130,
+		140
+	],
+	"playable": false,
+	"camera_position": [
+		-40,
+		30
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}
