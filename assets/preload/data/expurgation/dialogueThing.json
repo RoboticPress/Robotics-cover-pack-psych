@@ -1,159 +1,374 @@
 {
 	"dialogues": [
 		{
+			"characterName": "bf",
+			"line": "Beeo bop ba?",
 			"events": [
 				{
-					"index": 0,
 					"value1": "bf",
 					"value2": "true",
 					"value3": "value3",
-					"event": "Set if Character singing"
+					"event": "Set if Character singing",
+					"index": 0
 				},
 				{
-					"index": 0,
 					"value1": "bf",
 					"value2": "true",
 					"value3": "value3",
-					"event": "Camera Follow"
+					"event": "Camera Follow",
+					"index": 0
 				}
-			],
-			"characterName": "bf",
-			"line": "Beeo bop ba?"
+			]
 		},
 		{
+			"characterName": "robo",
+			"line": "Hello there Boyfriend FNF!",
 			"events": [
 				{
-					"index": 0,
 					"value1": "gf",
 					"value2": "value2",
 					"value3": "value3",
-					"event": "Camera Follow"
+					"event": "Camera Follow",
+					"index": 0
 				},
 				{
-					"index": 0,
 					"value1": "gf",
 					"value2": "true",
 					"value3": "value3",
-					"event": "Set if Character singing"
+					"event": "Set if Character singing",
+					"index": 0
 				},
 				{
-					"index": 0,
 					"value1": "bf",
 					"value2": "false",
 					"value3": "value3",
-					"event": "Set if Character singing"
+					"event": "Set if Character singing",
+					"index": 0
 				}
-			],
-			"characterName": "robo",
-			"line": "Hello there Boyfriend FNF!"
+			]
 		},
 		{
-			"events": [
-				{
-					"index": 0,
-					"value1": "bf",
-					"value2": "true",
-					"value3": "value3",
-					"event": "Set if Character singing"
-				},
-				{
-					"index": 0,
-					"value1": "gf",
-					"value2": "false",
-					"value3": "value3",
-					"event": "Set if Character singing"
-				},
-				{
-					"index": 0,
-					"value1": "bf",
-					"value2": "",
-					"value3": "value3",
-					"event": "Camera Follow"
-				}
-			],
 			"characterName": "bf",
-			"line": "Bap?"
-		},
-		{
+			"line": "Bap?",
 			"events": [
 				{
-					"index": 0,
+					"value1": "bf",
+					"value2": "true",
+					"value3": "value3",
+					"event": "Set if Character singing",
+					"index": 0
+				},
+				{
+					"value1": "gf",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing",
+					"index": 0
+				},
+				{
+					"value1": "bf",
+					"value2": "",
+					"value3": "value3",
+					"event": "Camera Follow",
+					"index": 0
+				}
+			]
+		},
+		{
+			"characterName": "extiky",
+			"line": "WHERE AM I",
+			"events": [
+				{
 					"value1": "dad",
 					"value2": "",
 					"value3": "value3",
-					"event": "Camera Follow"
+					"event": "Camera Follow",
+					"index": 0
 				},
 				{
-					"index": 0,
 					"value1": "dad",
 					"value2": "true",
 					"value3": "value3",
-					"event": "Set if Character singing"
+					"event": "Set if Character singing",
+					"index": 0
 				},
 				{
-					"index": 0,
 					"value1": "bf",
 					"value2": "false",
 					"value3": "value3",
-					"event": "Set if Character singing"
+					"event": "Set if Character singing",
+					"index": 0
 				}
-			],
-			"characterName": "extiky",
-			"line": "WHERE AM I"
+			]
 		},
 		{
+			"characterName": "robo",
+			"line": "Hwell Tricky from Madness Combat Episode Eleven,\nYou're in a cover where you sing alongside Hat Kid!",
 			"events": [
 				{
-					"index": 0,
 					"value1": "dad",
 					"value2": "false",
 					"value3": "value3",
-					"event": "Set if Character singing"
+					"event": "Set if Character singing",
+					"index": 0
 				},
 				{
-					"index": 0,
 					"value1": "gf",
 					"value2": "true",
 					"value3": "value3",
-					"event": "Set if Character singing"
+					"event": "Set if Character singing",
+					"index": 0
 				},
 				{
-					"index": 0,
 					"value1": "gf",
 					"value2": "true",
 					"value3": "value3",
-					"event": "Camera Follow"
+					"event": "Camera Follow",
+					"index": 0
+				},
+				{
+					"value1": "gf",
+					"value2": "singDOWN",
+					"value3": "value3",
+					"event": "Change Character Animation",
+					"index": 0
 				}
-			],
-			"characterName": "robo",
-			"line": "Hwell Tricky from Madness Combat Episode Eleven,\nYou're in a cover where you sing alongside Hat Kid!"
+			]
 		},
 		{
+			"characterName": "hat kid tiky",
+			"line": "Peck",
 			"events": [
 				{
-					"index": 0,
-					"value1": "dadAgain",
+					"value1": "dadagain",
 					"value2": "true",
 					"value3": "value3",
-					"event": "Set if Character singing"
+					"event": "Set if Character singing",
+					"index": 0
 				},
 				{
-					"index": 0,
 					"value1": "gf",
 					"value2": "false",
 					"value3": "value3",
-					"event": "Set if Character singing"
+					"event": "Set if Character singing",
+					"index": 0
 				},
 				{
-					"index": 0,
 					"value1": "5",
 					"value2": "5",
 					"value3": "value3",
-					"event": "Wave On"
+					"event": "Wave On",
+					"index": 0
+				},
+				{
+					"value1": "dadagain",
+					"value2": "true",
+					"index": 0,
+					"value3": "value3",
+					"event": "Camera Follow"
+				}
+			]
+		},
+		{
+			"line": "bap bop?",
+			"characterName": "bf",
+			"events": [
+				{
+					"value1": "bf",
+					"value2": "value2",
+					"event": "Camera Follow",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "dadagain",
+					"value2": "false",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "bf",
+					"value2": "true",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "bf",
+					"value2": "singUP",
+					"event": "Change Character Animation",
+					"index": 0,
+					"value3": "value3"
+				}
+			]
+		},
+		{
+			"line": "Oh that? That's Rose.",
+			"characterName": "robo",
+			"events": [
+				{
+					"value1": "gf",
+					"value2": "singUP",
+					"event": "Camera Follow",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "gf",
+					"value2": "singUP",
+					"event": "Change Character Animation",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "gf",
+					"value2": "true",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "bf",
+					"value2": "false",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "5",
+					"value2": "5",
+					"event": "Wave On",
+					"index": 16,
+					"value3": "value3"
+				}
+			]
+		},
+		{
+			"line": "They are a representative for TheEightySixthPlayer.\nHe helped Robotic by fixing the voice file\nfor this to not be offkey",
+			"characterName": "robo",
+			"events": [
+				{
+					"value1": "gf",
+					"value2": "singLEFT",
+					"event": "Change Character Animation",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "5",
+					"value2": "0.1",
+					"event": "Wave On",
+					"index": 30,
+					"value3": "value3"
+				},
+				{
+					"value1": "5",
+					"value2": "0.1",
+					"event": "Wave Off",
+					"index": 51,
+					"value3": "value3"
+				}
+			]
+		},
+		{
+			"line": "If I would say anything about Rose, it's that they hello there\nperson checking the dialogue json, I would love to say that\nI am not allowed to talk about Rose or EightySix, sorry...",
+			"characterName": "robo",
+			"events": [
+				{
+					"value1": "hell",
+					"value2": "true",
+					"value3": "value3",
+					"event": "Change Font",
+					"index": 51
+				}
+			]
+		},
+		{
+			"line": ":o",
+			"characterName": "bf",
+			"events": [
+				{
+					"value1": "bf",
+					"value2": "singLEFT",
+					"event": "Change Character Animation",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "bf",
+					"value2": "singLEFT",
+					"event": "Camera Follow",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "bf",
+					"value2": "true",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "gf",
+					"value2": "false",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				}
+			]
+		},
+		{
+			"line": "Yep.",
+			"characterName": "robo",
+			"events": [
+				{
+					"value1": "gf",
+					"value2": "singLEFT",
+					"event": "Camera Follow",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "gf",
+					"value2": "true",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "bf",
+					"value2": "false",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "gf",
+					"value2": "singRIGHT",
+					"event": "Change Character Animation",
+					"index": 0,
+					"value3": "value3"
+				}
+			]
+		},
+		{
+			"line": "NOW START THE COVER!",
+			"characterName": "robo",
+			"events": []
+		},
+		{
+			"events": [
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
 				}
 			],
-			"characterName": "hat kid tiky",
-			"line": "Peck"
+			"characterName": "robotic",
+			"line": "oh by the way, I am only remastering the visual elements here\nI will not be remastering the vocals even in a million years\nunless some miracle happens"
 		}
 	]
 }
