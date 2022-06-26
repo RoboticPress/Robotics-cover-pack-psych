@@ -123,8 +123,8 @@
 	"no_antialiasing": true,
 	"image": "characters/knockout/Edd",
 	"position": [
-		-50,
-		0
+		0,
+		50
 	],
 	"healthicon": "knockout/icon-edd",
 	"flip_x": false,

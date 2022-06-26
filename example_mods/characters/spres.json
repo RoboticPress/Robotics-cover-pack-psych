@@ -121,12 +121,12 @@
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/Spres",
+	"image": "characters/knockout/Spres",
 	"position": [
 		80,
 		170
 	],
-	"healthicon": "spres",
+	"healthicon": "knockout/icon-spres",
 	"flip_x": false,
 	"healthbar_colors": [
 		175,
