@@ -13,6 +13,17 @@
 		},
 		{
 			"offsets": [
+				-9,
+				10
+			],
+			"loop": false,
+			"anim": "hurt",
+			"fps": 24,
+			"name": "Dad Hurt",
+			"indices": []
+		},
+		{
+			"offsets": [
 				0,
 				-30
 			],

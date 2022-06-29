@@ -10,6 +10,31 @@
 	<SubTexture name="Dad Sing Note DOWN0005" x="1839" y="0" width="462" height="735" frameX="-4" frameY="0" frameWidth="470" frameHeight="735"/>
 	<SubTexture name="Dad Sing Note DOWN0006" x="1839" y="0" width="462" height="735" frameX="-4" frameY="0" frameWidth="470" frameHeight="735"/>
 	<SubTexture name="Dad Sing Note LEFT0000" x="843" y="793" width="370" height="777"/>
+	<SubTexture name="Dad Hurt0000" x="2205" y="810" width="370" height="777"/>
+	<SubTexture name="Dad Hurt0001" x="2205" y="810" width="370" height="777"/>
+	<SubTexture name="Dad Hurt0002" x="2205" y="810" width="370" height="777"/>
+	<SubTexture name="Dad Hurt0003" x="2205" y="810" width="370" height="777"/>
+	<SubTexture name="Dad Hurt0004" x="2205" y="810" width="370" height="777"/>
+	<SubTexture name="Dad Hurt0001" x="2205" y="810" width="370" height="777"/>
+	<SubTexture name="Dad Hurt0002" x="2205" y="810" width="370" height="777"/>
+	<SubTexture name="Dad Hurt0003" x="2205" y="810" width="370" height="777"/>
+	<SubTexture name="Dad Hurt0004" x="2205" y="810" width="370" height="777"/>
+	<SubTexture name="Dad Hurt0005" x="2205" y="810" width="370" height="777"/>
+	<SubTexture name="Dad Hurt0006" x="2205" y="810" width="370" height="777"/>
+	<SubTexture name="Dad Hurt0007" x="2205" y="810" width="370" height="777"/>
+	<SubTexture name="Dad Hurt0008" x="2205" y="810" width="370" height="777"/>
+	<SubTexture name="Dad Hurt0009" x="2205" y="810" width="370" height="777"/>
+	<SubTexture name="Dad Hurt0010" x="2205" y="810" width="370" height="777"/>
+	<SubTexture name="Dad Hurt0012" x="2205" y="810" width="370" height="777"/>
+	<SubTexture name="Dad Hurt0013" x="2205" y="810" width="370" height="777"/>
+	<SubTexture name="Dad Hurt0014" x="2205" y="810" width="370" height="777"/>
+	<SubTexture name="Dad Hurt0015" x="2205" y="810" width="370" height="777"/>
+	<SubTexture name="Dad Hurt0016" x="2205" y="810" width="370" height="777"/>
+	<SubTexture name="Dad Hurt0017" x="2205" y="810" width="370" height="777"/>
+	<SubTexture name="Dad Hurt0018" x="2205" y="810" width="370" height="777"/>
+	<SubTexture name="Dad Hurt0019" x="2205" y="810" width="370" height="777"/>
+	<SubTexture name="Dad Hurt0020" x="2205" y="810" width="370" height="777"/>
+	<SubTexture name="Dad Hurt0021" x="2205" y="810" width="370" height="777"/>
 	<SubTexture name="Dad Sing Note RIGHT0000" x="0" y="0" width="465" height="792" frameX="0" frameY="-1" frameWidth="465" frameHeight="793"/>
 	<SubTexture name="Dad Sing Note RIGHT0001" x="0" y="0" width="465" height="792" frameX="0" frameY="-1" frameWidth="465" frameHeight="793"/>
 	<SubTexture name="Dad Sing Note RIGHT0002" x="465" y="0" width="452" height="793" frameX="0" frameY="0" frameWidth="465" frameHeight="793"/>
