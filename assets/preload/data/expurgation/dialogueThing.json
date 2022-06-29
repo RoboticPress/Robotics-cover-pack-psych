@@ -140,7 +140,7 @@
 			"line": "Peck",
 			"events": [
 				{
-					"value1": "dadagain",
+					"value1": "dadagain1",
 					"value2": "true",
 					"value3": "value3",
 					"event": "Set if Character singing",
@@ -161,7 +161,7 @@
 					"index": 0
 				},
 				{
-					"value1": "dadagain",
+					"value1": "dadagain1",
 					"value2": "true",
 					"index": 0,
 					"value3": "value3",
@@ -181,7 +181,7 @@
 					"value3": "value3"
 				},
 				{
-					"value1": "dadagain",
+					"value1": "dadagain1",
 					"value2": "false",
 					"event": "Set if Character singing",
 					"index": 0,

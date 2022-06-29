@@ -1,0 +1,134 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Hank Idle"
+		},
+		{
+			"offsets": [
+				-4,
+				13
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Hank Left Note"
+		},
+		{
+			"offsets": [
+				110,
+				10
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Hank right note"
+		},
+		{
+			"offsets": [
+				30,
+				10
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": true,
+			"name": "Hank Down Note"
+		},
+		{
+			"offsets": [
+				-10,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": true,
+			"name": "Hank Up note"
+		},
+		{
+			"offsets": [
+				510,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP-alt",
+			"loop": true,
+			"name": "Hank Up shoot"
+		},
+		{
+			"offsets": [
+				357,
+				13
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"loop": false,
+			"name": "Hank Left Shoot"
+		},
+		{
+			"offsets": [
+				562,
+				10
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"loop": false,
+			"name": "Hank right shoot"
+		},
+		{
+			"offsets": [
+				540,
+				10
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN-alt",
+			"loop": true,
+			"name": "Hank Down Shoot"
+		},
+		{
+			"offsets": [
+				300,
+				10
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "screamright",
+			"loop": false,
+			"name": "Hank screamright"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/knockout/hank",
+	"position": [
+		0,
+		150
+	],
+	"healthicon": "knockout/hank",
+	"flip_x": false,
+	"healthbar_colors": [
+		70,
+		29,
+		84
+	],
+	"playable": false,
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

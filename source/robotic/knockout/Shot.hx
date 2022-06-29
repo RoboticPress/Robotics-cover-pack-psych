@@ -29,7 +29,7 @@ class Shot extends FlxSprite
 	{
 		super.update(elapsed);
 		if (animation.curAnim.curFrame == 6 && animation.curAnim.name == 'shot')
-			PlayState.instance.health -= 0.01;
+			PlayState.instance.health -= 0.03;
 		if (animation.curAnim.finished && animation.curAnim.name == 'shot')
 		{
 			PlayState.instance.remove(this);

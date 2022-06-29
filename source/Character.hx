@@ -34,6 +34,7 @@ typedef CharacterFile = {
 	var no_antialiasing:Bool;
 	var healthbar_colors:Array<Int>;
 	var playable:Bool;
+	var flying:Bool;
 }
 
 typedef AnimArray = {
@@ -76,6 +77,7 @@ class Character extends FlxSprite
 	public var imageFile:String = '';
 	public var jsonScale:Float = 1;
 	public var playable:Bool = false;
+	public var flying:Bool = false;
 	public var noAntialiasing:Bool = false;
 	public var originalFlipX:Bool = false;
 	public var healthColorArray:Array<Int> = [255, 0, 0];
@@ -170,6 +172,7 @@ class Character extends FlxSprite
 				}
 				imageFile = json.image;
 				playable = json.playable || false;
+				flying = json.flying || false;
 
 				if(json.scale != 1) {
 					jsonScale = json.scale;

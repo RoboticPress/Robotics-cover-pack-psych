@@ -6,7 +6,7 @@
 				10
 			],
 			"loop": false,
-			"anim": "singLEFT",
+			"anim": "singRIGHT",
 			"fps": 24,
 			"name": "Dad Sing Note LEFT",
 			"indices": []
@@ -39,7 +39,7 @@
 				7
 			],
 			"loop": false,
-			"anim": "singRIGHT",
+			"anim": "singLEFT",
 			"fps": 24,
 			"name": "Dad Sing Note RIGHT",
 			"indices": []
@@ -78,7 +78,7 @@
 			],
 			"loop": true,
 			"fps": 24,
-			"anim": "singLEFT-loop",
+			"anim": "singRIGHT-loop",
 			"indices": [
 				12,
 				13,
@@ -94,7 +94,7 @@
 			],
 			"loop": true,
 			"fps": 24,
-			"anim": "singRIGHT-loop",
+			"anim": "singLEFT-loop",
 			"indices": [
 				15,
 				16,

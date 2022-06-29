@@ -124,7 +124,7 @@
 	"image": "characters/knockout/Edd",
 	"position": [
 		0,
-		50
+		80
 	],
 	"healthicon": "knockout/icon-edd",
 	"flip_x": false,

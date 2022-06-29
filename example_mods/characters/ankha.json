@@ -1,58 +1,57 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "ankha left",
-			"indices": []
+			"indices": [],
+			"name": "ankha left"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "ankha down",
-			"indices": []
+			"indices": [],
+			"name": "ankha down"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
+			"fps": 24,
 			"anim": "singUP",
-			"fps": 24,
-			"name": "ankha up",
-			"indices": []
+			"indices": [],
+			"name": "ankha up"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
+			"fps": 24,
 			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "ankha right",
-			"indices": []
+			"indices": [],
+			"name": "ankha right"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"anim": "danceRight",
 			"fps": 24,
-			"name": "ankha idle",
+			"anim": "danceRight",
 			"indices": [
 				10,
 				11,
@@ -64,17 +63,17 @@
 				17,
 				18,
 				19
-			]
+			],
+			"name": "ankha idle"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"anim": "danceLeft",
 			"fps": 24,
-			"name": "ankha idle",
+			"anim": "danceLeft",
 			"indices": [
 				0,
 				1,
@@ -86,7 +85,30 @@
 				7,
 				8,
 				9
-			]
+			],
+			"name": "ankha idle"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "hurt",
+			"loop": false,
+			"name": "ankha hurt"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "DIE",
+			"loop": false,
+			"name": "ankha blue"
 		}
 	],
 	"no_antialiasing": false,

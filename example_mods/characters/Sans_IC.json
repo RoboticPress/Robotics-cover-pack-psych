@@ -259,7 +259,7 @@
 	"image": "characters/knockout/Sans_Brrrr",
 	"position": [
 		0,
-		200
+		230
 	],
 	"healthicon": "knockout/icon-sans",
 	"flip_x": false,

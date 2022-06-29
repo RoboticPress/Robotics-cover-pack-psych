@@ -1,103 +1,114 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "bb idle",
-			"indices": []
+			"indices": [],
+			"name": "bb idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "bb left",
-			"indices": []
+			"indices": [],
+			"name": "bb left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "bb right",
-			"indices": []
+			"indices": [],
+			"name": "bb right"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": true,
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "bb down",
-			"indices": []
+			"indices": [],
+			"name": "bb down"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": true,
+			"fps": 24,
 			"anim": "singUP",
-			"fps": 24,
-			"name": "bb up",
-			"indices": []
+			"indices": [],
+			"name": "bb up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singLEFTmiss",
-			"fps": 24,
-			"name": "bb left",
-			"indices": []
+			"indices": [],
+			"name": "bb left"
 		},
 		{
+			"offsets": [
+				0,
+				0
+			],
 			"loop": false,
-			"offsets": [
-				0,
-				0
-			],
+			"fps": 24,
 			"anim": "singRIGHTmiss",
-			"fps": 24,
-			"name": "bb right",
-			"indices": []
+			"indices": [],
+			"name": "bb right"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": true,
+			"fps": 24,
 			"anim": "singDOWNmiss",
-			"fps": 24,
-			"name": "bb down",
-			"indices": []
+			"indices": [],
+			"name": "bb down"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "singUPmiss",
+			"loop": true,
 			"fps": 24,
-			"name": "bb up",
-			"indices": []
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "bb up"
+		},
+		{
+			"offsets": [
+				1301,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "attack",
+			"loop": false,
+			"name": "bb attack"
 		}
 	],
 	"no_antialiasing": false,

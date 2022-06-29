@@ -1,0 +1,90 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "SelIdle"
+		},
+		{
+			"offsets": [
+				-14,
+				3
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "SelDown"
+		},
+		{
+			"offsets": [
+				-48,
+				6
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "SelLeft"
+		},
+		{
+			"offsets": [
+				65,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "SelUp"
+		},
+		{
+			"offsets": [
+				-25,
+				3
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "SelRight"
+		},
+		{
+			"offsets": [
+				-80,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "hey",
+			"loop": false,
+			"name": "SelHey"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/knockout/fuckboi_sheet",
+	"position": [
+		-160,
+		-50
+	],
+	"healthicon": "knockout/selever",
+	"flip_x": false,
+	"healthbar_colors": [
+		151,
+		38,
+		81
+	],
+	"playable": false,
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

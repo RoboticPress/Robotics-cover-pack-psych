@@ -40,7 +40,7 @@
 			],
 			"indices": [],
 			"fps": 24,
-			"anim": "SingLEFT",
+			"anim": "singLEFT",
 			"loop": false,
 			"name": "TaeYai right"
 		},

@@ -209,11 +209,11 @@ class TextBox extends FlxSpriteGroup
 								PlayState.instance.camFollow.x += PlayState.instance.gf.cameraPosition[0] + PlayState.instance.girlfriendCameraOffset[0];
 								PlayState.instance.camFollow.y += PlayState.instance.gf.cameraPosition[1] + PlayState.instance.girlfriendCameraOffset[1];
 							}
-							else if (event.value1.toLowerCase() == 'dadagain')
+							else if (event.value1.toLowerCase() == 'dadagain1')
 							{
-								PlayState.instance.camFollow.set(PlayState.instance.dadAgain.getMidpoint().x + 150, PlayState.instance.dadAgain.getMidpoint().y - 100);
-								PlayState.instance.camFollow.x += PlayState.instance.dadAgain.cameraPosition[0] + PlayState.instance.opponentAgainCameraOffset[0];
-								PlayState.instance.camFollow.y += PlayState.instance.dadAgain.cameraPosition[1] + PlayState.instance.opponentAgainCameraOffset[1];
+								PlayState.instance.camFollow.set(PlayState.instance.dadAgain1.getMidpoint().x + 150, PlayState.instance.dadAgain1.getMidpoint().y - 100);
+								PlayState.instance.camFollow.x += PlayState.instance.dadAgain1.cameraPosition[0] + PlayState.instance.opponentAgainCameraOffset[0];
+								PlayState.instance.camFollow.y += PlayState.instance.dadAgain1.cameraPosition[1] + PlayState.instance.opponentAgainCameraOffset[1];
 							}
 						case 'Box Color':
 							changeBoxColor(event.value1);
@@ -244,7 +244,7 @@ class TextBox extends FlxSpriteGroup
 								else
 									animationPlayDad = false;
 							}
-							if (event.value1.toLowerCase() == 'dadagain')
+							if (event.value1.toLowerCase() == 'dadagain1')
 							{
 								if (event.value2 == 'true')
 									animationPlayDadAgain = true;
@@ -284,7 +284,7 @@ class TextBox extends FlxSpriteGroup
 					PlayState.instance.dad.playAnim(animationToPlayDad);
 			}
 			if (animationPlayDadAgain)
-				PlayState.instance.dadAgain.playAnim('singRIGHT');
+				PlayState.instance.dadAgain1.playAnim('singRIGHT');
 			if (animationPlayBf)
 			{
 				if (PlayState.instance.betadciuMoment)

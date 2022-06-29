@@ -25,6 +25,17 @@
 		{
 			"loop": false,
 			"offsets": [
+				-36,
+				68
+			],
+			"anim": "hurt",
+			"fps": 24,
+			"name": "Hank",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
 				190,
 				50
 			],
@@ -82,7 +93,7 @@
 	],
 	"camera_position": [
 		-100,
-		0
+		-100
 	],
 	"sing_duration": 6.1,
 	"scale": 2
