@@ -207,12 +207,12 @@
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/ROBO_GF_assets",
+	"image": "characters/RoboVerse/ROBO_GF_assets",
 	"position": [
 		0,
 		0
 	],
-	"healthicon": "robo-gf",
+	"healthicon": "RoboVerse/robo-gf",
 	"flip_x": false,
 	"healthbar_colors": [
 		78,

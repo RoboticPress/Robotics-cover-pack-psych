@@ -95,6 +95,7 @@ class ChartingState extends MusicBeatState
 		['hide BoyfriendAgain', 'hides da dude'],
 		['boyfriendAgain Singing', 'sets his singing'],
 		['dadAgain1 Singing', 'sets his singing'],
+		['gfAgain Singing', 'sets her singing'],
 		['Cuphead super shot', 'Dad shoots super'],
 		['Cuphead super shot circle', 'Dad shoots super but circle'],
 		['Cuphead start shooting', 'Dad shoots blue funni'],

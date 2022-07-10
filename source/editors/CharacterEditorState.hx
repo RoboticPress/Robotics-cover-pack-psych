@@ -138,8 +138,8 @@ class CharacterEditorState extends MusicBeatState
 		add(textAnim);
 
 		genBoyOffsets();
-		ghostboyfriend = new Boyfriend(char.x, char.y, 'bf');
-		//add(ghostboyfriend);
+		ghostboyfriend = new Boyfriend(char.x, char.y, 'robo-gf');
+		add(ghostboyfriend);
 		ghostboyfriend.dance();
 		ghostboyfriend.alpha = 0.5;
 

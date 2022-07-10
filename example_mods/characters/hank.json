@@ -1,0 +1,156 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Hank Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-4,
+				13
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Hank Left Note",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				110,
+				10
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Hank right note",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				30,
+				10
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Hank Down Note",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-10,
+				0
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Hank Up note",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				510,
+				0
+			],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "Hank Up shoot",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				357,
+				13
+			],
+			"anim": "singRIGHT-alt",
+			"fps": 24,
+			"name": "Hank Left Shoot",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				562,
+				10
+			],
+			"anim": "singLEFT-alt",
+			"fps": 24,
+			"name": "Hank right shoot",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				540,
+				10
+			],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "Hank Down Shoot",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				300,
+				10
+			],
+			"anim": "screamright",
+			"fps": 24,
+			"name": "Hank screamright",
+			"indices": []
+		},
+		{
+			"offsets": [
+				105,
+				-85
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "ready",
+			"loop": false,
+			"name": "HankGetReady"
+		},
+		{
+			"offsets": [
+				175,
+				-32
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "taunt",
+			"loop": false,
+			"name": "hanktaunt"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/knockout/hank",
+	"position": [
+		0,
+		150
+	],
+	"healthicon": "knockout/hank",
+	"flip_x": false,
+	"healthbar_colors": [
+		70,
+		29,
+		84
+	],
+	"playable": true,
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

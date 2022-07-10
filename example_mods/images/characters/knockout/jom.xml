@@ -2,7 +2,7 @@
 <TextureAtlas imagePath="BOYFRIEND.png">
 	<!-- Created with Adobe Animate version 21.0.6.41649 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="amogos" x="0" y="0" width="517" height="0" frameX="0" frameY="-36" frameWidth="600" frameHeight="0"/>
+	<SubTexture name="amogos" x="0" y="0" width="517" height="1" frameX="0" frameY="-36" frameWidth="600" frameHeight="0"/>
 	<SubTexture name="BF idle dance0000" x="1000" y="1838" width="507" height="852" frameX="0" frameY="367" frameWidth="507" frameHeight="885"/>
 	<SubTexture name="BF idle dance0001" x="1000" y="1838" width="507" height="852" frameX="0" frameY="367" frameWidth="507" frameHeight="885"/>
 	<SubTexture name="BF idle dance0002" x="1507" y="1838" width="503" height="861" frameX="-2" frameY="376" frameWidth="507" frameHeight="885"/>

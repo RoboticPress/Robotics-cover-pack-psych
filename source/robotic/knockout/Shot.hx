@@ -6,6 +6,7 @@ using StringTools;
 
 class Shot extends FlxSprite
 {
+	public var doNot = false;
 	public function new(x:Float, y:Float) {
 		super(x, y);
 
@@ -28,8 +29,8 @@ class Shot extends FlxSprite
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
-		if (animation.curAnim.curFrame == 6 && animation.curAnim.name == 'shot')
-			PlayState.instance.health -= 0.03;
+		if (animation.curAnim.curFrame == 6 && animation.curAnim.name == 'shot' && !doNot)
+			PlayState.instance.health -= 0.04;
 		if (animation.curAnim.finished && animation.curAnim.name == 'shot')
 		{
 			PlayState.instance.remove(this);
