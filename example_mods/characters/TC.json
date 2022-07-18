@@ -1,50 +1,6 @@
 {
 	"animations": [
 		{
-			"offsets": [
-				35,
-				-8
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singLEFTmiss",
-			"indices": [],
-			"name": "TC Miss Left"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				15,
-				-54
-			],
-			"anim": "singDOWNmiss",
-			"fps": 24,
-			"name": "TC Miss Down",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				2,
-				-12
-			],
-			"anim": "singUPmiss",
-			"fps": 24,
-			"name": "TC Miss Up",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-11,
-				-12
-			],
-			"anim": "singRIGHTmiss",
-			"fps": 24,
-			"name": "TC Miss Right",
-			"indices": []
-		},
-		{
 			"loop": false,
 			"offsets": [
 				18,

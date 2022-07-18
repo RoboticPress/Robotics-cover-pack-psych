@@ -212,6 +212,12 @@ class PauseSubState extends MusicBeatSubstate
 			{
 				case "Resume":
 					close();
+					if (PlayState.instance.wasShooting)
+					{
+						PlayState.instance.wasShooting = false;
+						PlayState.instance.cupheadShooting = true;
+					}
+					
 				case 'Change Difficulty':
 					menuItems = difficultyChoices;
 					regenMenu();

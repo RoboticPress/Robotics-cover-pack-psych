@@ -12,7 +12,7 @@ class ShotGreenAnkha extends FlxSprite
 
 		var letters:Array<String> = ['B', 'A', 'L', 'L', 'S'];
 
-		loadGraphic(Paths.image('knockout/shootstuff/ankha projectiles/' + letters[letter%5]));
+		loadGraphic(Paths.image('knockout/shootstuff/ankha projectiles/' + letters[Std.int(Math.abs(letter%5))]));
 		setGraphicSize(Std.int(width * 2), Std.int(height*2));
 	}
 	

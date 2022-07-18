@@ -161,7 +161,7 @@
 		0,
 		410
 	],
-	"healthicon": "cuphead-pissed",
+	"healthicon": "knockout/icon-cuphead-pissed",
 	"flip_x": false,
 	"healthbar_colors": [
 		171,

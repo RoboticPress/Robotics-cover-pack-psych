@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="lord x.png">
+	<!-- Created with Adobe Animate version 20.0.2.22168 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="LORD DOWN0000" x="0" y="0" width="568" height="546" frameX="-3" frameY="-8" frameWidth="574" frameHeight="554"/>
+	<SubTexture name="LORD DOWN0001" x="0" y="0" width="568" height="546" frameX="-3" frameY="-8" frameWidth="574" frameHeight="554"/>
+	<SubTexture name="LORD DOWN0002" x="618" y="0" width="574" height="538" frameX="0" frameY="-6" frameWidth="574" frameHeight="554"/>
+	<SubTexture name="LORD DOWN0003" x="618" y="0" width="574" height="538" frameX="0" frameY="-6" frameWidth="574" frameHeight="554"/>
+	<SubTexture name="LORD DOWN0004" x="1242" y="0" width="574" height="529" frameX="0" frameY="-1" frameWidth="574" frameHeight="554"/>
+	<SubTexture name="LORD DOWN0005" x="1242" y="0" width="574" height="529" frameX="0" frameY="-1" frameWidth="574" frameHeight="554"/>
+	<SubTexture name="LORD DOWN0006" x="1866" y="0" width="574" height="525" frameX="0" frameY="0" frameWidth="574" frameHeight="554"/>
+	<SubTexture name="LORD DOWN0007" x="1866" y="0" width="574" height="525" frameX="0" frameY="0" frameWidth="574" frameHeight="554"/>
+	<SubTexture name="LORD DOWN0008" x="2490" y="0" width="574" height="520" frameX="0" frameY="0" frameWidth="574" frameHeight="554"/>
+	<SubTexture name="LORD DOWN0009" x="2490" y="0" width="574" height="520" frameX="0" frameY="0" frameWidth="574" frameHeight="554"/>
+	<SubTexture name="LORD DOWN0010" x="2490" y="0" width="574" height="520" frameX="0" frameY="0" frameWidth="574" frameHeight="554"/>
+	<SubTexture name="LORD DOWN0011" x="2490" y="0" width="574" height="520" frameX="0" frameY="0" frameWidth="574" frameHeight="554"/>
+	<SubTexture name="LORD DOWN0012" x="2490" y="0" width="574" height="520" frameX="0" frameY="0" frameWidth="574" frameHeight="554"/>
+	<SubTexture name="LORD DOWN0013" x="2490" y="0" width="574" height="520" frameX="0" frameY="0" frameWidth="574" frameHeight="554"/>
+	<SubTexture name="LORD IDLE0000" x="2698" y="3840" width="1299" height="750"/>
+	<SubTexture name="LORD IDLE0001" x="2698" y="3840" width="1299" height="750"/>
+	<SubTexture name="LORD IDLE0002" x="4047" y="3040" width="1299" height="750"/>
+	<SubTexture name="LORD IDLE0003" x="4047" y="3040" width="1299" height="750"/>
+	<SubTexture name="LORD IDLE0004" x="5396" y="3040" width="1299" height="750"/>
+	<SubTexture name="LORD IDLE0005" x="5396" y="3040" width="1299" height="750"/>
+	<SubTexture name="LORD IDLE0006" x="6745" y="3040" width="1299" height="750"/>
+	<SubTexture name="LORD IDLE0007" x="6745" y="3040" width="1299" height="750"/>
+	<SubTexture name="LORD IDLE0008" x="5396" y="3040" width="1299" height="750"/>
+	<SubTexture name="LORD IDLE0009" x="5396" y="3040" width="1299" height="750"/>
+	<SubTexture name="LORD IDLE0010" x="0" y="3840" width="1299" height="750"/>
+	<SubTexture name="LORD IDLE0011" x="0" y="3840" width="1299" height="750"/>
+	<SubTexture name="LORD IDLE0012" x="1349" y="3840" width="1299" height="750"/>
+	<SubTexture name="LORD IDLE0013" x="1349" y="3840" width="1299" height="750"/>
+	<SubTexture name="LORD LEFT0000" x="3114" y="0" width="629" height="584" frameX="0" frameY="-3" frameWidth="651" frameHeight="591"/>
+	<SubTexture name="LORD LEFT0001" x="3114" y="0" width="629" height="584" frameX="0" frameY="-3" frameWidth="651" frameHeight="591"/>
+	<SubTexture name="LORD LEFT0002" x="3793" y="0" width="628" height="585" frameX="-8" frameY="-1" frameWidth="651" frameHeight="591"/>
+	<SubTexture name="LORD LEFT0003" x="3793" y="0" width="628" height="585" frameX="-8" frameY="-1" frameWidth="651" frameHeight="591"/>
+	<SubTexture name="LORD LEFT0004" x="4471" y="0" width="626" height="587" frameX="-20" frameY="0" frameWidth="651" frameHeight="591"/>
+	<SubTexture name="LORD LEFT0005" x="4471" y="0" width="626" height="587" frameX="-20" frameY="0" frameWidth="651" frameHeight="591"/>
+	<SubTexture name="LORD LEFT0006" x="5147" y="0" width="626" height="589" frameX="-24" frameY="0" frameWidth="651" frameHeight="591"/>
+	<SubTexture name="LORD LEFT0007" x="5147" y="0" width="626" height="589" frameX="-24" frameY="0" frameWidth="651" frameHeight="591"/>
+	<SubTexture name="LORD LEFT0008" x="5823" y="0" width="626" height="590" frameX="-25" frameY="-1" frameWidth="651" frameHeight="591"/>
+	<SubTexture name="LORD LEFT0009" x="5823" y="0" width="626" height="590" frameX="-25" frameY="-1" frameWidth="651" frameHeight="591"/>
+	<SubTexture name="LORD LEFT0010" x="5823" y="0" width="626" height="590" frameX="-25" frameY="-1" frameWidth="651" frameHeight="591"/>
+	<SubTexture name="LORD LEFT0011" x="5823" y="0" width="626" height="590" frameX="-25" frameY="-1" frameWidth="651" frameHeight="591"/>
+	<SubTexture name="LORD LEFT0012" x="5823" y="0" width="626" height="590" frameX="-25" frameY="-1" frameWidth="651" frameHeight="591"/>
+	<SubTexture name="LORD LEFT0013" x="5823" y="0" width="626" height="590" frameX="-25" frameY="-1" frameWidth="651" frameHeight="591"/>
+	<SubTexture name="LORD RIGHT0000" x="6499" y="0" width="622" height="530" frameX="-37" frameY="-2" frameWidth="659" frameHeight="532"/>
+	<SubTexture name="LORD RIGHT0001" x="6499" y="0" width="622" height="530" frameX="-37" frameY="-2" frameWidth="659" frameHeight="532"/>
+	<SubTexture name="LORD RIGHT0002" x="7171" y="0" width="618" height="530" frameX="-25" frameY="-1" frameWidth="659" frameHeight="532"/>
+	<SubTexture name="LORD RIGHT0003" x="7171" y="0" width="618" height="530" frameX="-25" frameY="-1" frameWidth="659" frameHeight="532"/>
+	<SubTexture name="LORD RIGHT0004" x="0" y="640" width="617" height="529" frameX="-12" frameY="0" frameWidth="659" frameHeight="532"/>
+	<SubTexture name="LORD RIGHT0005" x="0" y="640" width="617" height="529" frameX="-12" frameY="0" frameWidth="659" frameHeight="532"/>
+	<SubTexture name="LORD RIGHT0006" x="667" y="640" width="614" height="526" frameX="-3" frameY="0" frameWidth="659" frameHeight="532"/>
+	<SubTexture name="LORD RIGHT0007" x="667" y="640" width="614" height="526" frameX="-3" frameY="0" frameWidth="659" frameHeight="532"/>
+	<SubTexture name="LORD RIGHT0008" x="1331" y="640" width="613" height="526" frameX="0" frameY="0" frameWidth="659" frameHeight="532"/>
+	<SubTexture name="LORD RIGHT0009" x="1331" y="640" width="613" height="526" frameX="0" frameY="0" frameWidth="659" frameHeight="532"/>
+	<SubTexture name="LORD RIGHT0010" x="1331" y="640" width="613" height="526" frameX="0" frameY="0" frameWidth="659" frameHeight="532"/>
+	<SubTexture name="LORD RIGHT0011" x="1331" y="640" width="613" height="526" frameX="0" frameY="0" frameWidth="659" frameHeight="532"/>
+	<SubTexture name="LORD RIGHT0012" x="1331" y="640" width="613" height="526" frameX="0" frameY="0" frameWidth="659" frameHeight="532"/>
+	<SubTexture name="LORD RIGHT0013" x="1331" y="640" width="613" height="526" frameX="0" frameY="0" frameWidth="659" frameHeight="532"/>
+	<SubTexture name="LORD UP0000" x="1994" y="640" width="670" height="628" frameX="0" frameY="0" frameWidth="727" frameHeight="635"/>
+	<SubTexture name="LORD UP0001" x="1994" y="640" width="670" height="628" frameX="0" frameY="0" frameWidth="727" frameHeight="635"/>
+	<SubTexture name="LORD UP0002" x="2714" y="640" width="680" height="620" frameX="0" frameY="-12" frameWidth="727" frameHeight="635"/>
+	<SubTexture name="LORD UP0003" x="2714" y="640" width="680" height="620" frameX="0" frameY="-12" frameWidth="727" frameHeight="635"/>
+	<SubTexture name="LORD UP0004" x="3444" y="640" width="699" height="610" frameX="0" frameY="-25" frameWidth="727" frameHeight="635"/>
+	<SubTexture name="LORD UP0005" x="3444" y="640" width="699" height="610" frameX="0" frameY="-25" frameWidth="727" frameHeight="635"/>
+	<SubTexture name="LORD UP0006" x="4193" y="640" width="722" height="607" frameX="0" frameY="-28" frameWidth="727" frameHeight="635"/>
+	<SubTexture name="LORD UP0007" x="4193" y="640" width="722" height="607" frameX="0" frameY="-28" frameWidth="727" frameHeight="635"/>
+	<SubTexture name="LORD UP0008" x="4965" y="640" width="727" height="605" frameX="0" frameY="-30" frameWidth="727" frameHeight="635"/>
+	<SubTexture name="LORD UP0009" x="4965" y="640" width="727" height="605" frameX="0" frameY="-30" frameWidth="727" frameHeight="635"/>
+	<SubTexture name="LORD UP0010" x="4965" y="640" width="727" height="605" frameX="0" frameY="-30" frameWidth="727" frameHeight="635"/>
+	<SubTexture name="LORD UP0011" x="4965" y="640" width="727" height="605" frameX="0" frameY="-30" frameWidth="727" frameHeight="635"/>
+	<SubTexture name="LORD UP0012" x="4965" y="640" width="727" height="605" frameX="0" frameY="-30" frameWidth="727" frameHeight="635"/>
+	<SubTexture name="LORD UP0013" x="4965" y="640" width="727" height="605" frameX="0" frameY="-30" frameWidth="727" frameHeight="635"/>
+	<SubTexture name="entrance0000" x="5742" y="640" width="1299" height="750"/>
+	<SubTexture name="entrance0001" x="0" y="1440" width="1299" height="750"/>
+	<SubTexture name="entrance0002" x="1349" y="1440" width="1299" height="750"/>
+	<SubTexture name="entrance0003" x="2698" y="1440" width="1299" height="750"/>
+	<SubTexture name="entrance0004" x="4047" y="1440" width="1299" height="750"/>
+	<SubTexture name="entrance0005" x="5396" y="1440" width="1299" height="750"/>
+	<SubTexture name="entrance0006" x="6745" y="1440" width="1299" height="750"/>
+	<SubTexture name="entrance0007" x="0" y="2240" width="1299" height="750"/>
+	<SubTexture name="entrance0008" x="1349" y="2240" width="1299" height="750"/>
+	<SubTexture name="entrance0009" x="2698" y="2240" width="1299" height="750"/>
+	<SubTexture name="entrance0010" x="4047" y="2240" width="1299" height="750"/>
+	<SubTexture name="entrance0011" x="5396" y="2240" width="1299" height="750"/>
+	<SubTexture name="entrance0012" x="6745" y="2240" width="1299" height="750"/>
+	<SubTexture name="entrance0013" x="0" y="3040" width="1299" height="750"/>
+	<SubTexture name="entrance0014" x="1349" y="3040" width="1299" height="750"/>
+	<SubTexture name="entrance0015" x="1349" y="3040" width="1299" height="750"/>
+	<SubTexture name="entrance0016" x="2698" y="3040" width="1299" height="750"/>
+	<SubTexture name="entrance0017" x="2698" y="3040" width="1299" height="750"/>
+	<SubTexture name="entrance0018" x="4047" y="3040" width="1299" height="750"/>
+	<SubTexture name="entrance0019" x="4047" y="3040" width="1299" height="750"/>
+	<SubTexture name="entrance0020" x="5396" y="3040" width="1299" height="750"/>
+	<SubTexture name="entrance0021" x="5396" y="3040" width="1299" height="750"/>
+	<SubTexture name="entrance0022" x="6745" y="3040" width="1299" height="750"/>
+	<SubTexture name="entrance0023" x="6745" y="3040" width="1299" height="750"/>
+	<SubTexture name="entrance0024" x="5396" y="3040" width="1299" height="750"/>
+	<SubTexture name="entrance0025" x="5396" y="3040" width="1299" height="750"/>
+	<SubTexture name="entrance0026" x="0" y="3840" width="1299" height="750"/>
+	<SubTexture name="entrance0027" x="0" y="3840" width="1299" height="750"/>
+	<SubTexture name="entrance0028" x="1349" y="3840" width="1299" height="750"/>
+	<SubTexture name="entrance0029" x="1349" y="3840" width="1299" height="750"/>
+	<SubTexture name="entrance0030" x="2698" y="3840" width="1299" height="750"/>
+	<SubTexture name="entrance0031" x="2698" y="3840" width="1299" height="750"/>
+	<SubTexture name="entrance0032" x="4047" y="3040" width="1299" height="750"/>
+	<SubTexture name="entrance0033" x="4047" y="3040" width="1299" height="750"/>
+	<SubTexture name="entrance0034" x="5396" y="3040" width="1299" height="750"/>
+	<SubTexture name="entrance0035" x="5396" y="3040" width="1299" height="750"/>
+	<SubTexture name="entrance0036" x="6745" y="3040" width="1299" height="750"/>
+	<SubTexture name="entrance0037" x="6745" y="3040" width="1299" height="750"/>
+</TextureAtlas>

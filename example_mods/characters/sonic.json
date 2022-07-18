@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-124,
+				46
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "sonic idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				160,
+				46
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "sonic left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-240,
+				123
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "sonic right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-170,
+				70
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "sonic down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-136,
+				91
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "sonic up",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/knockout/sonic",
+	"position": [
+		-400,
+		0
+	],
+	"healthicon": "knockout/icon-sonic",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		102,
+		204
+	],
+	"camera_position": [
+		40,
+		-260
+	],
+	"sing_duration": 4,
+	"scale": 1.3
+}

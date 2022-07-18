@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="ski.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="ski down0000" x="2" y="2" width="435" height="473" pivotX="496.7" pivotY="482.1"/>
+	<SubTexture name="ski down0001" x="2" y="2" width="435" height="473"/>
+	<SubTexture name="ski down0002" x="440" y="2" width="435" height="473"/>
+	<SubTexture name="ski down0003" x="440" y="2" width="435" height="473"/>
+	<SubTexture name="ski down0004" x="440" y="2" width="435" height="473"/>
+	<SubTexture name="ski down0005" x="440" y="2" width="435" height="473"/>
+	<SubTexture name="ski down0006" x="440" y="2" width="435" height="473"/>
+	<SubTexture name="ski down0007" x="440" y="2" width="435" height="473"/>
+	<SubTexture name="ski down0008" x="440" y="2" width="435" height="473"/>
+	<SubTexture name="ski down0009" x="440" y="2" width="435" height="473"/>
+	<SubTexture name="ski down0010" x="440" y="2" width="435" height="473"/>
+	<SubTexture name="ski down0011" x="440" y="2" width="435" height="473"/>
+	<SubTexture name="ski down0012" x="440" y="2" width="435" height="473"/>
+	<SubTexture name="ski down0013" x="440" y="2" width="435" height="473"/>
+	<SubTexture name="ski down0014" x="440" y="2" width="435" height="473"/>
+	<SubTexture name="ski down0015" x="440" y="2" width="435" height="473"/>
+	<SubTexture name="ski down0016" x="440" y="2" width="435" height="473"/>
+	<SubTexture name="ski down0017" x="440" y="2" width="435" height="473"/>
+	<SubTexture name="ski down0018" x="440" y="2" width="435" height="473"/>
+	<SubTexture name="ski down0019" x="440" y="2" width="435" height="473"/>
+	<SubTexture name="ski down0020" x="440" y="2" width="435" height="473"/>
+	<SubTexture name="ski down0021" x="440" y="2" width="435" height="473"/>
+	<SubTexture name="ski down0022" x="440" y="2" width="435" height="473"/>
+	<SubTexture name="ski down0023" x="440" y="2" width="435" height="473"/>
+	<SubTexture name="ski idle0000" x="878" y="2" width="445" height="498" pivotX="501.1" pivotY="507.4"/>
+	<SubTexture name="ski idle0001" x="878" y="2" width="445" height="498"/>
+	<SubTexture name="ski idle0002" x="1326" y="2" width="445" height="498"/>
+	<SubTexture name="ski idle0003" x="1326" y="2" width="445" height="498"/>
+	<SubTexture name="ski idle0004" x="2" y="503" width="445" height="498"/>
+	<SubTexture name="ski idle0005" x="2" y="503" width="445" height="498"/>
+	<SubTexture name="ski idle0006" x="450" y="503" width="445" height="498"/>
+	<SubTexture name="ski idle0007" x="450" y="503" width="445" height="498"/>
+	<SubTexture name="ski idle0008" x="898" y="503" width="445" height="498"/>
+	<SubTexture name="ski idle0009" x="898" y="503" width="445" height="498"/>
+	<SubTexture name="ski idle0010" x="898" y="503" width="445" height="498"/>
+	<SubTexture name="ski idle0011" x="898" y="503" width="445" height="498"/>
+	<SubTexture name="ski idle0012" x="898" y="503" width="445" height="498"/>
+	<SubTexture name="ski idle0013" x="898" y="503" width="445" height="498"/>
+	<SubTexture name="ski left0000" x="1346" y="503" width="437" height="511" pivotX="553.7" pivotY="520.05"/>
+	<SubTexture name="ski left0001" x="1346" y="503" width="437" height="511"/>
+	<SubTexture name="ski left0002" x="2" y="1017" width="437" height="511"/>
+	<SubTexture name="ski left0003" x="2" y="1017" width="437" height="511"/>
+	<SubTexture name="ski left0004" x="2" y="1017" width="437" height="511"/>
+	<SubTexture name="ski left0005" x="2" y="1017" width="437" height="511"/>
+	<SubTexture name="ski left0006" x="2" y="1017" width="437" height="511"/>
+	<SubTexture name="ski left0007" x="2" y="1017" width="437" height="511"/>
+	<SubTexture name="ski left0008" x="2" y="1017" width="437" height="511"/>
+	<SubTexture name="ski left0009" x="2" y="1017" width="437" height="511"/>
+	<SubTexture name="ski left0010" x="2" y="1017" width="437" height="511"/>
+	<SubTexture name="ski left0011" x="2" y="1017" width="437" height="511"/>
+	<SubTexture name="ski left0012" x="2" y="1017" width="437" height="511"/>
+	<SubTexture name="ski left0013" x="2" y="1017" width="437" height="511"/>
+	<SubTexture name="ski left0014" x="2" y="1017" width="437" height="511"/>
+	<SubTexture name="ski left0015" x="2" y="1017" width="437" height="511"/>
+	<SubTexture name="ski left0016" x="2" y="1017" width="437" height="511"/>
+	<SubTexture name="ski left0017" x="2" y="1017" width="437" height="511"/>
+	<SubTexture name="ski left0018" x="2" y="1017" width="437" height="511"/>
+	<SubTexture name="ski left0019" x="2" y="1017" width="437" height="511"/>
+	<SubTexture name="ski left0020" x="2" y="1017" width="437" height="511"/>
+	<SubTexture name="ski left0021" x="2" y="1017" width="437" height="511"/>
+	<SubTexture name="ski left0022" x="2" y="1017" width="437" height="511"/>
+	<SubTexture name="ski left0023" x="2" y="1017" width="437" height="511"/>
+	<SubTexture name="ski right0000" x="442" y="1017" width="435" height="499" pivotX="459.4" pivotY="508.95"/>
+	<SubTexture name="ski right0001" x="442" y="1017" width="435" height="499"/>
+	<SubTexture name="ski right0002" x="880" y="1017" width="435" height="499"/>
+	<SubTexture name="ski right0003" x="880" y="1017" width="435" height="499"/>
+	<SubTexture name="ski right0004" x="880" y="1017" width="435" height="499"/>
+	<SubTexture name="ski right0005" x="880" y="1017" width="435" height="499"/>
+	<SubTexture name="ski right0006" x="880" y="1017" width="435" height="499"/>
+	<SubTexture name="ski right0007" x="880" y="1017" width="435" height="499"/>
+	<SubTexture name="ski right0008" x="880" y="1017" width="435" height="499"/>
+	<SubTexture name="ski right0009" x="880" y="1017" width="435" height="499"/>
+	<SubTexture name="ski right0010" x="880" y="1017" width="435" height="499"/>
+	<SubTexture name="ski right0011" x="880" y="1017" width="435" height="499"/>
+	<SubTexture name="ski right0012" x="880" y="1017" width="435" height="499"/>
+	<SubTexture name="ski right0013" x="880" y="1017" width="435" height="499"/>
+	<SubTexture name="ski right0014" x="880" y="1017" width="435" height="499"/>
+	<SubTexture name="ski right0015" x="880" y="1017" width="435" height="499"/>
+	<SubTexture name="ski right0016" x="880" y="1017" width="435" height="499"/>
+	<SubTexture name="ski right0017" x="880" y="1017" width="435" height="499"/>
+	<SubTexture name="ski right0018" x="880" y="1017" width="435" height="499"/>
+	<SubTexture name="ski right0019" x="880" y="1017" width="435" height="499"/>
+	<SubTexture name="ski right0020" x="880" y="1017" width="435" height="499"/>
+	<SubTexture name="ski right0021" x="880" y="1017" width="435" height="499"/>
+	<SubTexture name="ski right0022" x="880" y="1017" width="435" height="499"/>
+	<SubTexture name="ski right0023" x="880" y="1017" width="435" height="499"/>
+	<SubTexture name="ski up0000" x="1318" y="1017" width="425" height="489" pivotX="491.6" pivotY="498.8"/>
+	<SubTexture name="ski up0001" x="1318" y="1017" width="425" height="489"/>
+	<SubTexture name="ski up0002" x="2" y="1531" width="425" height="489"/>
+	<SubTexture name="ski up0003" x="2" y="1531" width="425" height="489"/>
+	<SubTexture name="ski up0004" x="2" y="1531" width="425" height="489"/>
+	<SubTexture name="ski up0005" x="2" y="1531" width="425" height="489"/>
+	<SubTexture name="ski up0006" x="2" y="1531" width="425" height="489"/>
+	<SubTexture name="ski up0007" x="2" y="1531" width="425" height="489"/>
+	<SubTexture name="ski up0008" x="2" y="1531" width="425" height="489"/>
+	<SubTexture name="ski up0009" x="2" y="1531" width="425" height="489"/>
+	<SubTexture name="ski up0010" x="2" y="1531" width="425" height="489"/>
+	<SubTexture name="ski up0011" x="2" y="1531" width="425" height="489"/>
+	<SubTexture name="ski up0012" x="2" y="1531" width="425" height="489"/>
+	<SubTexture name="ski up0013" x="2" y="1531" width="425" height="489"/>
+	<SubTexture name="ski up0014" x="2" y="1531" width="425" height="489"/>
+	<SubTexture name="ski up0015" x="2" y="1531" width="425" height="489"/>
+	<SubTexture name="ski up0016" x="2" y="1531" width="425" height="489"/>
+	<SubTexture name="ski up0017" x="2" y="1531" width="425" height="489"/>
+	<SubTexture name="ski up0018" x="2" y="1531" width="425" height="489"/>
+	<SubTexture name="ski up0019" x="2" y="1531" width="425" height="489"/>
+	<SubTexture name="ski up0020" x="2" y="1531" width="425" height="489"/>
+	<SubTexture name="ski up0021" x="2" y="1531" width="425" height="489"/>
+</TextureAtlas>

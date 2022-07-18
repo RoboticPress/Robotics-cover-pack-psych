@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Fleetway_Super_Sonic2.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="laser instance 10000" x="0" y="0" width="613" height="613" frameX="-362" frameY="-363" frameWidth="3204" frameHeight="1797"/>
+	<SubTexture name="laser instance 10001" x="613" y="0" width="845" height="845" frameX="-251" frameY="-252" frameWidth="3204" frameHeight="1797"/>
+	<SubTexture name="laser instance 10002" x="1458" y="0" width="1152" height="1035" frameX="-161" frameY="-161" frameWidth="3204" frameHeight="1797"/>
+	<SubTexture name="laser instance 10003" x="2610" y="0" width="3086" height="1676" frameX="-90" frameY="-91" frameWidth="3204" frameHeight="1797"/>
+	<SubTexture name="laser instance 10004" x="0" y="1676" width="3159" height="1708" frameX="-40" frameY="-40" frameWidth="3204" frameHeight="1797"/>
+	<SubTexture name="laser instance 10005" x="3159" y="1676" width="3194" height="1731" frameX="-10" frameY="-10" frameWidth="3204" frameHeight="1797"/>
+	<SubTexture name="laser instance 10006" x="0" y="3407" width="3179" height="1743" frameX="0" frameY="0" frameWidth="3204" frameHeight="1797"/>
+	<SubTexture name="laser instance 10007" x="3179" y="3407" width="0" height="0" frameX="138" frameY="-153" frameWidth="3204" frameHeight="1797"/>
+	<SubTexture name="laser instance 10008" x="3179" y="3407" width="2410" height="1088" frameX="-779" frameY="-709" frameWidth="3204" frameHeight="1797"/>
+	<SubTexture name="laser instance 10009" x="3179" y="3407" width="0" height="0" frameX="138" frameY="-153" frameWidth="3204" frameHeight="1797"/>
+	<SubTexture name="laser instance 10010" x="5589" y="3407" width="2192" height="990" frameX="-763" frameY="-707" frameWidth="3204" frameHeight="1797"/>
+	<SubTexture name="laser instance 10011" x="3179" y="3407" width="0" height="0" frameX="138" frameY="-153" frameWidth="3204" frameHeight="1797"/>
+</TextureAtlas>

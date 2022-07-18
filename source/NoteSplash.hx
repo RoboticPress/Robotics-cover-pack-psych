@@ -54,7 +54,7 @@ class NoteSplash extends FlxSprite
 			case 'notes/ParryNOTE_assetsSplash':
 				for (i in 1...3) {
 					animation.addByPrefix("note1-" + i, "ParryFX0", 24, false);
-					animation.addByPrefix("note2-" + i, "ParryFX0 ", 24, false);
+					animation.addByPrefix("note2-" + i, "ParryFX0", 24, false);
 					animation.addByPrefix("note0-" + i, "ParryFX0", 24, false);
 					animation.addByPrefix("note3-" + i, "ParryFX0", 24, false);
 				}

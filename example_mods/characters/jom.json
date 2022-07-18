@@ -61,7 +61,7 @@
 				7,
 				19
 			],
-			"anim": "singLEFTmiss",
+			"anim": "singRIGHTmiss",
 			"fps": 24,
 			"name": "BF NOTE LEFT MISS",
 			"indices": []
@@ -94,7 +94,7 @@
 				-44,
 				22
 			],
-			"anim": "singRIGHTmiss",
+			"anim": "singLEFTmiss",
 			"fps": 24,
 			"name": "BF NOTE RIGHT MISS",
 			"indices": []

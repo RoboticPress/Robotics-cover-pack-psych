@@ -312,7 +312,7 @@ class Character extends FlxSprite
 	 */
 	public function dance()
 	{
-		if (!debugMode && !specialAnim)
+		if (!debugMode && !specialAnim && !(curCharacter == 'cuphead-mad' && animation.curAnim != null && animation.curAnim.name == 'oops'))
 		{
 			if(danceIdle)
 			{

@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "LORD IDLE"
+		},
+		{
+			"offsets": [
+				-270,
+				-90
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "LORD LEFT"
+		},
+		{
+			"offsets": [
+				-360,
+				-120
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "LORD RIGHT"
+		},
+		{
+			"offsets": [
+				-360,
+				-140
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "LORD DOWN"
+		},
+		{
+			"offsets": [
+				-340,
+				-10
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "LORD UP"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "entrance",
+			"loop": false,
+			"name": "entrance"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/knockout/lord x",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "knockout/LORD X ICONS",
+	"flip_x": false,
+	"healthbar_colors": [
+		35,
+		56,
+		89
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

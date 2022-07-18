@@ -8981,6 +8981,186 @@
 				"bpm": 136
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 136,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 136
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 136
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 136,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 136,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 136
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 136,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 136
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 136,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 136,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 136
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 136
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 136,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 136
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 136,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 136
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 136,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 136
+			},
+			{
 				"gfSection": false,
 				"lengthInSteps": 16,
 				"altAnim": false,
@@ -9713,6 +9893,11 @@
 						"Change Character",
 						"bf",
 						"robo"
+					],
+					[
+						"Change Character",
+						"gf",
+						"no-gf"
 					]
 				]
 			],
@@ -9728,26 +9913,146 @@
 						"Cuphead stop shooting",
 						"",
 						""
-					]
-				]
-			],
-			[
-				128722.94117647,
-				[
+					],
 					[
-						"CupheadAttack",
-						"True",
+						"Insta Cam Zoom",
+						"0.7",
 						""
 					]
 				]
 			],
 			[
-				130480.624117647,
+				123529.411764706,
+				[
+					[
+						"Insta Cam Zoom",
+						"0.75",
+						""
+					]
+				]
+			],
+			[
+				125294.117647059,
+				[
+					[
+						"Insta Cam Zoom",
+						"0.8",
+						""
+					]
+				]
+			],
+			[
+				127058.823529412,
+				[
+					[
+						"Insta Cam Zoom",
+						"0.9",
+						""
+					]
+				]
+			],
+			[
+				128382.352941176,
+				[
+					[
+						"Cuphead super shot",
+						"",
+						""
+					]
+				]
+			],
+			[
+				128713.235294118,
+				[
+					[
+						"Insta Cam Zoom",
+						"0.65",
+						""
+					],
+					[
+						"Do Hardcoded Event",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				129154.705882353,
+				[
+					[
+						"Flash",
+						"0xFFFFFFFF",
+						"2"
+					],
+					[
+						"Do Hardcoded Event",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				129705.624117647,
 				[
 					[
 						"Play Animation",
 						"oops",
 						"dadbetadciu"
+					],
+					[
+						"Play Animation",
+						"singRIGHTmiss",
+						"bfbetadciu"
+					],
+					[
+						"Play Animation",
+						"singLEFTmiss",
+						"dad"
+					],
+					[
+						"Play Animation",
+						"singRIGHTmiss",
+						"bf"
+					]
+				]
+			],
+			[
+				131300,
+				[
+					[
+						"Do Hardcoded Event",
+						"3",
+						""
+					]
+				]
+			],
+			[
+				131627,
+				[
+					[
+						"Change Character",
+						"dad",
+						"big-monika"
+					],
+					[
+						"Change Character",
+						"gf",
+						"robo-gf"
+					],
+					[
+						"Do Hardcoded Event",
+						"5",
+						"1"
+					]
+				]
+			],
+			[
+				133676.470588235,
+				[
+					[
+						"Do Hardcoded Event",
+						"4",
+						""
 					]
 				]
 			],
@@ -9755,28 +10060,133 @@
 				141507.352941176,
 				[
 					[
-						"CupheadShotting",
+						"Cuphead start shooting",
 						"",
 						""
 					]
 				]
 			],
 			[
-				155735.294117647,
+				147904,
 				[
 					[
-						"CupheadShotting",
+						"Do Hardcoded Event",
+						"6",
+						"1"
+					]
+				]
+			],
+			[
+				153529.411764706,
+				[
+					[
+						"Cuphead start shooting",
 						"",
 						""
 					]
 				]
 			],
 			[
-				176250,
+				154411.764705882,
 				[
 					[
-						"CupheadAttack",
-						"True",
+						"Do Hardcoded Event",
+						"5",
+						"2"
+					]
+				]
+			],
+			[
+				161911.764705882,
+				[
+					[
+						"Do Hardcoded Event",
+						"6",
+						"2"
+					]
+				]
+			],
+			[
+				164007,
+				[
+					[
+						"Do Hardcoded Event",
+						"5",
+						"3"
+					]
+				]
+			],
+			[
+				165551,
+				[
+					[
+						"Do Hardcoded Event",
+						"6",
+						"3"
+					]
+				]
+			],
+			[
+				167536,
+				[
+					[
+						"Do Hardcoded Event",
+						"5",
+						"4"
+					]
+				]
+			],
+			[
+				169301.470588235,
+				[
+					[
+						"Do Hardcoded Event",
+						"6",
+						"4"
+					]
+				]
+			],
+			[
+				171066.176470588,
+				[
+					[
+						"Do Hardcoded Event",
+						"5",
+						"5"
+					]
+				]
+			],
+			[
+				172610.294117647,
+				[
+					[
+						"Do Hardcoded Event",
+						"6",
+						"5"
+					],
+					[
+						"Do Hardcoded Event",
+						"5",
+						"6"
+					]
+				]
+			],
+			[
+				174375,
+				[
+					[
+						"Do Hardcoded Event",
+						"7",
+						""
+					]
+				]
+			],
+			[
+				176029.411764706,
+				[
+					[
+						"Cuphead super shot",
+						"",
 						""
 					]
 				]

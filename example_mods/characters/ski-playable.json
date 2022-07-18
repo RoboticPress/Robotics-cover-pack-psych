@@ -1,0 +1,112 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				52,
+				13
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "ski left"
+		},
+		{
+			"offsets": [
+				-5,
+				-25
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "ski down"
+		},
+		{
+			"offsets": [
+				-10,
+				-9
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "ski up"
+		},
+		{
+			"offsets": [
+				-42,
+				1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "ski right"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "ski idle"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-3,
+				4
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "ski diesnt",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-4,
+				-2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "ski death c"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-7,
+				-16
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "ski death loop",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/knockout/ski",
+	"position": [
+		0,
+		260
+	],
+	"healthicon": "knockout/icon-ski",
+	"flip_x": true,
+	"healthbar_colors": [
+		141,
+		101,
+		201
+	],
+	"playable": false,
+	"camera_position": [
+		-100,
+		110
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

@@ -354,6 +354,7 @@ class Paths
 			return currentTrackedAssets.get(path);
 		}
 		trace('oh no its returning null NOOOO');
+		trace(path);
 		return null;
 	}
 
