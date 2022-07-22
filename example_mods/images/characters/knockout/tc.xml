@@ -1,55 +1,195 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="tc.png">
-	<!-- Created with Adobe Animate version 20.0.1.19255 -->
+	<!-- Created with Adobe Animate version 22.0.6.202 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="tcdown0000" x="0" y="0" width="560" height="728" frameX="0" frameY="-21" frameWidth="560" frameHeight="749"/>
-	<SubTexture name="tcdown0001" x="0" y="0" width="560" height="728" frameX="0" frameY="-21" frameWidth="560" frameHeight="749"/>
-	<SubTexture name="tcdown0002" x="560" y="0" width="554" height="745" frameX="-3" frameY="-4" frameWidth="560" frameHeight="749"/>
-	<SubTexture name="tcdown0003" x="560" y="0" width="554" height="745" frameX="-3" frameY="-4" frameWidth="560" frameHeight="749"/>
-	<SubTexture name="tcdown0004" x="1114" y="0" width="553" height="749" frameX="-2" frameY="0" frameWidth="560" frameHeight="749"/>
-	<SubTexture name="tcdown0005" x="1114" y="0" width="553" height="749" frameX="-2" frameY="0" frameWidth="560" frameHeight="749"/>
-	<SubTexture name="tcdown0006" x="1114" y="0" width="553" height="749" frameX="-2" frameY="0" frameWidth="560" frameHeight="749"/>
-	<SubTexture name="tcdown0007" x="1114" y="0" width="553" height="749" frameX="-2" frameY="0" frameWidth="560" frameHeight="749"/>
-	<SubTexture name="tcdown0008" x="1114" y="0" width="553" height="749" frameX="-2" frameY="0" frameWidth="560" frameHeight="749"/>
-	<SubTexture name="tcidle0000" x="1667" y="0" width="424" height="753" frameX="0" frameY="-31" frameWidth="433" frameHeight="784"/>
-	<SubTexture name="tcidle0001" x="1667" y="0" width="424" height="753" frameX="0" frameY="-31" frameWidth="433" frameHeight="784"/>
-	<SubTexture name="tcidle0002" x="2091" y="0" width="426" height="770" frameX="0" frameY="-14" frameWidth="433" frameHeight="784"/>
-	<SubTexture name="tcidle0003" x="2091" y="0" width="426" height="770" frameX="0" frameY="-14" frameWidth="433" frameHeight="784"/>
-	<SubTexture name="tcidle0004" x="2517" y="0" width="429" height="778" frameX="0" frameY="-6" frameWidth="433" frameHeight="784"/>
-	<SubTexture name="tcidle0005" x="2517" y="0" width="429" height="778" frameX="0" frameY="-6" frameWidth="433" frameHeight="784"/>
-	<SubTexture name="tcidle0006" x="2946" y="0" width="430" height="782" frameX="0" frameY="-2" frameWidth="433" frameHeight="784"/>
-	<SubTexture name="tcidle0007" x="2946" y="0" width="430" height="782" frameX="0" frameY="-2" frameWidth="433" frameHeight="784"/>
-	<SubTexture name="tcidle0008" x="3376" y="0" width="433" height="784"/>
-	<SubTexture name="tcidle0009" x="0" y="784" width="433" height="784"/>
-	<SubTexture name="tcidle0010" x="0" y="784" width="433" height="784"/>
-	<SubTexture name="tcidle0011" x="0" y="784" width="433" height="784"/>
-	<SubTexture name="tcidle0012" x="0" y="784" width="433" height="784"/>
-	<SubTexture name="tcidle0013" x="0" y="784" width="433" height="784"/>
-	<SubTexture name="tcleft0000" x="433" y="784" width="455" height="771" frameX="0" frameY="-1" frameWidth="455" frameHeight="772"/>
-	<SubTexture name="tcleft0001" x="433" y="784" width="455" height="771" frameX="0" frameY="-1" frameWidth="455" frameHeight="772"/>
-	<SubTexture name="tcleft0002" x="888" y="784" width="435" height="772" frameX="-18" frameY="0" frameWidth="455" frameHeight="772"/>
-	<SubTexture name="tcleft0003" x="888" y="784" width="435" height="772" frameX="-18" frameY="0" frameWidth="455" frameHeight="772"/>
-	<SubTexture name="tcleft0004" x="1323" y="784" width="422" height="772" frameX="-26" frameY="0" frameWidth="455" frameHeight="772"/>
-	<SubTexture name="tcleft0005" x="1323" y="784" width="422" height="772" frameX="-26" frameY="0" frameWidth="455" frameHeight="772"/>
-	<SubTexture name="tcleft0006" x="1323" y="784" width="422" height="772" frameX="-26" frameY="0" frameWidth="455" frameHeight="772"/>
-	<SubTexture name="tcleft0007" x="1323" y="784" width="422" height="772" frameX="-26" frameY="0" frameWidth="455" frameHeight="772"/>
-	<SubTexture name="tcleft0008" x="1323" y="784" width="422" height="772" frameX="-26" frameY="0" frameWidth="455" frameHeight="772"/>
-	<SubTexture name="tcright0000" x="1745" y="784" width="488" height="768" frameX="-1" frameY="-5" frameWidth="489" frameHeight="773"/>
-	<SubTexture name="tcright0001" x="1745" y="784" width="488" height="768" frameX="-1" frameY="-5" frameWidth="489" frameHeight="773"/>
-	<SubTexture name="tcright0002" x="2233" y="784" width="462" height="771" frameX="0" frameY="-2" frameWidth="489" frameHeight="773"/>
-	<SubTexture name="tcright0003" x="2233" y="784" width="462" height="771" frameX="0" frameY="-2" frameWidth="489" frameHeight="773"/>
-	<SubTexture name="tcright0004" x="2695" y="784" width="459" height="773" frameX="0" frameY="0" frameWidth="489" frameHeight="773"/>
-	<SubTexture name="tcright0005" x="2695" y="784" width="459" height="773" frameX="0" frameY="0" frameWidth="489" frameHeight="773"/>
-	<SubTexture name="tcright0006" x="2695" y="784" width="459" height="773" frameX="0" frameY="0" frameWidth="489" frameHeight="773"/>
-	<SubTexture name="tcright0007" x="2695" y="784" width="459" height="773" frameX="0" frameY="0" frameWidth="489" frameHeight="773"/>
-	<SubTexture name="tcright0008" x="2695" y="784" width="459" height="773" frameX="0" frameY="0" frameWidth="489" frameHeight="773"/>
-	<SubTexture name="tcup0000" x="3154" y="784" width="534" height="792" frameX="0" frameY="0" frameWidth="543" frameHeight="792"/>
-	<SubTexture name="tcup0001" x="3154" y="784" width="534" height="792" frameX="0" frameY="0" frameWidth="543" frameHeight="792"/>
-	<SubTexture name="tcup0002" x="0" y="1576" width="541" height="783" frameX="0" frameY="-9" frameWidth="543" frameHeight="792"/>
-	<SubTexture name="tcup0003" x="0" y="1576" width="541" height="783" frameX="0" frameY="-9" frameWidth="543" frameHeight="792"/>
-	<SubTexture name="tcup0004" x="541" y="1576" width="543" height="780" frameX="0" frameY="-12" frameWidth="543" frameHeight="792"/>
-	<SubTexture name="tcup0005" x="541" y="1576" width="543" height="780" frameX="0" frameY="-12" frameWidth="543" frameHeight="792"/>
-	<SubTexture name="tcup0006" x="541" y="1576" width="543" height="780" frameX="0" frameY="-12" frameWidth="543" frameHeight="792"/>
-	<SubTexture name="tcup0007" x="541" y="1576" width="543" height="780" frameX="0" frameY="-12" frameWidth="543" frameHeight="792"/>
-	<SubTexture name="tcup0008" x="541" y="1576" width="543" height="780" frameX="0" frameY="-12" frameWidth="543" frameHeight="792"/>
+	<SubTexture name="tcconfirm0000" x="0" y="0" width="375" height="805"/>
+	<SubTexture name="tcconfirm0001" x="0" y="0" width="375" height="805"/>
+	<SubTexture name="tcconfirm0002" x="0" y="0" width="375" height="805"/>
+	<SubTexture name="tcconfirm0003" x="0" y="0" width="375" height="805"/>
+	<SubTexture name="tcconfirm0004" x="0" y="0" width="375" height="805"/>
+	<SubTexture name="tcconfirm0005" x="0" y="0" width="375" height="805"/>
+	<SubTexture name="tcconfirm0006" x="0" y="0" width="375" height="805"/>
+	<SubTexture name="tcconfirm0007" x="0" y="0" width="375" height="805"/>
+	<SubTexture name="tcconfirm0008" x="0" y="0" width="375" height="805"/>
+	<SubTexture name="tcconfirm0009" x="0" y="0" width="375" height="805"/>
+	<SubTexture name="tcconfirm0010" x="0" y="0" width="375" height="805"/>
+	<SubTexture name="tcconfirm0011" x="0" y="0" width="375" height="805"/>
+	<SubTexture name="tcdown0000" x="375" y="0" width="560" height="749"/>
+	<SubTexture name="tcdown0001" x="375" y="0" width="560" height="749"/>
+	<SubTexture name="tcdown0002" x="935" y="0" width="560" height="749"/>
+	<SubTexture name="tcdown0003" x="935" y="0" width="560" height="749"/>
+	<SubTexture name="tcdown0004" x="1495" y="0" width="560" height="749"/>
+	<SubTexture name="tcdown0005" x="1495" y="0" width="560" height="749"/>
+	<SubTexture name="tcdown0006" x="1495" y="0" width="560" height="749"/>
+	<SubTexture name="tcdown0007" x="1495" y="0" width="560" height="749"/>
+	<SubTexture name="tcdown0008" x="1495" y="0" width="560" height="749"/>
+	<SubTexture name="tcdown miss0000" x="2055" y="0" width="560" height="749"/>
+	<SubTexture name="tcdown miss0001" x="2055" y="0" width="560" height="749"/>
+	<SubTexture name="tcdown miss0002" x="2615" y="0" width="560" height="749"/>
+	<SubTexture name="tcdown miss0003" x="2615" y="0" width="560" height="749"/>
+	<SubTexture name="tcdown miss0004" x="3175" y="0" width="560" height="749"/>
+	<SubTexture name="tcdown miss0005" x="3175" y="0" width="560" height="749"/>
+	<SubTexture name="tcdown miss0006" x="3175" y="0" width="560" height="749"/>
+	<SubTexture name="tcdown miss0007" x="3175" y="0" width="560" height="749"/>
+	<SubTexture name="tcdown miss0008" x="3175" y="0" width="560" height="749"/>
+	<SubTexture name="tcgotcrit0000" x="3735" y="0" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0001" x="4206" y="0" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0002" x="4677" y="0" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0003" x="5148" y="0" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0004" x="5619" y="0" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0005" x="6090" y="0" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0006" x="6561" y="0" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0007" x="7032" y="0" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0008" x="7503" y="0" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0009" x="0" y="806" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0010" x="0" y="806" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0011" x="471" y="806" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0012" x="942" y="806" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0013" x="942" y="806" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0014" x="1413" y="806" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0015" x="1413" y="806" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0016" x="1413" y="806" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0017" x="1884" y="806" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0018" x="1884" y="806" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0019" x="2355" y="806" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0020" x="2355" y="806" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0021" x="2826" y="806" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0022" x="2826" y="806" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0023" x="2826" y="806" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0024" x="2826" y="806" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0025" x="2826" y="806" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0026" x="2826" y="806" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0027" x="3297" y="806" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0028" x="3768" y="806" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0029" x="4239" y="806" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0030" x="4710" y="806" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0031" x="5181" y="806" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0032" x="5652" y="806" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0033" x="6123" y="806" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0034" x="6594" y="806" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0035" x="7065" y="806" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0036" x="7536" y="806" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0037" x="0" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0038" x="471" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0039" x="471" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0040" x="942" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0041" x="942" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0042" x="942" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0043" x="942" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0044" x="1413" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0045" x="1413" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0046" x="1413" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0047" x="1413" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0048" x="1884" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0049" x="1884" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0050" x="1413" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0051" x="1413" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0052" x="1413" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0053" x="1413" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0054" x="1413" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0055" x="1413" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0056" x="1413" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0057" x="1413" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0058" x="1413" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0059" x="1413" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0060" x="1413" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0061" x="1413" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0062" x="1413" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0063" x="1413" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0064" x="2355" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0065" x="2826" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0066" x="3297" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0067" x="3297" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0068" x="3768" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0069" x="3768" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0070" x="4239" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0071" x="4239" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0072" x="4239" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0073" x="4239" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0074" x="4239" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0075" x="4239" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0076" x="4239" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0077" x="4239" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0078" x="4239" y="1612" width="471" height="806"/>
+	<SubTexture name="tcgotcrit0079" x="4239" y="1612" width="471" height="806"/>
+	<SubTexture name="tcidle0000" x="4710" y="1612" width="433" height="784"/>
+	<SubTexture name="tcidle0001" x="4710" y="1612" width="433" height="784"/>
+	<SubTexture name="tcidle0002" x="5143" y="1612" width="433" height="784"/>
+	<SubTexture name="tcidle0003" x="5143" y="1612" width="433" height="784"/>
+	<SubTexture name="tcidle0004" x="5576" y="1612" width="433" height="784"/>
+	<SubTexture name="tcidle0005" x="5576" y="1612" width="433" height="784"/>
+	<SubTexture name="tcidle0006" x="6009" y="1612" width="433" height="784"/>
+	<SubTexture name="tcidle0007" x="6009" y="1612" width="433" height="784"/>
+	<SubTexture name="tcidle0008" x="6442" y="1612" width="433" height="784"/>
+	<SubTexture name="tcidle0009" x="6875" y="1612" width="433" height="784"/>
+	<SubTexture name="tcidle0010" x="6875" y="1612" width="433" height="784"/>
+	<SubTexture name="tcidle0011" x="6875" y="1612" width="433" height="784"/>
+	<SubTexture name="tcidle0012" x="6875" y="1612" width="433" height="784"/>
+	<SubTexture name="tcidle0013" x="6875" y="1612" width="433" height="784"/>
+	<SubTexture name="tcleft0000" x="7308" y="1612" width="455" height="772"/>
+	<SubTexture name="tcleft0001" x="7308" y="1612" width="455" height="772"/>
+	<SubTexture name="tcleft0002" x="0" y="2418" width="455" height="772"/>
+	<SubTexture name="tcleft0003" x="0" y="2418" width="455" height="772"/>
+	<SubTexture name="tcleft0004" x="455" y="2418" width="455" height="772"/>
+	<SubTexture name="tcleft0005" x="455" y="2418" width="455" height="772"/>
+	<SubTexture name="tcleft0006" x="455" y="2418" width="455" height="772"/>
+	<SubTexture name="tcleft0007" x="455" y="2418" width="455" height="772"/>
+	<SubTexture name="tcleft0008" x="455" y="2418" width="455" height="772"/>
+	<SubTexture name="tcleft miss0000" x="910" y="2418" width="455" height="772"/>
+	<SubTexture name="tcleft miss0001" x="910" y="2418" width="455" height="772"/>
+	<SubTexture name="tcleft miss0002" x="1365" y="2418" width="455" height="772"/>
+	<SubTexture name="tcleft miss0003" x="1365" y="2418" width="455" height="772"/>
+	<SubTexture name="tcleft miss0004" x="1820" y="2418" width="455" height="772"/>
+	<SubTexture name="tcleft miss0005" x="1820" y="2418" width="455" height="772"/>
+	<SubTexture name="tcleft miss0006" x="1820" y="2418" width="455" height="772"/>
+	<SubTexture name="tcleft miss0007" x="1820" y="2418" width="455" height="772"/>
+	<SubTexture name="tcleft miss0008" x="1820" y="2418" width="455" height="772"/>
+	<SubTexture name="tcright0000" x="2275" y="2418" width="489" height="773"/>
+	<SubTexture name="tcright0001" x="2275" y="2418" width="489" height="773"/>
+	<SubTexture name="tcright0002" x="2764" y="2418" width="489" height="773"/>
+	<SubTexture name="tcright0003" x="2764" y="2418" width="489" height="773"/>
+	<SubTexture name="tcright0004" x="3253" y="2418" width="489" height="773"/>
+	<SubTexture name="tcright0005" x="3253" y="2418" width="489" height="773"/>
+	<SubTexture name="tcright0006" x="3253" y="2418" width="489" height="773"/>
+	<SubTexture name="tcright0007" x="3253" y="2418" width="489" height="773"/>
+	<SubTexture name="tcright0008" x="3253" y="2418" width="489" height="773"/>
+	<SubTexture name="tcright miss0000" x="3742" y="2418" width="489" height="773"/>
+	<SubTexture name="tcright miss0001" x="3742" y="2418" width="489" height="773"/>
+	<SubTexture name="tcright miss0002" x="4231" y="2418" width="489" height="773"/>
+	<SubTexture name="tcright miss0003" x="4231" y="2418" width="489" height="773"/>
+	<SubTexture name="tcright miss0004" x="4720" y="2418" width="489" height="773"/>
+	<SubTexture name="tcright miss0005" x="4720" y="2418" width="489" height="773"/>
+	<SubTexture name="tcright miss0006" x="4720" y="2418" width="489" height="773"/>
+	<SubTexture name="tcright miss0007" x="4720" y="2418" width="489" height="773"/>
+	<SubTexture name="tcright miss0008" x="4720" y="2418" width="489" height="773"/>
+	<SubTexture name="tcup0000" x="5209" y="2418" width="543" height="792"/>
+	<SubTexture name="tcup0001" x="5209" y="2418" width="543" height="792"/>
+	<SubTexture name="tcup0002" x="5752" y="2418" width="543" height="792"/>
+	<SubTexture name="tcup0003" x="5752" y="2418" width="543" height="792"/>
+	<SubTexture name="tcup0004" x="6295" y="2418" width="543" height="792"/>
+	<SubTexture name="tcup0005" x="6295" y="2418" width="543" height="792"/>
+	<SubTexture name="tcup0006" x="6295" y="2418" width="543" height="792"/>
+	<SubTexture name="tcup0007" x="6295" y="2418" width="543" height="792"/>
+	<SubTexture name="tcup0008" x="6295" y="2418" width="543" height="792"/>
+	<SubTexture name="tcup miss0000" x="6838" y="2418" width="543" height="792"/>
+	<SubTexture name="tcup miss0001" x="6838" y="2418" width="543" height="792"/>
+	<SubTexture name="tcup miss0002" x="7381" y="2418" width="543" height="792"/>
+	<SubTexture name="tcup miss0003" x="7381" y="2418" width="543" height="792"/>
+	<SubTexture name="tcup miss0004" x="0" y="3210" width="543" height="792"/>
+	<SubTexture name="tcup miss0005" x="0" y="3210" width="543" height="792"/>
+	<SubTexture name="tcup miss0006" x="0" y="3210" width="543" height="792"/>
+	<SubTexture name="tcup miss0007" x="0" y="3210" width="543" height="792"/>
+	<SubTexture name="tcup miss0008" x="0" y="3210" width="543" height="792"/>
+	<SubTexture name="tcwontdoit0000" x="543" y="3210" width="411" height="857"/>
+	<SubTexture name="tcwontdoit0001" x="954" y="3210" width="411" height="857"/>
+	<SubTexture name="tcwontdoit0002" x="1365" y="3210" width="411" height="857"/>
+	<SubTexture name="tcwontdoit0003" x="1365" y="3210" width="411" height="857"/>
+	<SubTexture name="tcwontdoit0004" x="1776" y="3210" width="411" height="857"/>
+	<SubTexture name="tcwontdoit0005" x="1776" y="3210" width="411" height="857"/>
+	<SubTexture name="tcwontdoit0006" x="2187" y="3210" width="411" height="857"/>
+	<SubTexture name="tcwontdoit0007" x="2187" y="3210" width="411" height="857"/>
+	<SubTexture name="tcwontdoit0008" x="1776" y="3210" width="411" height="857"/>
+	<SubTexture name="tcwontdoit0009" x="1776" y="3210" width="411" height="857"/>
+	<SubTexture name="tcwontdoit0010" x="1365" y="3210" width="411" height="857"/>
+	<SubTexture name="tcwontdoit0011" x="1365" y="3210" width="411" height="857"/>
 </TextureAtlas>

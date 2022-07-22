@@ -1,0 +1,17 @@
+{
+	"dialogues": [
+		{
+			"events": [
+				{
+					"index": 0,
+					"value1": "5",
+					"value2": "5",
+					"value3": "value3",
+					"event": "Wave On"
+				}
+			],
+			"characterName": "eduardo",
+			"line": "WELL WELL WELL"
+		}
+	]
+}

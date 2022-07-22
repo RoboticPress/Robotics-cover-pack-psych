@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="tc attacc.png">
+	<!-- Created with Adobe Animate version 22.0.6.202 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="tc attacc0000" x="0" y="0" width="659" height="816"/>
+	<SubTexture name="tc attacc0001" x="0" y="0" width="659" height="816"/>
+	<SubTexture name="tc attacc0002" x="659" y="0" width="659" height="816"/>
+	<SubTexture name="tc attacc0003" x="659" y="0" width="659" height="816"/>
+	<SubTexture name="tc attacc0004" x="1318" y="0" width="659" height="816"/>
+	<SubTexture name="tc attacc0005" x="1318" y="0" width="659" height="816"/>
+	<SubTexture name="tc attacc0006" x="1318" y="0" width="659" height="816"/>
+	<SubTexture name="tc attacc0007" x="1318" y="0" width="659" height="816"/>
+	<SubTexture name="tc attacc0008" x="1318" y="0" width="659" height="816"/>
+</TextureAtlas>

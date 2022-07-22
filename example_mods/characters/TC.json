@@ -3,174 +3,152 @@
 		{
 			"loop": false,
 			"offsets": [
-				18,
-				2
-			],
-			"anim": "hey",
-			"fps": 24,
-			"name": "TC Hey",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				206,
-				-1
+				1,
+				8
 			],
 			"anim": "firstDeath",
 			"fps": 24,
-			"name": "TC Game Over",
-			"indices": []
-		},
-		{
-			"loop": true,
-			"offsets": [
-				95,
-				-40
-			],
-			"anim": "deathLoop",
-			"fps": 24,
-			"name": "TC Retry Loop",
+			"name": "tcgotcrit",
 			"indices": []
 		},
 		{
 			"loop": false,
-			"offsets": [
-				25,
-				-1
-			],
-			"anim": "deathConfirm",
-			"fps": 24,
-			"name": "TC Continue",
-			"indices": []
-		},
-		{
-			"offsets": [
-				2,
-				18
-			],
-			"loop": true,
-			"fps": 24,
-			"anim": "scared",
-			"indices": [],
-			"name": "TC Scared"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				14,
-				17
-			],
-			"anim": "boombaby",
-			"fps": 24,
-			"name": "TC Boom Baby!",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				14,
-				-108
-			],
-			"anim": "dodgeDOWN",
-			"fps": 24,
-			"name": "TC Dodge Down",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				90,
-				-2
-			],
-			"anim": "dodgeLEFT",
-			"fps": 24,
-			"name": "TC Dodge Left",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-10,
-				-20
-			],
-			"anim": "dodgeRIGHT",
-			"fps": 24,
-			"name": "TC Dodge Right",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-10,
-				5
-			],
-			"anim": "dodgeUP",
-			"fps": 24,
-			"name": "TC Dodge Up",
-			"indices": []
-		},
-		{
-			"offsets": [
-				23,
-				-11
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singLEFT",
-			"indices": [],
-			"name": "tcleft"
-		},
-		{
 			"offsets": [
 				15,
 				-35
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "tcdown"
-		},
-		{
-			"offsets": [
-				0,
-				6
-			],
-			"loop": false,
 			"fps": 24,
-			"anim": "singUP",
-			"indices": [],
-			"name": "tcup"
+			"name": "tcdown0",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				2,
 				-10
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "tcright"
+			"fps": 24,
+			"name": "tcright0",
+			"indices": []
 		},
 		{
+			"loop": false,
+			"offsets": [
+				1,
+				7
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "tcup0",
+			"indices": []
+		},
+		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "tcidle"
+			"fps": 24,
+			"name": "tcidle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				6
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "tcconfirm",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				53
+			],
+			"anim": "deathloop",
+			"fps": 24,
+			"name": "tcwontdoit",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				53
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "tcwontdoit",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				23,
+				-11
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "tcleft0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				23,
+				-11
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "tcleft miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				15,
+				-37
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "tcdown miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				3,
+				-8
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "tcright miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				2,
+				6
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "tcup miss",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/knockout/TC",
+	"image": "characters/knockout/tc",
 	"position": [
-		70,
-		-10
+		10,
+		0
 	],
 	"healthicon": "knockout/icon-tc",
 	"flip_x": true,
@@ -179,10 +157,9 @@
 		0,
 		121
 	],
-	"playable": false,
 	"camera_position": [
-		70,
-		0
+		60,
+		160
 	],
 	"sing_duration": 4,
 	"scale": 0.9

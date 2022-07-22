@@ -27,6 +27,7 @@ using StringTools;
 class FreeplayState extends MusicBeatState
 {
 	var songs:Array<SongMetadata> = [];
+	var NOMOREMOVE = false;
 
 	var selector:FlxText;
 	private static var curSelected:Int = 0;
@@ -48,12 +49,13 @@ class FreeplayState extends MusicBeatState
 
 	var bg:FlxSprite;
 	var intendedColor:Int;
-	var colorTween:FlxTween;
+	var colorTween:FlxTween;var thefunkicuphead:FlxSprite;
 
 	override function create()
 	{
 		Paths.clearStoredMemory();
 		Paths.clearUnusedMemory();
+		NOMOREMOVE = false;
 		
 		persistentUpdate = true;
 		PlayState.isStoryMode = false;
@@ -203,6 +205,13 @@ class FreeplayState extends MusicBeatState
 		text.setFormat(Paths.font("vcr.ttf"), size, FlxColor.WHITE, RIGHT);
 		text.scrollFactor.set();
 		add(text);
+
+		thefunkicuphead = new FlxSprite();
+		thefunkicuphead.frames = Paths.getSparrowAtlas('knockout/the_thing2.0', 'shared');
+		thefunkicuphead.animation.addByPrefix('boo', 'BOO instance 1', 24, false);
+		thefunkicuphead.visible = false;
+		thefunkicuphead.scale.set(1.1, 1.1);
+		add(thefunkicuphead);
 		super.create();
 	}
 
@@ -277,6 +286,7 @@ class FreeplayState extends MusicBeatState
 		var shiftMult:Int = 1;
 		if(FlxG.keys.pressed.SHIFT) shiftMult = 3;
 
+		if (!NOMOREMOVE)
 		if(songs.length > 1)
 		{
 			if (upP)
@@ -320,6 +330,7 @@ class FreeplayState extends MusicBeatState
 			MusicBeatState.switchState(new MainMenuState());
 		}
 
+		if (!NOMOREMOVE)
 		if(ctrl)
 		{
 			persistentUpdate = false;
@@ -376,10 +387,20 @@ class FreeplayState extends MusicBeatState
 				colorTween.cancel();
 			}
 			
+			if (!NOMOREMOVE)
 			if (FlxG.keys.pressed.SHIFT){
 				LoadingState.loadAndSwitchState(new ChartingState());
 			}else{
-				LoadingState.loadAndSwitchState(new PlayState());
+				if (poop.startsWith('knockout'))
+				{
+					thefunkicuphead.visible = true;
+					NOMOREMOVE = true;
+					thefunkicuphead.animation.play('boo', true, true);
+					FlxG.sound.play(Paths.sound('knockout/boing', 'shared'));
+					FlxG.sound.music.stop();
+				}
+				else
+					LoadingState.loadAndSwitchState(new PlayState());
 			}
 
 			FlxG.sound.music.volume = 0;
@@ -391,6 +412,11 @@ class FreeplayState extends MusicBeatState
 			persistentUpdate = false;
 			openSubState(new ResetScoreSubState(songs[curSelected].songName, curDifficulty, songs[curSelected].songCharacter));
 			FlxG.sound.play(Paths.sound('scrollMenu'));
+		}
+		
+		if (thefunkicuphead.animation.curAnim != null && thefunkicuphead.animation.curAnim.name == 'boo' && thefunkicuphead.animation.curAnim.curFrame == 0)
+		{
+			LoadingState.loadAndSwitchState(new PlayState());
 		}
 		super.update(elapsed);
 	}

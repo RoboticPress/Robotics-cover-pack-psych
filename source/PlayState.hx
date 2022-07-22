@@ -287,10 +287,6 @@ class PlayState extends MusicBeatState
 	public var randomfunni:Array<Float> = [];
 	public var funniRects:Array<FlxSprite> = [];
 	public var moreRects:Array<FlxSprite> = [];
-	public var funniRects1:Array<FlxSprite> = [];
-	public var moreRects1:Array<FlxSprite> = [];
-	public var funniRects2:Array<FlxSprite> = [];
-	public var moreRects2:Array<FlxSprite> = [];
 	public var scoreTxt:FlxText;
 	var timeTxt:FlxText;
 	var scoreTxtTween:FlxTween;
@@ -561,7 +557,8 @@ class PlayState extends MusicBeatState
 					chromaticTween = FlxTween.tween(this, {funniNumberForChrome: defaultChromNumber}, 0.2, {
 						ease: FlxEase.quadInOut,
 						onUpdate: function(twn:FlxTween) {
-							chromaticShader.setChrome(funniNumberForChrome);
+							if (!ClientPrefs.shaders)
+								chromaticShader.setChrome(funniNumberForChrome);
 						}
 					});
 				}
@@ -887,6 +884,7 @@ class PlayState extends MusicBeatState
 					rectanglemf.setGraphicSize(Std.int(rectanglemf.width * 5));
 					rectanglemf.updateHitbox();
 					rectanglemf.antialiasing = false;
+					rectanglemf.visible = ClientPrefs.visualizers;
 					add(rectanglemf);
 					funniVariable[funniRects.length] = FlxG.random.int(100, 200);
 					funniRects.push(rectanglemf);
@@ -902,6 +900,7 @@ class PlayState extends MusicBeatState
 					rectanglemf.flipY = true;
 					rectanglemf.updateHitbox();
 					rectanglemf.antialiasing = false;
+					rectanglemf.visible = ClientPrefs.visualizers;
 					add(rectanglemf);
 					funniVariable[moreRects.length] = FlxG.random.int(100, 200);
 					moreRects.push(rectanglemf);
@@ -998,6 +997,7 @@ class PlayState extends MusicBeatState
 					rectanglemf.setGraphicSize(Std.int(rectanglemf.width * 5));
 					rectanglemf.updateHitbox();
 					rectanglemf.antialiasing = false;
+					rectanglemf.visible = ClientPrefs.visualizers;
 					add(rectanglemf);
 					funniVariable[funniRects.length] = FlxG.random.int(100, 200);
 					funniRects.push(rectanglemf);
@@ -1014,6 +1014,7 @@ class PlayState extends MusicBeatState
 					//rectanglemf.flipY = true;
 					rectanglemf.updateHitbox();
 					rectanglemf.antialiasing = false;
+					rectanglemf.visible = ClientPrefs.visualizers;
 					add(rectanglemf);
 					funniVariable[moreRects.length] = FlxG.random.int(100, 200);
 					moreRects.push(rectanglemf);
@@ -1238,6 +1239,7 @@ class PlayState extends MusicBeatState
 					rectanglemf.setGraphicSize(Std.int(rectanglemf.width * 5));
 					rectanglemf.updateHitbox();
 					rectanglemf.antialiasing = false;
+					rectanglemf.visible = ClientPrefs.visualizers;
 					add(rectanglemf);
 					rectanglemf.alpha = 0.8;
 					funniVariable[funniRects.length] = FlxG.random.int(100, 200);
@@ -1255,6 +1257,7 @@ class PlayState extends MusicBeatState
 					//rectanglemf.flipY = true;
 					rectanglemf.updateHitbox();
 					rectanglemf.antialiasing = false;
+					rectanglemf.visible = ClientPrefs.visualizers;
 					add(rectanglemf);
 					funniVariable[moreRects.length] = FlxG.random.int(100, 200);
 					moreRects.push(rectanglemf);
@@ -1343,6 +1346,7 @@ class PlayState extends MusicBeatState
 					rectanglemf.setGraphicSize(Std.int(rectanglemf.width * 5));
 					rectanglemf.updateHitbox();
 					rectanglemf.antialiasing = false;
+					rectanglemf.visible = ClientPrefs.visualizers;
 					add(rectanglemf);
 					rectanglemf.alpha = 0.8;
 					funniVariable[funniRects.length] = FlxG.random.int(100, 200);
@@ -1360,6 +1364,7 @@ class PlayState extends MusicBeatState
 					//rectanglemf.flipY = true;
 					rectanglemf.updateHitbox();
 					rectanglemf.antialiasing = false;
+					rectanglemf.visible = ClientPrefs.visualizers;
 					add(rectanglemf);
 					funniVariable[moreRects.length] = FlxG.random.int(100, 200);
 					moreRects.push(rectanglemf);
@@ -1486,6 +1491,7 @@ class PlayState extends MusicBeatState
 					//rectanglemf.flipY = true;
 					rectanglemf.updateHitbox();
 					rectanglemf.antialiasing = false;
+					rectanglemf.visible = ClientPrefs.visualizers;
 					add(rectanglemf);
 					funniVariable[moreRects.length] = FlxG.random.int(100, 200);
 					moreRects.push(rectanglemf);
@@ -1501,49 +1507,15 @@ class PlayState extends MusicBeatState
 					rectanglemf.setGraphicSize(Std.int(rectanglemf.width * 5));
 					rectanglemf.updateHitbox();
 					rectanglemf.antialiasing = false;
+					rectanglemf.visible = ClientPrefs.visualizers;
 					add(rectanglemf);
 					rectanglemf.alpha = 0.8;
 					funniVariable[funniRects.length] = FlxG.random.int(100, 200);
 					funniRects.push(rectanglemf);
 				}
-				for (i in 0...7)
-				{
-					var rectanglemf:BGSprite;
-					if (i == 0)
-						rectanglemf = new BGSprite('pillar', moreRects[i-1].x + moreRects[i-1].width, 600, 0.9, 0.9);
-					else
-						rectanglemf = new BGSprite('pillar', moreRects1[i-1].x + moreRects1[i-1].width, 600, 0.9, 0.9);
-					rectanglemf.color = 0xFF66FFFF;
-					rectanglemf.setGraphicSize(Std.int(rectanglemf.width * 5));
-					//rectanglemf.flipY = true;
-					rectanglemf.updateHitbox();
-					rectanglemf.antialiasing = false;
-					add(rectanglemf);
-					funniVariable[moreRects1.length] = FlxG.random.int(100, 200);
-					moreRects1.push(rectanglemf);
-				}
-				for (i in 0...7)
-				{
-					var rectanglemf:BGSprite;
-					if (i == 0)
-						rectanglemf = new BGSprite('pillar', funniRects[i-1].x + funniRects[i-1].width, 600, 0.9, 0.9);
-					else
-						rectanglemf = new BGSprite('pillar', funniRects1[i-1].x + funniRects1[i-1].width, 600, 0.9, 0.9);
-					rectanglemf.color = 0xFF00FF90;
-					rectanglemf.setGraphicSize(Std.int(rectanglemf.width * 5));
-					rectanglemf.updateHitbox();
-					rectanglemf.antialiasing = false;
-					add(rectanglemf);
-					rectanglemf.alpha = 0.8;
-					funniVariable[funniRects1.length] = FlxG.random.int(100, 200);
-					funniRects1.push(rectanglemf);
-				}
 				aaaaaaaaclose = funniRects[funniRects.length-1].x+funniRects[funniRects.length-1].width;
 				aaaaaaaaclose2 = moreRects[0].x;
-				aaaaaaaaclose3 = funniRects1[funniRects1.length-1].x+funniRects1[funniRects1.length-1].width;
-				aaaaaaaaclose4 = moreRects1[0].x;
-				aaaaaaaaclose5 = funniRects[funniRects.length-1].x+funniRects[funniRects.length-1].width;
-				aaaaaaaaclose6 = moreRects[0].x;
+				aaaaaaaaclose3 = funniRects[0].x;
 
 				var bgAlley:FlxSprite = new FlxSprite(-500, -200).loadGraphic(Paths.image('headache/garStage'));
 				bgAlley.antialiasing = true;
@@ -1694,11 +1666,11 @@ class PlayState extends MusicBeatState
 				bg3.scale.set(4,4);
 				add(bg1);
 				add(bg2);
-				for (i in 0...17)
+				for (i in 0...36)
 				{
 					var rectanglemf:BGSprite;
 					if (i == 0)
-						rectanglemf = new BGSprite('pillar', 200, 1400, 0.9, 0.9);
+						rectanglemf = new BGSprite('pillar', -300, 1400, 0.9, 0.9);
 					else
 						rectanglemf = new BGSprite('pillar', moreRects[i-1].x + moreRects[i-1].width, 1400, 0.9, 0.9);
 					rectanglemf.color = 0xFF6670FF;
@@ -1706,21 +1678,23 @@ class PlayState extends MusicBeatState
 					//rectanglemf.flipY = true;
 					rectanglemf.updateHitbox();
 					rectanglemf.antialiasing = false;
+					rectanglemf.visible = ClientPrefs.visualizers;
 					add(rectanglemf);
 					funniVariable[moreRects.length] = FlxG.random.int(100, 200);
 					moreRects.push(rectanglemf);
 				}
-				for (i in 0...17)
+				for (i in 0...36)
 				{
 					var rectanglemf:BGSprite;
 					if (i == 0)
-						rectanglemf = new BGSprite('pillar', 200, 1400, 0.9, 0.9);
+						rectanglemf = new BGSprite('pillar', -300, 1400, 0.9, 0.9);
 					else
 						rectanglemf = new BGSprite('pillar', funniRects[i-1].x + funniRects[i-1].width, 1400, 0.9, 0.9);
 					rectanglemf.color = 0xFFFF7373;
 					rectanglemf.setGraphicSize(Std.int(rectanglemf.width * 5));
 					rectanglemf.updateHitbox();
 					rectanglemf.antialiasing = false;
+					rectanglemf.visible = ClientPrefs.visualizers;
 					add(rectanglemf);
 					rectanglemf.alpha = 0.8;
 					funniVariable[funniRects.length] = FlxG.random.int(100, 200);
@@ -3010,9 +2984,12 @@ class PlayState extends MusicBeatState
 		taeyaiConsole.visible = false;
 		if (SONG.song.toLowerCase() == 'knockout')
 		{
-			chromaticShader = new ChromaticAberrationEffect(defaultChromNumber);
-			addShaderToCamera('camGame', chromaticShader);
-			addShaderToCamera('camHUD', chromaticShader);
+			if (!ClientPrefs.shaders)
+			{
+				chromaticShader = new ChromaticAberrationEffect(defaultChromNumber);
+				addShaderToCamera('camGame', chromaticShader);
+				addShaderToCamera('camHUD', chromaticShader);
+			}
 			FlxG.sound.list.add(hurtSound);
 			//USE FOR ENDLESS
 			//dad.color = FlxColor.fromRGB(0, 38, 255, 122);
@@ -4580,12 +4557,12 @@ class PlayState extends MusicBeatState
 								superMove = false;
 							}
 						}
-						else if ((superCircleHitBox.x + superCircleHitBox.width > bfHitBox.x) && !(superCircleHitBox.x > bfHitBox.x + bfHitBox.width))
+						else if ((superCircleHitBox.x + superCircleHitBox.width > bfHitBox.x) && !(superCircleHitBox.x > bfHitBox.x + bfHitBox.width) )
 						{
 							switch (boyfriend.curCharacter)
 							{
 								case 'chara-playable':
-									if (boyfriend.animation.curAnim.name != 'singLEFT-alt')
+									if (boyfriend.animation.curAnim.name != 'save')
 									{
 										if (boyfriendBETADCIU.animation.curAnim.name != 'attack')
 										{
@@ -4624,8 +4601,11 @@ class PlayState extends MusicBeatState
 										}
 									}
 							}
-							boyfriendBETADCIU.specialAnim = true;
-							boyfriendBETADCIU.playAnim('dodge');
+							if (boyfriendBETADCIU.animation.curAnim.name != 'attack')
+							{
+								boyfriendBETADCIU.specialAnim = true;
+								boyfriendBETADCIU.playAnim('dodge');
+							}
 						}
 						else
 						{
@@ -5252,14 +5232,10 @@ class PlayState extends MusicBeatState
 					snapCamFollowToPos(dad.getMidpoint().x,dad.getMidpoint().y);
 				if (stepCheck(1120, 1136) || stepCheck(1152, 1160))
 					snapCamFollowToPos(boyfriend.getMidpoint().x,boyfriend.getMidpoint().y);
-				pillarsThing(funniRects, 0, 1, 1400, false, 2, true, 25);
-				pillarsThing(moreRects, 1, 1, 1400, false, 2, true, 25);
-				movePillars(moreRects, 5, aaaaaaaaclose);
-				movePillars(funniRects, -5 * 1/2, aaaaaaaaclose2);
-				pillarsThing(funniRects1, 0, 1, 1400, false, 2, true, 25);
-				pillarsThing(moreRects1, 1, 1, 1400, false, 2, true, 25);
-				movePillars(moreRects1, 5, aaaaaaaaclose);
-				movePillars(funniRects1, -5 * 1/2, aaaaaaaaclose2);
+				pillarsThing(funniRects, 0, 1, 1400, false, 1, true, 25, true, 4);
+				pillarsThing(moreRects, 1, 1, 1400, false, 1, true, 25, true, 4);
+				movePillars(moreRects, 15, aaaaaaaaclose);
+				movePillars(funniRects, -15 * 1/2, aaaaaaaaclose2);
 		}
 		/*if (FlxG.keys.justPressed.NINE)
 		{
@@ -6112,13 +6088,15 @@ class PlayState extends MusicBeatState
 				chromaticTween = FlxTween.tween(this, {funniNumberForChrome: defaultChromNumber}, 0.2, {
 					ease: FlxEase.quadInOut,
 					onUpdate: function(twn:FlxTween) {
-						chromaticShader.setChrome(funniNumberForChrome);
+						if (!ClientPrefs.shaders)
+							chromaticShader.setChrome(funniNumberForChrome);
 					}
 				});
 
 			},
 			onUpdate: function(twn:FlxTween) {
-				chromaticShader.setChrome(funniNumberForChrome);
+				if (!ClientPrefs.shaders)
+					chromaticShader.setChrome(funniNumberForChrome);
 			}
 		});
 
@@ -6181,7 +6159,8 @@ class PlayState extends MusicBeatState
 
 			},
 			onUpdate: function(twn:FlxTween) {
-				chromaticShader.setChrome(funniNumberForChrome);
+				if (!ClientPrefs.shaders)
+					chromaticShader.setChrome(funniNumberForChrome);
 			}
 		});
 		chromaticTween = FlxTween.tween(this, {funniNumberForChrome: 0.09}, 0.2, {
@@ -6191,13 +6170,15 @@ class PlayState extends MusicBeatState
 				chromaticTween = FlxTween.tween(this, {funniNumberForChrome: defaultChromNumber}, 0.2, {
 					ease: FlxEase.quadInOut,
 					onUpdate: function(twn:FlxTween) {
-						chromaticShader.setChrome(funniNumberForChrome);
+						if (!ClientPrefs.shaders)
+							chromaticShader.setChrome(funniNumberForChrome);
 					}
 				});
 
 			},
 			onUpdate: function(twn:FlxTween) {
-				chromaticShader.setChrome(funniNumberForChrome);
+				if (!ClientPrefs.shaders)
+					chromaticShader.setChrome(funniNumberForChrome);
 			}
 		});
 
@@ -6864,6 +6845,14 @@ class PlayState extends MusicBeatState
 						FlxTween.tween(boyfriendBETADCIU, {alpha: 0}, 0.3, {ease: FlxEase.quadIn});
 						FlxTween.tween(superCircleCuphead, {alpha: 0}, 0.3, {ease: FlxEase.quadIn});
 						FlxTween.tween(lylaceDead, {alpha: 0}, 0.3, {ease: FlxEase.quadIn});
+						for (i in funniRects)
+						{
+							FlxTween.tween(i, {alpha: 0}, 0.3, {ease: FlxEase.quadIn});
+						}
+						for (i in moreRects)
+						{
+							FlxTween.tween(i, {alpha: 0}, 0.3, {ease: FlxEase.quadIn});
+						}
 					case 4:
 						FlxTween.tween(dad, {alpha: 1}, 0.3, {ease: FlxEase.quadIn});
 						FlxTween.tween(boyfriend, {alpha: 1}, 0.3, {ease: FlxEase.quadIn});
@@ -6880,6 +6869,8 @@ class PlayState extends MusicBeatState
 						gfAgain.x -= 1400;
 						gfAgain.y -= 75;
 						firstPersonMode = true;
+						gf.color = FlxColor.WHITE;
+						gfAgain.color = FlxColor.WHITE;
 						var dumb = CoolUtil.coolTextFile(Paths.txt('dumb'));
 						var xfunni = Std.parseFloat(dumb[0]);
 						var yfunni = Std.parseFloat(dumb[1]);
@@ -7029,6 +7020,8 @@ class PlayState extends MusicBeatState
 							ease: FlxEase.quadIn,
 							onComplete: function (twn:FlxTween)
 							{
+								gf.color = 0xFFAEB8CF;
+								gfAgain.color = 0xFFAEB8CF;
 								iconP1.changeIcon('bf');
 								iconP2.changeIcon('knockout/icon-cuphead-pissed');
 								defaultCamZoom = 0.65;
@@ -9168,14 +9161,19 @@ class PlayState extends MusicBeatState
 		}
 	}
 	var audioBuffers:Array<AudioBuffer> = [null, null];
-	function pillarsThing(?pillarArray:Array<FlxSprite> = null, isVocals:Int = 0, theBase:Int = 0, basevalue:Float = 600, smooththing:Bool = false, heightValue:Float = 2, ?goweeee:Bool = true, ?speedValue:Float = 50)
+	function pillarsThing(?pillarArray:Array<FlxSprite> = null, isVocals:Int = 0, theBase:Int = 0, basevalue:Float = 600, smooththing:Bool = false, heightValue:Float = 2, ?goweeee:Bool = true, ?speedValue:Float = 50, ?loopThis:Bool = false, ?divideby:Int = 3)
 	{
+		var maxpillars = pillarArray.length;
+		if (loopThis)
+		{
+			maxpillars = Std.int(pillarArray.length/divideby);
+		}
 		var increasething = 1;
 		if (smooththing)
 			increasething = 2;
 			
 		fUNNINUMBERLOL += increasething;
-		if (fUNNINUMBERLOL >= pillarArray.length)
+		if (fUNNINUMBERLOL >= maxpillars)
 			fUNNINUMBERLOL = 0;
 		var i = fUNNINUMBERLOL;
 		//for (i in 0...pillarArray.length)
@@ -9223,22 +9221,52 @@ class PlayState extends MusicBeatState
 					{
 						//trace('GREEN');
 						//trace((Math.abs(min) + Math.abs(max)) * 1000);
-						if (isVocals == 1)
+						if (loopThis)
 						{
-							if (((pillarArray[i].y > basevalue - (Math.abs(min) + Math.abs(max)) * 1000 * heightValue * vocals.volume * FlxG.sound.volume) && goweeee) || !goweeee)
-								pillarArray[i].y = basevalue - (Math.abs(min) + Math.abs(max)) * 1000 * heightValue * vocals.volume * FlxG.sound.volume;
+							for (z in 0...divideby)
+							{
+								if (isVocals == 1)
+								{
+									if (((pillarArray[i + maxpillars * z].y > basevalue - (Math.abs(min) + Math.abs(max)) * 1000 * heightValue * vocals.volume * FlxG.sound.volume) && goweeee) || !goweeee)
+										pillarArray[i + maxpillars * z].y = basevalue - (Math.abs(min) + Math.abs(max)) * 1000 * heightValue * vocals.volume * FlxG.sound.volume;
+								}
+								else
+								{
+									if (((pillarArray[i + maxpillars * z].y > basevalue - (Math.abs(min) + Math.abs(max)) * 1000 * heightValue * FlxG.sound.volume) && goweeee) || !goweeee)
+										pillarArray[i + maxpillars * z].y = basevalue - (Math.abs(min) + Math.abs(max)) * 1000 * heightValue * FlxG.sound.volume;
+								}
+							}
 						}
 						else
 						{
-							if (((pillarArray[i].y > basevalue - (Math.abs(min) + Math.abs(max)) * 1000 * heightValue * FlxG.sound.volume) && goweeee) || !goweeee)
-								pillarArray[i].y = basevalue - (Math.abs(min) + Math.abs(max)) * 1000 * heightValue * FlxG.sound.volume;
+							if (isVocals == 1)
+							{
+								if (((pillarArray[i].y > basevalue - (Math.abs(min) + Math.abs(max)) * 1000 * heightValue * vocals.volume * FlxG.sound.volume) && goweeee) || !goweeee)
+									pillarArray[i].y = basevalue - (Math.abs(min) + Math.abs(max)) * 1000 * heightValue * vocals.volume * FlxG.sound.volume;
+							}
+							else
+							{
+								if (((pillarArray[i].y > basevalue - (Math.abs(min) + Math.abs(max)) * 1000 * heightValue * FlxG.sound.volume) && goweeee) || !goweeee)
+									pillarArray[i].y = basevalue - (Math.abs(min) + Math.abs(max)) * 1000 * heightValue * FlxG.sound.volume;
+							}
 						}
 					}
 					else
 					{
 						//trace('PINK');
-						if (((pillarArray[i].y < basevalue + (Math.abs(min) + Math.abs(max)) * 1000 * heightValue) && goweeee) || !goweeee)
-							pillarArray[i].y = basevalue + (Math.abs(min) + Math.abs(max)) * 1000 * heightValue;
+						if (loopThis)
+						{
+							for (z in 0...divideby)
+							{
+								if (((pillarArray[i + maxpillars * z].y < basevalue + (Math.abs(min) + Math.abs(max)) * 1000 * heightValue) && goweeee) || !goweeee)
+									pillarArray[i + maxpillars * z].y = basevalue + (Math.abs(min) + Math.abs(max)) * 1000 * heightValue;
+							}
+						}
+						else
+						{
+							if (((pillarArray[i].y < basevalue + (Math.abs(min) + Math.abs(max)) * 1000 * heightValue) && goweeee) || !goweeee)
+								pillarArray[i].y = basevalue + (Math.abs(min) + Math.abs(max)) * 1000 * heightValue;
+						}
 					}
 					//waveformSprite.pixels.fillRect(new Rectangle(Std.int((GRID_SIZE * 4) - pixelsMin), drawIndex, pixelsMin + pixelsMax, 1), FlxColor.ORANGE);
 					drawIndex++;
@@ -9323,6 +9351,10 @@ class PlayState extends MusicBeatState
 	
 	override function beatHit()
 	{
+		for (i in 0...funniRects.length)
+		{
+			randomfunni[i] = FlxG.random.int(-150, 0);
+		}
 		super.beatHit();
 
 		if(lastBeatHit >= curBeat) {

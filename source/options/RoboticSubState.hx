@@ -31,14 +31,21 @@ class RoboticSubState extends BaseOptionsMenu
 {
 	public function new()
 	{
-		title = 'Robotic Substate';
+		title = 'Robotic Settings';
 		rpcTitle = 'Robotic Substate'; //for Discord Rich Presence
 
-		var option:Option = new Option('Shaders',
-			'Turn Shaders on or off. fun fact this doesn\'t work because no',
+		var option:Option = new Option('No Shaders',
+			'Turns shaders off. (Not recommended unless nessecary)',
 			'shaders',
 			'bool',
-			true);
+			false);
+		addOption(option);
+
+		var option:Option = new Option('Add Visualizers',
+			'Visualizers cool ig',
+			'visualizers',
+			'bool',
+			false);
 		addOption(option);
 
 		super();

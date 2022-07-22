@@ -170,6 +170,7 @@ class Character extends FlxSprite
 					case "texture":
 						frames = AtlasFrameMaker.construct(json.image);
 				}
+				FlxG.bitmap.add(Paths.image(imageFile));
 				imageFile = json.image;
 				playable = json.playable || false;
 				flying = json.flying || false;

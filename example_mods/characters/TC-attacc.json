@@ -1,0 +1,35 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "tc attacc",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/knockout/tc_attacc",
+	"position": [
+		-110,
+		-20
+	],
+	"healthicon": "knockout/icon-tc",
+	"flip_x": true,
+	"healthbar_colors": [
+		215,
+		0,
+		121
+	],
+	"playable": false,
+	"camera_position": [
+		60,
+		160
+	],
+	"sing_duration": 4,
+	"scale": 0.9
+}
