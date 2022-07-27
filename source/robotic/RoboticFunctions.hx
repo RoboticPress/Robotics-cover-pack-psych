@@ -1,5 +1,6 @@
 package robotic;
 
+import flixel.FlxG;
 using StringTools;
 
 class RoboticFunctions
@@ -113,5 +114,18 @@ class RoboticFunctions
 		}
 
 		return [returnLetter, returnDirectory];
+	}
+
+	static public function ifBeatenSong(song:String):Bool
+	{
+		if (FlxG.save.data.beatsong == null)
+			FlxG.save.data.beatsong = ['tutorial'];
+		return FlxG.save.data.beatsong.contains(song.toLowerCase());
+	}
+
+	static public function BeatSong(song:String)
+	{
+		FlxG.save.data.beatsong.push(song.toLowerCase());
+		FlxG.save.data.coins++;
 	}
 }

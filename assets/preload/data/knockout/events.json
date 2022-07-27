@@ -1,0 +1,1034 @@
+{
+	"song": {
+		"speed": 2.8,
+		"stage": "knockout",
+		"player1": "BF_IC_Rain",
+		"player2": "cuphead-mad",
+		"player3": null,
+		"events": [
+			[
+				8823.52941176471,
+				[
+					[
+						"Change Character",
+						"dad",
+						"sky-mad"
+					],
+					[
+						"betadciuDAD",
+						"",
+						""
+					]
+				]
+			],
+			[
+				12352.9411764706,
+				[
+					[
+						"Change Character",
+						"bf",
+						"taeyai-playable"
+					],
+					[
+						"betadciuBF",
+						"",
+						""
+					]
+				]
+			],
+			[
+				14117.6470588235,
+				[
+					[
+						"Change Character",
+						"dad",
+						"majin"
+					]
+				]
+			],
+			[
+				15441.1764705882,
+				[
+					[
+						"Cuphead super shot",
+						"",
+						""
+					]
+				]
+			],
+			[
+				15551.7647058824,
+				[
+					[
+						"Change Character",
+						"dadagain2",
+						"fleetway3"
+					],
+					[
+						"Play Animation",
+						"laser",
+						"dadAgain2"
+					],
+					[
+						"tween iconp2again to funni place",
+						"",
+						""
+					]
+				]
+			],
+			[
+				16323.5294117647,
+				[
+					[
+						"Change Character",
+						"dadagain2",
+						"fleetway"
+					]
+				]
+			],
+			[
+				19411.7647058823,
+				[
+					[
+						"Change Character",
+						"dadagain1",
+						"hex"
+					],
+					[
+						"dadAgain1 Singing",
+						"true",
+						""
+					]
+				]
+			],
+			[
+				22941.1764705882,
+				[
+					[
+						"Change Character",
+						"bf",
+						"hat kid rain"
+					]
+				]
+			],
+			[
+				25808.8235294118,
+				[
+					[
+						"Change Character",
+						"bfagain",
+						"tankman"
+					],
+					[
+						"Play Animation",
+						"singDOWN",
+						"boyfriendagain"
+					]
+				]
+			],
+			[
+				26029.4117647059,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"boyfriendagain"
+					]
+				]
+			],
+			[
+				26470.5882352941,
+				[
+					[
+						"boyfriendAgain Singing",
+						"true",
+						""
+					]
+				]
+			],
+			[
+				30000,
+				[
+					[
+						"Change Character",
+						"dad",
+						"ankha"
+					],
+					[
+						"hide dadAgain1",
+						"",
+						""
+					],
+					[
+						"hide dadAgain2",
+						"",
+						""
+					],
+					[
+						"Cuphead start shooting chaser",
+						"",
+						""
+					]
+				]
+			],
+			[
+				33529.4117647059,
+				[
+					[
+						"Change Character",
+						"bf",
+						"bb"
+					],
+					[
+						"hide BoyfriendAgain",
+						"",
+						""
+					]
+				]
+			],
+			[
+				33970.5882352941,
+				[
+					[
+						"Cuphead start shooting",
+						"",
+						""
+					]
+				]
+			],
+			[
+				37058.8235294118,
+				[
+					[
+						"Change Character",
+						"dad",
+						"furscorns"
+					]
+				]
+			],
+			[
+				38823.5294117647,
+				[
+					[
+						"Change Character",
+						"bf",
+						"spres-playable"
+					]
+				]
+			],
+			[
+				40588.2352941177,
+				[
+					[
+						"Change Character",
+						"dad",
+						"extiky"
+					]
+				]
+			],
+			[
+				43676.4705882353,
+				[
+					[
+						"Cuphead super shot",
+						"",
+						""
+					]
+				]
+			],
+			[
+				51176.4705882353,
+				[
+					[
+						"Change Character",
+						"bf",
+						"hank-playable"
+					]
+				]
+			],
+			[
+				51286.7647058824,
+				[
+					[
+						"Cuphead start shooting",
+						"",
+						""
+					]
+				]
+			],
+			[
+				55036.7647058824,
+				[
+					[
+						"Cuphead super shot",
+						"",
+						""
+					]
+				]
+			],
+			[
+				58014.705882353,
+				[
+					[
+						"Change Character",
+						"dad",
+						"Sans_IC"
+					]
+				]
+			],
+			[
+				65073.5294117647,
+				[
+					[
+						"Change Character",
+						"bf",
+						"chara-playable"
+					]
+				]
+			],
+			[
+				66286.7647058824,
+				[
+					[
+						"Cuphead super shot circle",
+						"",
+						""
+					]
+				]
+			],
+			[
+				66507.3529411765,
+				[
+					[
+						"CupheadDoubleAttack",
+						"True",
+						""
+					]
+				]
+			],
+			[
+				71360.2941176471,
+				[
+					[
+						"CupheadAttack",
+						"True",
+						""
+					]
+				]
+			],
+			[
+				71470.5882352942,
+				[
+					[
+						"Screen Shake",
+						"0.2, 0.05",
+						"0.2, 0.05"
+					]
+				]
+			],
+			[
+				71691.1764705883,
+				[
+					[
+						"Screen Shake",
+						"0.2, 0.05",
+						"0.2, 0.05"
+					]
+				]
+			],
+			[
+				72352.9411764706,
+				[
+					[
+						"CupheadShotting",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				72352.9411764706,
+				[
+					[
+						"gfAgain Singing",
+						"true",
+						""
+					],
+					[
+						"Change Dad Icon GFAgain",
+						"",
+						""
+					],
+					[
+						"Cuphead start shooting chaser",
+						"",
+						""
+					]
+				]
+			],
+			[
+				79411.7647058824,
+				[
+					[
+						"Change Character",
+						"bf",
+						"neonight-playable"
+					],
+					[
+						"Cuphead start shooting",
+						"",
+						""
+					],
+					[
+						"Change Character",
+						"bfagain1",
+						"sharv-playable"
+					],
+					[
+						"Change Dad Icon GFAgain",
+						"",
+						""
+					]
+				]
+			],
+			[
+				80294.1176470588,
+				[
+					[
+						"CupheadShotting",
+						"",
+						""
+					]
+				]
+			],
+			[
+				85147.0588235294,
+				[
+					[
+						"CupheadAttack",
+						"True",
+						""
+					]
+				]
+			],
+			[
+				86360.2941176471,
+				[
+					[
+						"gfAgain Singing",
+						"false",
+						""
+					]
+				]
+			],
+			[
+				86470.5882352941,
+				[
+					[
+						"Change Character",
+						"dad",
+						"ChampionKnightEX"
+					],
+					[
+						"Cuphead start shooting chaser",
+						"",
+						""
+					]
+				]
+			],
+			[
+				90000,
+				[
+					[
+						"Change Character",
+						"bf",
+						"blantados-playable"
+					],
+					[
+						"hide BoyfriendAgain",
+						"",
+						""
+					],
+					[
+						"Cuphead start shooting",
+						"",
+						""
+					]
+				]
+			],
+			[
+				90441.1764705882,
+				[
+					[
+						"CupheadShotting",
+						"",
+						""
+					]
+				]
+			],
+			[
+				93529.4117647059,
+				[
+					[
+						"Change Character",
+						"dad",
+						"eduardo"
+					],
+					[
+						"Cuphead start shooting chaser",
+						"",
+						""
+					]
+				]
+			],
+			[
+				95294.1176470588,
+				[
+					[
+						"Change Character",
+						"bf",
+						"tord-playable"
+					]
+				]
+			],
+			[
+				97058.8235294117,
+				[
+					[
+						"CupheadShotting",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				97058.8235294117,
+				[
+					[
+						"Change Character",
+						"dad",
+						"sunky"
+					],
+					[
+						"Cuphead start shooting chaser",
+						"",
+						""
+					]
+				]
+			],
+			[
+				100147.058823529,
+				[
+					[
+						"Cuphead super shot circle",
+						"",
+						""
+					]
+				]
+			],
+			[
+				100257.352941176,
+				[
+					[
+						"Cuphead start shooting chaser",
+						"",
+						""
+					]
+				]
+			],
+			[
+				100367.647058823,
+				[
+					[
+						"Cuphead start shooting chaser",
+						"",
+						""
+					]
+				]
+			],
+			[
+				100477.941176471,
+				[
+					[
+						"Cuphead start shooting chaser",
+						"",
+						""
+					]
+				]
+			],
+			[
+				100588.235294118,
+				[
+					[
+						"Cuphead start shooting chaser",
+						"",
+						""
+					]
+				]
+			],
+			[
+				100698.529411765,
+				[
+					[
+						"Cuphead start shooting chaser",
+						"",
+						""
+					]
+				]
+			],
+			[
+				100808.823529412,
+				[
+					[
+						"Cuphead start shooting chaser",
+						"",
+						""
+					]
+				]
+			],
+			[
+				100919.117647059,
+				[
+					[
+						"Cuphead start shooting chaser",
+						"",
+						""
+					]
+				]
+			],
+			[
+				101029.411764706,
+				[
+					[
+						"Cuphead start shooting chaser",
+						"",
+						""
+					]
+				]
+			],
+			[
+				101139.705882353,
+				[
+					[
+						"Cuphead start shooting chaser",
+						"",
+						""
+					]
+				]
+			],
+			[
+				101250,
+				[
+					[
+						"Cuphead start shooting chaser",
+						"",
+						""
+					]
+				]
+			],
+			[
+				101360.294117647,
+				[
+					[
+						"Cuphead start shooting chaser",
+						"",
+						""
+					]
+				]
+			],
+			[
+				101470.588235294,
+				[
+					[
+						"Cuphead start shooting chaser",
+						"",
+						""
+					]
+				]
+			],
+			[
+				101580.882352941,
+				[
+					[
+						"Cuphead start shooting chaser",
+						"",
+						""
+					]
+				]
+			],
+			[
+				107647.058823529,
+				[
+					[
+						"Change Character",
+						"bf",
+						"TC"
+					]
+				]
+			],
+			[
+				107757.352941176,
+				[
+					[
+						"Cuphead start shooting",
+						"",
+						""
+					]
+				]
+			],
+			[
+				114705.882352941,
+				[
+					[
+						"Change Character",
+						"dad",
+						"agressive-yuri"
+					]
+				]
+			],
+			[
+				115036.764705882,
+				[
+					[
+						"Cuphead start shooting chaser",
+						"",
+						""
+					]
+				]
+			],
+			[
+				116470.588235294,
+				[
+					[
+						"Change Character",
+						"bf",
+						"natsuki-playable"
+					]
+				]
+			],
+			[
+				118235.294117647,
+				[
+					[
+						"Change Character",
+						"dad",
+						"selever"
+					]
+				]
+			],
+			[
+				120000,
+				[
+					[
+						"Change Character",
+						"bf",
+						"robo"
+					],
+					[
+						"Change Character",
+						"gf",
+						"no-gf"
+					]
+				]
+			],
+			[
+				121764.705882353,
+				[
+					[
+						"Change Character",
+						"dad",
+						"jom"
+					],
+					[
+						"Cuphead stop shooting",
+						"",
+						""
+					],
+					[
+						"Insta Cam Zoom",
+						"0.7",
+						""
+					]
+				]
+			],
+			[
+				123529.411764706,
+				[
+					[
+						"Insta Cam Zoom",
+						"0.75",
+						""
+					]
+				]
+			],
+			[
+				125294.117647059,
+				[
+					[
+						"Insta Cam Zoom",
+						"0.8",
+						""
+					]
+				]
+			],
+			[
+				127058.823529412,
+				[
+					[
+						"Insta Cam Zoom",
+						"0.9",
+						""
+					]
+				]
+			],
+			[
+				128382.352941176,
+				[
+					[
+						"Cuphead super shot",
+						"",
+						""
+					]
+				]
+			],
+			[
+				128713.235294118,
+				[
+					[
+						"Insta Cam Zoom",
+						"0.65",
+						""
+					],
+					[
+						"Do Hardcoded Event",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				129154.705882353,
+				[
+					[
+						"Flash",
+						"0xFFFFFFFF",
+						"2"
+					],
+					[
+						"Do Hardcoded Event",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				129705.624117647,
+				[
+					[
+						"Play Animation",
+						"oops",
+						"dadbetadciu"
+					],
+					[
+						"Play Animation",
+						"singRIGHTmiss",
+						"bfbetadciu"
+					],
+					[
+						"Play Animation",
+						"singLEFTmiss",
+						"dad"
+					],
+					[
+						"Play Animation",
+						"singRIGHTmiss",
+						"bf"
+					]
+				]
+			],
+			[
+				131300,
+				[
+					[
+						"Do Hardcoded Event",
+						"3",
+						""
+					]
+				]
+			],
+			[
+				131627,
+				[
+					[
+						"Change Character",
+						"dad",
+						"big-monika"
+					],
+					[
+						"Change Character",
+						"gf",
+						"robo-gf"
+					],
+					[
+						"Do Hardcoded Event",
+						"5",
+						"1"
+					]
+				]
+			],
+			[
+				133676.470588235,
+				[
+					[
+						"Do Hardcoded Event",
+						"4",
+						""
+					]
+				]
+			],
+			[
+				141507.352941176,
+				[
+					[
+						"Cuphead start shooting",
+						"",
+						""
+					]
+				]
+			],
+			[
+				147904,
+				[
+					[
+						"Do Hardcoded Event",
+						"6",
+						"1"
+					]
+				]
+			],
+			[
+				153529.411764706,
+				[
+					[
+						"Cuphead start shooting",
+						"",
+						""
+					]
+				]
+			],
+			[
+				154411.764705882,
+				[
+					[
+						"Do Hardcoded Event",
+						"5",
+						"2"
+					]
+				]
+			],
+			[
+				161911.764705882,
+				[
+					[
+						"Do Hardcoded Event",
+						"6",
+						"2"
+					]
+				]
+			],
+			[
+				164007,
+				[
+					[
+						"Do Hardcoded Event",
+						"5",
+						"3"
+					]
+				]
+			],
+			[
+				165551,
+				[
+					[
+						"Do Hardcoded Event",
+						"6",
+						"3"
+					]
+				]
+			],
+			[
+				167536,
+				[
+					[
+						"Do Hardcoded Event",
+						"5",
+						"4"
+					]
+				]
+			],
+			[
+				169301.470588235,
+				[
+					[
+						"Do Hardcoded Event",
+						"6",
+						"4"
+					]
+				]
+			],
+			[
+				171066.176470588,
+				[
+					[
+						"Do Hardcoded Event",
+						"5",
+						"5"
+					]
+				]
+			],
+			[
+				172610.294117647,
+				[
+					[
+						"Do Hardcoded Event",
+						"6",
+						"5"
+					],
+					[
+						"Do Hardcoded Event",
+						"5",
+						"6"
+					]
+				]
+			],
+			[
+				174375,
+				[
+					[
+						"Do Hardcoded Event",
+						"7",
+						""
+					]
+				]
+			],
+			[
+				176029.411764706,
+				[
+					[
+						"Cuphead super shot",
+						"",
+						""
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": "notes/IC_NoteSplash",
+		"validScore": false,
+		"gfVersion": "robo-gf",
+		"bpm": 136,
+		"arrowSkin": "notes/Cuphead_NOTE_assets",
+		"needsVoices": true,
+		"song": "Knockout"
+	}
+}

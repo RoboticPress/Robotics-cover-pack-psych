@@ -121,6 +121,11 @@ class MainMenuState extends MusicBeatState
 			menuItem.scrollFactor.set(0, scr);
 			menuItem.antialiasing = ClientPrefs.globalAntialiasing;
 			//menuItem.setGraphicSize(Std.int(menuItem.width * 0.58));
+			if (optionShit[i] == 'mods')
+			{
+				menuItem.setGraphicSize(Std.int(menuItem.width * 0.7), Std.int(menuItem.height * 0.7));
+				menuItem.updateHitbox();
+			}
 			menuItem.updateHitbox();
 		}
 

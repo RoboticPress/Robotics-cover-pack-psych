@@ -27,7 +27,9 @@ class MasterEditorMenu extends MusicBeatState
 		'Dialogue Portrait Editor',
 		'Character Editor',
 		'Chart Editor',
-		'Robotic Dialogue Editor'
+		'Robotic Dialogue Editor',
+		'Robotic Testing Area',
+		'Robotic Testing Area Two'
 	];
 	private var grpTexts:FlxTypedGroup<Alphabet>;
 	private var directories:Array<String> = [null];
@@ -128,6 +130,10 @@ class MasterEditorMenu extends MusicBeatState
 					LoadingState.loadAndSwitchState(new ChartingState(), false);
 				case 'Robotic Dialogue Editor':
 					LoadingState.loadAndSwitchState(new FreeplayStateRobotic());
+				case 'Robotic Testing Area':
+					LoadingState.loadAndSwitchState(new RoboticTesting());
+				case 'Robotic Testing Area Two':
+					LoadingState.loadAndSwitchState(new RoboticTesting1());
 			}
 			FlxG.sound.music.volume = 0;
 			#if PRELOAD_ALL

@@ -1,5 +1,6 @@
 package editors;
 
+import flixel.util.FlxTimer;
 #if desktop
 import Discord.DiscordClient;
 #end
@@ -244,9 +245,9 @@ class ChartingState extends MusicBeatState
 
 		vortex = FlxG.save.data.chart_vortex;
 		ignoreWarnings = FlxG.save.data.ignoreWarnings;
-		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
+		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('idkkk'));
 		bg.scrollFactor.set();
-		bg.color = 0xFF222222;
+		//bg.color = 0xFF222222;
 		add(bg);
 
 		gridLayer = new FlxTypedGroup<FlxSprite>();
@@ -853,7 +854,7 @@ class ChartingState extends MusicBeatState
 				var boob = note[1];
 				if (boob>7){
 					boob -= 8;
-					var copiedNote:Array<Dynamic> = [note[0], boob, note[2], 'TikyHat Note'];
+					var copiedNote:Array<Dynamic> = [note[0], boob, note[2], 'Parry Note'];
 					duetNotes.push(copiedNote);
 					_song.notes[curSection].sectionNotes.remove(note);
 				}
