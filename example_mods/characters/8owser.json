@@ -1,0 +1,221 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-5,
+				90
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "8owser Idle"
+		},
+		{
+			"offsets": [
+				-40,
+				81
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "8owser Left"
+		},
+		{
+			"offsets": [
+				-50,
+				12
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "8owser Down"
+		},
+		{
+			"offsets": [
+				-116,
+				137
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "8owser Up"
+		},
+		{
+			"offsets": [
+				-54,
+				17
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "Miss Down"
+		},
+		{
+			"offsets": [
+				-43,
+				86
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "Left Miss"
+		},
+		{
+			"offsets": [
+				-51,
+				85
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "Right Miss"
+		},
+		{
+			"offsets": [
+				-112,
+				104
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "8owser Hey"
+		},
+		{
+			"offsets": [
+				-18,
+				88
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "scared",
+			"indices": [],
+			"name": "8owser Nervous"
+		},
+		{
+			"offsets": [
+				-2,
+				122
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "8owser Dead Loop"
+		},
+		{
+			"offsets": [
+				-111,
+				94
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "dodge",
+			"indices": [],
+			"name": "8owser Block"
+		},
+		{
+			"offsets": [
+				-71,
+				96
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "pre-attack",
+			"indices": [],
+			"name": "Attack Charge"
+		},
+		{
+			"offsets": [
+				94,
+				117
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "attack",
+			"indices": [],
+			"name": "8owser Attack"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-2,
+				127
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "8owser Die",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-2,
+				122
+			],
+			"anim": "deathComfirm",
+			"fps": 24,
+			"name": "8owser Retry",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-61,
+				90
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "8owser Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-113,
+				135
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "Up Miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				106,
+				306
+			],
+			"anim": "hurt",
+			"fps": 24,
+			"name": "8owser Hit",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/atrocity/8owser",
+	"position": [
+		-20,
+		350
+	],
+	"healthicon": "atrocity/icon-8owser",
+	"flip_x": true,
+	"healthbar_colors": [
+		21,
+		47,
+		86
+	],
+	"camera_position": [
+		220,
+		-50
+	],
+	"sing_duration": 4,
+	"scale": 1
+}
