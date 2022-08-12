@@ -28,7 +28,7 @@
 				130,
 				-90
 			],
-			"anim": "singLEFT",
+			"anim": "singRIGHT",
 			"fps": 24,
 			"name": "Fleetway Left",
 			"indices": []
@@ -61,7 +61,7 @@
 				-50,
 				-133
 			],
-			"anim": "singRIGHT",
+			"anim": "singLEFT",
 			"fps": 24,
 			"name": "Fleetway Right",
 			"indices": []

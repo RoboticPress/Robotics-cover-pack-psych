@@ -8,79 +8,79 @@
 			],
 			"anim": "idle",
 			"fps": 24,
-			"name": "Fleetway Idle",
+			"name": "Ace Idle",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				0,
-				0
+				-1,
+				2
 			],
-			"anim": "howfast",
+			"anim": "intro",
 			"fps": 24,
-			"name": "Fleetway HowFast",
+			"name": "Ace Intro",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				130,
-				-90
-			],
-			"anim": "singLEFT",
-			"fps": 24,
-			"name": "Fleetway Left",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				0,
-				-170
+				83,
+				-86
 			],
 			"anim": "singDOWN",
 			"fps": 24,
-			"name": "Fleetway Down",
+			"name": "Ace Down Note",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-6,
-				100
-			],
-			"anim": "singUP",
-			"fps": 24,
-			"name": "Fleetway Up",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-50,
-				-133
+				-80,
+				11
 			],
 			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "Fleetway Right",
+			"name": "Ace Left Note",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				54,
+				40
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Ace Up Note",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				157,
+				19
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Ace Right Note",
 			"indices": []
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/knockout/Fleetway_Super_Sonic",
+	"image": "characters/atrocity/ace",
 	"position": [
-		-190,
-		-90
+		0,
+		-120
 	],
-	"healthicon": "knockout/fleetway",
+	"healthicon": "atrocity/icon-ace",
 	"flip_x": false,
 	"healthbar_colors": [
-		254,
-		209,
-		0
+		186,
+		226,
+		255
 	],
-	"playable": false,
+	"playable": true,
 	"camera_position": [
 		0,
 		0

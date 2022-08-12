@@ -1,0 +1,161 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "TomIdle",
+			"indices": [
+				0,
+				1,
+				2,
+				3
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-57,
+				-1
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "TomLeft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				8,
+				-68
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "TomDown",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-80,
+				26
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "TomUp",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-3
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "TomRight",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-70,
+				-4
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "TomHEY!!",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-60,
+				-10
+			],
+			"anim": "singRIGHT-alt",
+			"fps": 24,
+			"name": "TomSusanLeft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-162
+			],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "TomSusanDown",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				220,
+				70
+			],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "TomSusanUp",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				50,
+				0
+			],
+			"anim": "singLEFT-alt",
+			"fps": 24,
+			"name": "TomSusanRight",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-80,
+				0
+			],
+			"anim": "idle-alt",
+			"fps": 24,
+			"name": "TomSusanIdle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				44,
+				37
+			],
+			"anim": "I AM NOT YOUR FRIEND",
+			"fps": 24,
+			"name": "TomSusanStartup",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/atrocity/challeng-etom",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "atrocity/tomIcon",
+	"flip_x": false,
+	"healthbar_colors": [
+		18,
+		93,
+		217
+	],
+	"playable": false,
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

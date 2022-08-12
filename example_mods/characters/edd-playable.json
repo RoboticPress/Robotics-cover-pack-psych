@@ -1,123 +1,123 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "EddIdle"
+			"fps": 24,
+			"name": "EddIdle",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "idle-loop",
+			"fps": 24,
+			"name": "EddIdle",
 			"indices": [
 				8,
 				9,
 				10,
 				11
-			],
-			"name": "EddIdle"
+			]
 		},
 		{
-			"offsets": [
-				20,
-				4
-			],
 			"loop": false,
-			"fps": 24,
-			"anim": "singLEFT",
-			"indices": [],
-			"name": "EddLeft"
-		},
-		{
 			"offsets": [
-				20,
+				-30,
 				4
 			],
-			"loop": true,
+			"anim": "singRIGHT",
 			"fps": 24,
-			"anim": "singLEFT-loop",
+			"name": "EddLeft",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-30,
+				4
+			],
+			"anim": "singRIGHT-loop",
+			"fps": 24,
+			"name": "EddLeft",
 			"indices": [
 				3,
 				4,
 				5,
 				6
-			],
-			"name": "EddLeft"
+			]
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-11,
 				-66
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "EddDown"
+			"fps": 24,
+			"name": "EddDown",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
 				-11,
 				-66
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "singDOWN-loop",
+			"fps": 24,
+			"name": "EddDown",
 			"indices": [
 				3,
 				4,
 				5,
 				6
-			],
-			"name": "EddDown"
+			]
 		},
 		{
+			"loop": false,
 			"offsets": [
-				-5,
+				-35,
 				31
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "EddUp"
+			"fps": 24,
+			"name": "EddUp",
+			"indices": []
 		},
 		{
-			"offsets": [
-				-11,
-				10
-			],
 			"loop": false,
-			"fps": 24,
-			"anim": "singRIGHT",
-			"indices": [],
-			"name": "EddRight"
-		},
-		{
 			"offsets": [
-				-11,
+				119,
 				10
 			],
-			"loop": true,
+			"anim": "singLEFT",
 			"fps": 24,
-			"anim": "singRIGHT-loop",
+			"name": "EddRight",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				119,
+				10
+			],
+			"anim": "singLEFT-loop",
+			"fps": 24,
+			"name": "EddRight",
 			"indices": [
 				3,
 				4,
 				5,
 				6
-			],
-			"name": "EddRight"
+			]
 		}
 	],
 	"no_antialiasing": true,
@@ -133,7 +133,7 @@
 		173,
 		51
 	],
-	"playable": false,
+	"playable": true,
 	"camera_position": [
 		100,
 		50

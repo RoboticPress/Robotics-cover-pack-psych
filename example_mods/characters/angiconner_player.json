@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				127,
+				-109
+			],
+			"loop": false,
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "ConnerAngry Right 0",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				-138
+			],
+			"loop": false,
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "ConnerAngry Down 0",
+			"indices": []
+		},
+		{
+			"offsets": [
+				55,
+				-40
+			],
+			"loop": false,
+			"anim": "singUP",
+			"fps": 24,
+			"name": "ConnerAngry Up 0",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-1,
+				-90
+			],
+			"loop": false,
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "ConnerAngry Left 0",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				-80
+			],
+			"loop": false,
+			"anim": "idle",
+			"fps": 24,
+			"name": "ConnerAngry Idle 0",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Conner",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "icon_angiconner",
+	"flip_x": false,
+	"healthbar_colors": [
+		245,
+		252,
+		247
+	],
+	"camera_position": [
+		-10,
+		90
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

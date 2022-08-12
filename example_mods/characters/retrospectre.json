@@ -1,0 +1,79 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Retro IDLE"
+		},
+		{
+			"offsets": [
+				-16,
+				174
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Retro LEFT"
+		},
+		{
+			"offsets": [
+				0,
+				160
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "Retro DOWN"
+		},
+		{
+			"offsets": [
+				-30,
+				170
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "Retro UP"
+		},
+		{
+			"offsets": [
+				-134,
+				32
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Retro RIGHT"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/atrocity/RetroSpecter_2",
+	"position": [
+		-340,
+		-160
+	],
+	"healthicon": "atrocity/retrospectre",
+	"flip_x": false,
+	"healthbar_colors": [
+		58,
+		172,
+		180
+	],
+	"playable": false,
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

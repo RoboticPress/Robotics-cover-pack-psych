@@ -1,0 +1,46 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-32,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "TordIdlePlayable instance 1"
+		},
+		{
+			"offsets": [
+				-28,
+				0
+			],
+			"loop": false,
+			"fps": 25,
+			"anim": "idle",
+			"indices": [],
+			"name": "TordIdlePlayable copy instance 1"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/atrocity/fuck_you_snow_final_thing",
+	"position": [
+		-80,
+		0
+	],
+	"healthicon": "headache/tord",
+	"flip_x": false,
+	"healthbar_colors": [
+		217,
+		18,
+		76
+	],
+	"playable": true,
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

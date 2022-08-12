@@ -1,0 +1,90 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Ace Idle"
+		},
+		{
+			"offsets": [
+				39,
+				2
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "intro",
+			"loop": false,
+			"name": "Ace Intro"
+		},
+		{
+			"offsets": [
+				13,
+				-126
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "Ace Down Note"
+		},
+		{
+			"offsets": [
+				87,
+				9
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Ace Left Note"
+		},
+		{
+			"offsets": [
+				54,
+				20
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "Ace Up Note"
+		},
+		{
+			"offsets": [
+				-113,
+				-21
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Ace Right Note"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/atrocity/ace",
+	"position": [
+		0,
+		-120
+	],
+	"healthicon": "atrocity/icon-ace",
+	"flip_x": false,
+	"healthbar_colors": [
+		186,
+		226,
+		255
+	],
+	"playable": false,
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

@@ -1,0 +1,123 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "FINAL SNOW IDLE"
+		},
+		{
+			"offsets": [
+				-66,
+				-26
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "FINAL SNOW LEFT"
+		},
+		{
+			"offsets": [
+				-4,
+				-95
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "FINAL SNOW DOWN"
+		},
+		{
+			"offsets": [
+				7,
+				-3
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "FINAL SNOW UP"
+		},
+		{
+			"offsets": [
+				51,
+				-64
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "FINAL SNOW RIGHT"
+		},
+		{
+			"offsets": [
+				-64,
+				-25
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "MISS LEFT"
+		},
+		{
+			"offsets": [
+				-5,
+				-93
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "MISS DOWN"
+		},
+		{
+			"offsets": [
+				5,
+				-3
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "MISS UP"
+		},
+		{
+			"offsets": [
+				51,
+				-63
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "MISS RIGHT"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/atrocity/Snow_Sprite_NEW_BF_SIDE",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "atrocity/SnowTheFox",
+	"flip_x": true,
+	"healthbar_colors": [
+		247,
+		163,
+		149
+	],
+	"playable": true,
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

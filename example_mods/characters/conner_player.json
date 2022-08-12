@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				127,
+				-109
+			],
+			"loop": false,
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Conner Right0",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-11,
+				-138
+			],
+			"loop": false,
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Conner Down0",
+			"indices": []
+		},
+		{
+			"offsets": [
+				55,
+				-40
+			],
+			"loop": false,
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Conner Up0",
+			"indices": []
+		},
+		{
+			"offsets": [
+				44,
+				-89
+			],
+			"loop": false,
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Conner Left0",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				-80
+			],
+			"loop": false,
+			"anim": "idle",
+			"fps": 24,
+			"name": "Conner Idle0",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/atrocity/Conner",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "atrocity/icon_conner",
+	"flip_x": false,
+	"healthbar_colors": [
+		245,
+		252,
+		247
+	],
+	"camera_position": [
+		-10,
+		90
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}
