@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="eddshock.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="EddIdle instance 10000" x="0" y="0" width="376" height="648" frameX="0" frameY="-12" frameWidth="377" frameHeight="662"/>
+	<SubTexture name="EddIdle instance 10001" x="376" y="0" width="376" height="647" frameX="-1" frameY="-13" frameWidth="377" frameHeight="662"/>
+	<SubTexture name="EddIdle instance 10002" x="752" y="0" width="362" height="660" frameX="-9" frameY="-2" frameWidth="377" frameHeight="662"/>
+	<SubTexture name="EddIdle instance 10003" x="1114" y="0" width="363" height="660" frameX="-8" frameY="-2" frameWidth="377" frameHeight="662"/>
+	<SubTexture name="EddIdle instance 10004" x="1477" y="0" width="361" height="662" frameX="-9" frameY="0" frameWidth="377" frameHeight="662"/>
+	<SubTexture name="EddIdle instance 10005" x="0" y="662" width="360" height="661" frameX="-10" frameY="-1" frameWidth="377" frameHeight="662"/>
+	<SubTexture name="EddIdle instance 10006" x="360" y="662" width="367" height="655" frameX="-6" frameY="-6" frameWidth="377" frameHeight="662"/>
+	<SubTexture name="EddIdle instance 10007" x="727" y="662" width="367" height="656" frameX="-5" frameY="-5" frameWidth="377" frameHeight="662"/>
+	<SubTexture name="EddIdle instance 10008" x="1094" y="662" width="369" height="654" frameX="-4" frameY="-7" frameWidth="377" frameHeight="662"/>
+	<SubTexture name="EddIdle instance 10009" x="1463" y="662" width="368" height="654" frameX="-5" frameY="-7" frameWidth="377" frameHeight="662"/>
+	<SubTexture name="EddIdle instance 10010" x="0" y="1323" width="368" height="654" frameX="-5" frameY="-7" frameWidth="377" frameHeight="662"/>
+	<SubTexture name="EddIdle instance 10011" x="368" y="1323" width="369" height="654" frameX="-4" frameY="-7" frameWidth="377" frameHeight="662"/>
+	<SubTexture name="EddIdle instance 10012" x="737" y="1323" width="369" height="654" frameX="-4" frameY="-7" frameWidth="377" frameHeight="662"/>
+	<SubTexture name="EddIdle instance 10013" x="1106" y="1323" width="368" height="654" frameX="-5" frameY="-7" frameWidth="377" frameHeight="662"/>
+</TextureAtlas>

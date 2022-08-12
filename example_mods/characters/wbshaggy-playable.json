@@ -1,0 +1,79 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				104,
+				-140
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "b_Down"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "b_Idle"
+		},
+		{
+			"offsets": [
+				-16,
+				115
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "b_Up"
+		},
+		{
+			"offsets": [
+				119,
+				-106
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "b_Left"
+		},
+		{
+			"offsets": [
+				131,
+				-94
+			],
+			"indices": [],
+			"fps": 30,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "b_Right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/atrocity/shaggy_green",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "atrocity/icon-wbshaggy",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		0,
+		0
+	],
+	"playable": true,
+	"camera_position": [
+		-210,
+		50
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}
