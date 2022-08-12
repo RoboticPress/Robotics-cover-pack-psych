@@ -54,9 +54,16 @@ class RoboPerk extends FlxSpriteGroup
 		{
 			case 'extra life' | 'extra health':
 				bg.y = baseY - 30 * scale.y;
-				bg1.y = baseY + Math.sin(floaty/30) * 20 * scale.y - 100 * scale.y;
-			case 'botplay':
+				if (!flying)
+					bg1.y = baseY + Math.sin(floaty/30) * 20 * scale.y - 100 * scale.y;
+			case 'botplay' | 'disabled':
 				bg.y = baseY - 30 * scale.y;
 		}
+	}
+	var flying = false;
+	public function fly()
+	{
+		flying = true;
+		FlxTween.tween(bg1, {y: bg1.y - 200, alpha: 0}, 0.5, {ease:FlxEase.elasticInOut});
 	}
 }

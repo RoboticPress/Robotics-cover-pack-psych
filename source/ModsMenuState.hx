@@ -139,11 +139,11 @@ class ModsMenuState extends MusicBeatState
 		if (perks.members[curSelected].type == 'extra life')
 			tooltip.text = 'Press Space to buy this item for 2 Robo Coins\nNO REFUNDS!';
 		var equipped = 'locked';
+		description.color = FlxColor.RED;
 		if (FlxG.save.data.bought.contains(perks.members[curSelected].type))
 		{
 			equipped = 'not equipped';
 			tooltip.text = 'Press Space to equip this item';
-			description.color = FlxColor.RED;
 			if (FlxG.save.data.equipped.contains(perks.members[curSelected].type))
 			{
 				equipped = 'equipped';
@@ -158,7 +158,7 @@ class ModsMenuState extends MusicBeatState
 			case 'extra health':
 				description.text = 'Extra Health\nGain 50% more max health\n\nThis perk is ' + equipped;
 			case 'botplay':
-				description.text = 'Robo Robo\nTurn botplay on for 8.6 seconds\n\nThis perk is ' + equipped;
+				description.text = 'Robo Robo\nTurn botplay on for 8.6 seconds by pressing 3\n\nThis perk is ' + equipped;
 		}
 	}
 }

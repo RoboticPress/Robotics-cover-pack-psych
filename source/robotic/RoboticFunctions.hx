@@ -125,6 +125,8 @@ class RoboticFunctions
 
 	static public function BeatSong(song:String)
 	{
+		if (FlxG.save.data.beatsong == null)
+			FlxG.save.data.beatsong = ['tutorial'];
 		FlxG.save.data.beatsong.push(song.toLowerCase());
 		FlxG.save.data.coins++;
 	}

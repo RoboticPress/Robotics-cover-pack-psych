@@ -96,12 +96,16 @@ class ChartingState extends MusicBeatState
 		['hide BoyfriendAgain', 'hides da dude'],
 		['boyfriendAgain Singing', 'sets his singing'],
 		['dadAgain1 Singing', 'sets his singing'],
+		['dadAgain2 Singing', 'sets his singing'],
 		['gfAgain Singing', 'sets her singing'],
 		['Cuphead super shot', 'Dad shoots super'],
 		['Cuphead super shot circle', 'Dad shoots super but circle'],
 		['Cuphead start shooting', 'Dad shoots blue funni'],
 		['Cuphead start shooting chaser', 'Dad shoots green funni'],
 		['tween iconp2again to funni place', 'idkkkkk'],
+		['Flash', 'eye hurty\nvalue1 for color in hex value 2 for duration'],
+		['Do Hardcoded Event', 'value 1 and 2 are codes'],
+		['Change Zoom', 'zoomomoom']
 	];
 
 	var _file:FileReference;
