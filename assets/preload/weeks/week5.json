@@ -1,22 +1,30 @@
 {
 	"songs": [
-		["Cocoa", "parents", [160, 209, 255]],
-		["Eggnog", "parents", [160, 209, 255]],
-		["Winter Horrorland", "monster", [160, 209, 255]]
+		[
+			"Atrocity",
+			"atrocity/skeleton",
+			[
+				255,
+				113,
+				95
+			]
+		]
 	],
-
+	"hideFreeplay": false,
+	"weekBackground": "stage",
 	"weekCharacters": [
-		"parents-christmas",
+		"dad",
 		"bf",
 		"gf"
 	],
-	"weekBackground": "christmas",
-
-	"storyName": "RED SNOW",
-	"weekBefore": "week4",
-	"weekName": "Week 5",
-	"startUnlocked": true,
-
+	"storyName": "jellybean vs skeletons",
+	"weekName": "Jelly maniac",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
 	"hideStoryMode": false,
-	"hideFreeplay": false
+	"weekBefore": "week4",
+	"startUnlocked": true
 }
