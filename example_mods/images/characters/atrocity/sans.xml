@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="sans.png"><SubTexture name="sans down0000" x="0" y="0" width="379" height="466" frameX="0" frameY="0" frameWidth="379" frameHeight="466" />
+<SubTexture name="sans down0001" x="379" y="0" width="393" height="455" frameX="0" frameY="0" frameWidth="393" frameHeight="455" />
+<SubTexture name="sans trombone down0000" x="772" y="0" width="574" height="489" frameX="0" frameY="0" frameWidth="574" frameHeight="489" />
+<SubTexture name="sans trombone down0001" x="1346" y="0" width="587" height="484" frameX="0" frameY="0" frameWidth="587" frameHeight="484" />
+<SubTexture name="sans trombone left0000" x="1933" y="0" width="579" height="537" frameX="0" frameY="0" frameWidth="579" frameHeight="537" />
+<SubTexture name="sans trombone left0001" x="2512" y="0" width="591" height="537" frameX="0" frameY="0" frameWidth="591" frameHeight="537" />
+<SubTexture name="sans right0000" x="0" y="537" width="407" height="512" frameX="0" frameY="0" frameWidth="407" frameHeight="512" />
+<SubTexture name="sans right0001" x="407" y="537" width="410" height="510" frameX="0" frameY="0" frameWidth="410" frameHeight="510" />
+<SubTexture name="sans trombone right0000" x="817" y="537" width="612" height="530" frameX="0" frameY="0" frameWidth="612" frameHeight="530" />
+<SubTexture name="sans trombone right0001" x="1429" y="537" width="633" height="531" frameX="0" frameY="0" frameWidth="633" frameHeight="531" />
+<SubTexture name="sans up0000" x="2062" y="537" width="452" height="542" frameX="0" frameY="0" frameWidth="452" frameHeight="542" />
+<SubTexture name="sans up0001" x="2514" y="537" width="462" height="542" frameX="0" frameY="0" frameWidth="462" frameHeight="542" />
+<SubTexture name="sans trombone up0000" x="0" y="1079" width="568" height="547" frameX="0" frameY="0" frameWidth="568" frameHeight="547" />
+<SubTexture name="sans trombone up0001" x="568" y="1079" width="572" height="548" frameX="0" frameY="0" frameWidth="572" frameHeight="548" />
+<SubTexture name="sans idle0000" x="1140" y="1079" width="394" height="549" frameX="0" frameY="0" frameWidth="394" frameHeight="549" />
+<SubTexture name="sans idle0001" x="1534" y="1079" width="394" height="545" frameX="-1" frameY="-4" frameWidth="394" frameHeight="545" />
+<SubTexture name="sans idle0002" x="1928" y="1079" width="395" height="544" frameX="-1" frameY="-5" frameWidth="395" frameHeight="544" />
+<SubTexture name="sans idle0003" x="2323" y="1079" width="395" height="543" frameX="-1" frameY="-6" frameWidth="395" frameHeight="543" />
+<SubTexture name="sans idle0004" x="0" y="1628" width="394" height="543" frameX="-3" frameY="-6" frameWidth="394" frameHeight="543" />
+<SubTexture name="sans idle0005" x="394" y="1628" width="397" height="547" frameX="-1" frameY="-2" frameWidth="397" frameHeight="547" />
+<SubTexture name="sans idle0006" x="791" y="1628" width="397" height="548" frameX="-1" frameY="-1" frameWidth="397" frameHeight="548" />
+<SubTexture name="sans idle0007" x="1188" y="1628" width="397" height="549" frameX="-1" frameY="0" frameWidth="397" frameHeight="549" />
+<SubTexture name="sans idle0008" x="1585" y="1628" width="397" height="549" frameX="-1" frameY="0" frameWidth="397" frameHeight="549" />
+<SubTexture name="sans idle0009" x="1982" y="1628" width="397" height="549" frameX="-1" frameY="0" frameWidth="397" frameHeight="549" />
+<SubTexture name="sans idle0010" x="0" y="2177" width="396" height="545" frameX="2" frameY="-4" frameWidth="396" frameHeight="545" />
+<SubTexture name="sans idle0011" x="396" y="2177" width="396" height="542" frameX="4" frameY="-7" frameWidth="396" frameHeight="542" />
+<SubTexture name="sans idle0012" x="792" y="2177" width="396" height="542" frameX="4" frameY="-7" frameWidth="396" frameHeight="542" />
+<SubTexture name="sans idle0013" x="1188" y="2177" width="403" height="541" frameX="4" frameY="-8" frameWidth="403" frameHeight="541" />
+<SubTexture name="sans idle0014" x="1591" y="2177" width="395" height="541" frameX="4" frameY="-8" frameWidth="395" frameHeight="541" />
+<SubTexture name="sans idle0015" x="1986" y="2177" width="395" height="541" frameX="4" frameY="-8" frameWidth="395" frameHeight="541" />
+<SubTexture name="sans idle0016" x="0" y="2722" width="395" height="546" frameX="2" frameY="-3" frameWidth="395" frameHeight="546" />
+<SubTexture name="sans idle0017" x="395" y="2722" width="394" height="548" frameX="0" frameY="-1" frameWidth="394" frameHeight="548" />
+<SubTexture name="sans idle0018" x="789" y="2722" width="394" height="549" frameX="0" frameY="0" frameWidth="394" frameHeight="549" />
+<SubTexture name="sans idle0019" x="1183" y="2722" width="394" height="549" frameX="0" frameY="0" frameWidth="394" frameHeight="549" />
+<SubTexture name="sans left0000" x="1577" y="2722" width="483" height="535" frameX="0" frameY="0" frameWidth="483" frameHeight="535" />
+<SubTexture name="sans left0001" x="2060" y="2722" width="485" height="536" frameX="0" frameY="0" frameWidth="485" frameHeight="536" />
+<SubTexture name="sans trombone eye0000" x="0" y="3271" width="51" height="52" frameX="0" frameY="0" frameWidth="51" frameHeight="52" />
+<SubTexture name="sans trombone eye0001" x="51" y="3271" width="51" height="52" frameX="0" frameY="0" frameWidth="51" frameHeight="52" />
+<SubTexture name="sans eye0000" x="102" y="3271" width="52" height="50" frameX="0" frameY="0" frameWidth="52" frameHeight="50" />
+<SubTexture name="sans eye0001" x="154" y="3271" width="52" height="52" frameX="0" frameY="0" frameWidth="52" frameHeight="52" />
+</TextureAtlas>
