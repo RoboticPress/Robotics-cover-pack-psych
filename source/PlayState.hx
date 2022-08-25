@@ -7322,11 +7322,11 @@ class PlayState extends MusicBeatState
 			case 'betadciuDAD':
 				betadciuMomentDAD();
 			case 'hide dadAgain1':
-				dadAgain2.visible = false;
+				dadAgain1.visible = false;
 				iconP2Again1.visible = false;
 				dadAgain1Singing = false;
 			case 'hide dadAgain2':
-				dadAgain1.visible = false;
+				dadAgain2.visible = false;
 				iconP2Again2.visible = false;
 				dadAgain2Singing = false;
 			case 'hide BoyfriendAgain':
@@ -7721,8 +7721,6 @@ class PlayState extends MusicBeatState
 								});
 								dadAgain1.dance();
 							case 4:
-								dadAgain1.visible = false;
-								dadAgain1Singing = false;
 								dadSinging = true;
 								flashScreen(FlxColor.WHITE,0.5);
 								bg1.loadGraphic(Paths.image('atrocity/moreBGs/bg2'));
@@ -7929,7 +7927,6 @@ class PlayState extends MusicBeatState
 										bg1.x = 0;
 										dad.scale.set(thingything,thingything);
 										dad.updateHitbox();
-										dadAgain1.visible = false;
 		
 										for (anim in dad.animOffsets.keys())
 										{
@@ -8000,7 +7997,6 @@ class PlayState extends MusicBeatState
 								FlxTween.tween(this, {coolnumber: coolnumber + 600}, 0.5, {ease: FlxEase.quadInOut, onUpdate: function (twn:FlxTween) {dad.clipRect = new FlxRect(0, 0, coolnumber, 1200);}});
 								FlxTween.tween(dadAgain1, {y: dadAgain1.y - 1000}, 0.5, {ease: FlxEase.quadInOut});
 							case 19:
-								dadAgain1.visible = false;
 								var thingything = 2;
 								flashScreen(FlxColor.WHITE,0.5);
 								dad.scale.set(thingything,thingything);
@@ -8079,7 +8075,6 @@ class PlayState extends MusicBeatState
 								FlxTween.tween(dadAgain1, {x: dadAgain1.x + 881}, 0.5, {ease: FlxEase.quadInOut});
 							case 24:
 								flashScreen(FlxColor.WHITE,0.5);
-								dadAgain1.visible = false;
 								dad.x -= 881;
 								var thingything = 2;
 								boyfriend.scale.set(thingything,thingything);
