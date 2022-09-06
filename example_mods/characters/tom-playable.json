@@ -142,7 +142,7 @@
 	"image": "characters/atrocity/challeng-etom",
 	"position": [
 		0,
-		0
+		40
 	],
 	"healthicon": "atrocity/tomIcon",
 	"flip_x": false,

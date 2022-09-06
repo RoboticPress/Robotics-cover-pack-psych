@@ -57,12 +57,12 @@
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/Rose_but_hes_normal_this_time_i_promise_bounding_box_ver",
+	"image": "characters/RoboVerse/Rose_but_hes_normal_this_time_i_promise_bounding_box_ver",
 	"position": [
 		0,
-		-290
+		-230
 	],
-	"healthicon": "rose",
+	"healthicon": "RoboVerse/rose",
 	"flip_x": false,
 	"healthbar_colors": [
 		255,
