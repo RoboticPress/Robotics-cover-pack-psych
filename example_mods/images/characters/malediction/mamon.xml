@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="mamon.png">
+	<!-- Created with Adobe Animate version 21.0.9.42677 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="idle instance 10000" x="2" y="2" width="316" height="558" pivotX="-35.45" pivotY="-13.45"/>
+	<SubTexture name="idle instance 10001" x="2" y="2" width="316" height="558"/>
+	<SubTexture name="idle instance 10002" x="320" y="2" width="316" height="558"/>
+	<SubTexture name="idle instance 10003" x="320" y="2" width="316" height="558"/>
+	<SubTexture name="idle instance 10004" x="638" y="2" width="316" height="558"/>
+	<SubTexture name="idle instance 10005" x="638" y="2" width="316" height="558"/>
+	<SubTexture name="idle instance 10006" x="956" y="2" width="316" height="558"/>
+	<SubTexture name="idle instance 10007" x="1274" y="2" width="316" height="558"/>
+	<SubTexture name="idle instance 10008" x="1592" y="2" width="316" height="558"/>
+	<SubTexture name="idle instance 10009" x="1910" y="2" width="316" height="558"/>
+	<SubTexture name="idle instance 10010" x="2228" y="2" width="316" height="558"/>
+	<SubTexture name="idle instance 10011" x="2546" y="2" width="316" height="558"/>
+	<SubTexture name="idle instance 10012" x="2546" y="2" width="316" height="558"/>
+	<SubTexture name="idle instance 10013" x="2546" y="2" width="316" height="558"/>
+	<SubTexture name="mamon left instance 10000" x="2864" y="2" width="265" height="556" pivotX="-60.65" pivotY="-12.4"/>
+	<SubTexture name="mamon left instance 10001" x="3131" y="2" width="265" height="556"/>
+	<SubTexture name="mamon left instance 10002" x="3398" y="2" width="265" height="556"/>
+	<SubTexture name="mamon left instance 10003" x="3665" y="2" width="265" height="556"/>
+	<SubTexture name="mamon left instance 10004" x="2" y="562" width="265" height="556"/>
+	<SubTexture name="mamon left instance 10005" x="2" y="562" width="265" height="556"/>
+	<SubTexture name="mamon left instance 10006" x="269" y="562" width="265" height="556"/>
+	<SubTexture name="mamon left instance 10007" x="269" y="562" width="265" height="556"/>
+	<SubTexture name="mamon left instance 10008" x="536" y="562" width="265" height="556"/>
+	<SubTexture name="mamondown instance 10000" x="803" y="562" width="283" height="534" pivotX="-48" pivotY="-42"/>
+	<SubTexture name="mamondown instance 10001" x="803" y="562" width="283" height="534"/>
+	<SubTexture name="mamondown instance 10002" x="1088" y="562" width="283" height="534"/>
+	<SubTexture name="mamondown instance 10003" x="1373" y="562" width="283" height="534"/>
+	<SubTexture name="mamondown instance 10004" x="1658" y="562" width="283" height="534"/>
+	<SubTexture name="mamondown instance 10005" x="1943" y="562" width="283" height="534"/>
+	<SubTexture name="mamondown instance 10006" x="2228" y="562" width="283" height="534"/>
+	<SubTexture name="mamondown instance 10007" x="2513" y="562" width="283" height="534"/>
+	<SubTexture name="mamondown instance 10008" x="2798" y="562" width="283" height="534"/>
+	<SubTexture name="mamondown instance 10009" x="3083" y="562" width="283" height="534"/>
+	<SubTexture name="mamonright instance 10000" x="3368" y="562" width="297" height="556" pivotX="-47.95" pivotY="-5.15"/>
+	<SubTexture name="mamonright instance 10001" x="3368" y="562" width="297" height="556"/>
+	<SubTexture name="mamonright instance 10002" x="3667" y="562" width="297" height="556"/>
+	<SubTexture name="mamonright instance 10003" x="3667" y="562" width="297" height="556"/>
+	<SubTexture name="mamonright instance 10004" x="2" y="1120" width="297" height="556"/>
+	<SubTexture name="mamonright instance 10005" x="2" y="1120" width="297" height="556"/>
+	<SubTexture name="mamonright instance 10006" x="301" y="1120" width="297" height="556"/>
+	<SubTexture name="mamonright instance 10007" x="600" y="1120" width="297" height="556"/>
+	<SubTexture name="mamonright instance 10008" x="899" y="1120" width="297" height="556"/>
+	<SubTexture name="mamonup instance 10000" x="1198" y="1120" width="271" height="564" pivotX="-47.5" pivotY="-9"/>
+	<SubTexture name="mamonup instance 10001" x="1198" y="1120" width="271" height="564"/>
+	<SubTexture name="mamonup instance 10002" x="1471" y="1120" width="271" height="564"/>
+	<SubTexture name="mamonup instance 10003" x="1471" y="1120" width="271" height="564"/>
+	<SubTexture name="mamonup instance 10004" x="1744" y="1120" width="271" height="564"/>
+	<SubTexture name="mamonup instance 10005" x="1744" y="1120" width="271" height="564"/>
+	<SubTexture name="mamonup instance 10006" x="2017" y="1120" width="271" height="564"/>
+	<SubTexture name="mamonup instance 10007" x="2290" y="1120" width="271" height="564"/>
+	<SubTexture name="mamonup instance 10008" x="2563" y="1120" width="271" height="564"/>
+	<SubTexture name="mamonup instance 10009" x="2836" y="1120" width="271" height="564"/>
+</TextureAtlas>
