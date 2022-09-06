@@ -1,0 +1,769 @@
+{
+	"song": {
+		"speed": 2.8,
+		"stage": "curse",
+		"player1": "bf",
+		"player2": "curse",
+		"player3": null,
+		"events": [
+			[
+				1875,
+				[
+					[
+						"Change Character",
+						"dad",
+						"knux"
+					]
+				]
+			],
+			[
+				2000,
+				[
+					[
+						"betadciuDAD",
+						"",
+						""
+					]
+				]
+			],
+			[
+				5875,
+				[
+					[
+						"Change Character",
+						"bf",
+						"hat kid"
+					]
+				]
+			],
+			[
+				6000,
+				[
+					[
+						"betadciuBF",
+						"bf",
+						"hat kid"
+					]
+				]
+			],
+			[
+				9875,
+				[
+					[
+						"Change Character",
+						"dad",
+						"snow"
+					]
+				]
+			],
+			[
+				13875,
+				[
+					[
+						"Change Character",
+						"bf",
+						"sunday-playable"
+					]
+				]
+			],
+			[
+				18000,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					],
+					[
+						"Change Character",
+						"bf",
+						"taeyai-playable"
+					],
+					[
+						"Change Character",
+						"dad",
+						"nonsense"
+					]
+				]
+			],
+			[
+				18500,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				19000,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				19500,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				20000,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				20500,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				21000,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				21500,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				22000,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				22500,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				23000,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				23500,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				24000,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				24500,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				25000,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				25500,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				26000,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					],
+					[
+						"Change Character",
+						"bf",
+						"selever"
+					],
+					[
+						"Change Character",
+						"dad",
+						"sarv"
+					]
+				]
+			],
+			[
+				26500,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				27000,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				27500,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				28000,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				28500,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				29000,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				29500,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				30000,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				30500,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				31000,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				31500,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				32000,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				32500,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				33000,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				33500,
+				[
+					[
+						"Flash Curse",
+						"fffff",
+						""
+					]
+				]
+			],
+			[
+				34125,
+				[
+					[
+						"Change Character",
+						"dad",
+						"mamon"
+					]
+				]
+			],
+			[
+				42250,
+				[
+					[
+						"Change Character",
+						"bf",
+						"agressive-yuri-playable"
+					]
+				]
+			],
+			[
+				50000,
+				[
+					[
+						"Change Character",
+						"dad",
+						"whitty"
+					],
+					[
+						"Change Character",
+						"bf",
+						"carol-playable"
+					]
+				]
+			],
+			[
+				57750,
+				[
+					[
+						"Do Hardcoded Event",
+						"9",
+						"0"
+					],
+					[
+						"Do Hardcoded Event",
+						"9",
+						"1"
+					]
+				]
+			],
+			[
+				66875,
+				[
+					[
+						"Cam OFF",
+						"0",
+						""
+					]
+				]
+			],
+			[
+				69750,
+				[
+					[
+						"Change Character",
+						"dad",
+						"ycr"
+					]
+				]
+			],
+			[
+				69875,
+				[
+					[
+						"Cam OFF",
+						"1",
+						""
+					],
+					[
+						"betadciuDAD",
+						"",
+						""
+					]
+				]
+			],
+			[
+				73750,
+				[
+					[
+						"Change Character",
+						"bf",
+						"rose-playable"
+					]
+				]
+			],
+			[
+				73875,
+				[
+					[
+						"betadciuBF",
+						"",
+						""
+					]
+				]
+			],
+			[
+				77875,
+				[
+					[
+						"Change Character",
+						"dad",
+						"furscorns"
+					]
+				]
+			],
+			[
+				81875,
+				[
+					[
+						"Change Character",
+						"dad",
+						"bb-opponent"
+					],
+					[
+						"Change Character",
+						"bf",
+						"monika-playable"
+					]
+				]
+			],
+			[
+				86875,
+				[
+					[
+						"Change Character",
+						"bf",
+						"natsuki-playable"
+					]
+				]
+			],
+			[
+				87875,
+				[
+					[
+						"Change Character",
+						"dad",
+						"arch"
+					]
+				]
+			],
+			[
+				88500,
+				[
+					[
+						"Cam OFF",
+						"0",
+						""
+					],
+					[
+						"Do Hardcoded Event",
+						"9",
+						"2"
+					]
+				]
+			],
+			[
+				88750,
+				[
+					[
+						"Do Hardcoded Event",
+						"9",
+						"3"
+					]
+				]
+			],
+			[
+				88809.375,
+				[
+					[
+						"Do Hardcoded Event",
+						"9",
+						"3"
+					]
+				]
+			],
+			[
+				88875,
+				[
+					[
+						"Do Hardcoded Event",
+						"9",
+						"3"
+					]
+				]
+			],
+			[
+				89125,
+				[
+					[
+						"Do Hardcoded Event",
+						"9",
+						"4"
+					]
+				]
+			],
+			[
+				89981.25,
+				[
+					[
+						"Do Hardcoded Event",
+						"9",
+						"5"
+					]
+				]
+			],
+			[
+				89987.5,
+				[
+					[
+						"Cam OFF",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				90000,
+				[
+					[
+						"Flash Curse",
+						"FFFFFF",
+						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"Susie_smile"
+					],
+					[
+						"Change Character",
+						"bf",
+						"Ralsei_smile-playable"
+					]
+				]
+			],
+			[
+				98000,
+				[
+					[
+						"Change Character",
+						"bf",
+						"majin-playable"
+					],
+					[
+						"Change Character",
+						"dad",
+						"hex"
+					]
+				]
+			],
+			[
+				106000,
+				[
+					[
+						"Change Character",
+						"dad",
+						"xterion"
+					],
+					[
+						"Change Character",
+						"bf",
+						"chaotix-playable"
+					]
+				]
+			],
+			[
+				114000,
+				[
+					[
+						"Change Character",
+						"bf",
+						"robo-playable"
+					],
+					[
+						"Change Character",
+						"dad",
+						"jom"
+					],
+					[
+						"Change Character",
+						"gf",
+						"no-gf"
+					]
+				]
+			],
+			[
+				122000,
+				[
+					[
+						"Change Character",
+						"dad",
+						"eduardo"
+					],
+					[
+						"Change Character",
+						"bf",
+						"tom-playable"
+					],
+					[
+						"Change Character",
+						"gf",
+						"robo-gf"
+					]
+				]
+			],
+			[
+				130000,
+				[
+					[
+						"Change Character",
+						"bf",
+						"extiky-playable"
+					],
+					[
+						"Change Character",
+						"dad",
+						"sky-mad"
+					]
+				]
+			],
+			[
+				138000,
+				[
+					[
+						"Change Character",
+						"dad",
+						"Sans_IC"
+					]
+				]
+			],
+			[
+				147000,
+				[
+					[
+						"Cam OFF",
+						"0",
+						""
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": "noteSplashes",
+		"validScore": false,
+		"gfVersion": "robo-gf",
+		"bpm": 120,
+		"arrowSkin": "",
+		"needsVoices": true,
+		"song": "malediction"
+	}
+}

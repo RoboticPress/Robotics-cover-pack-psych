@@ -1,0 +1,528 @@
+{
+	"dialogues": [
+		{
+			"line": "Beep",
+			"characterName": "bf",
+			"events": [
+				{
+					"value1": "bf",
+					"value2": "true",
+					"index": 0,
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"value1": "gf",
+					"value2": "false",
+					"index": 0,
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"value1": "dad",
+					"value2": "false",
+					"index": 0,
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"value1": "bf",
+					"value2": "value2",
+					"index": 0,
+					"value3": "value3",
+					"event": "Camera Follow"
+				},
+				{
+					"value1": "characters/bf",
+					"value2": "value2",
+					"index": 0,
+					"value3": "value3",
+					"event": "Change Sound"
+				}
+			]
+		},
+		{
+			"line": "Hello BF",
+			"characterName": "robo",
+			"events": [
+				{
+					"value1": "gf",
+					"value2": "true",
+					"index": 0,
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"value1": "bf",
+					"value2": "false",
+					"index": 0,
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"value1": "dad",
+					"value2": "false",
+					"index": 0,
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"value1": "gf",
+					"value2": "value2",
+					"index": 0,
+					"value3": "value3",
+					"event": "Camera Follow"
+				},
+				{
+					"value1": "characters/robo",
+					"value2": "value2",
+					"index": 0,
+					"value3": "value3",
+					"event": "Change Sound"
+				}
+			]
+		},
+		{
+			"line": "and henlo curse",
+			"characterName": "robo",
+			"events": [
+				{
+					"value1": "gf",
+					"value2": "singLEFT",
+					"index": 0,
+					"value3": "value3",
+					"event": "Change Character Animation"
+				}
+			]
+		},
+		{
+			"characterName": "curse",
+			"line": "Oh--! Hello there-?",
+			"events": [
+				{
+					"value1": "dad",
+					"value2": "true",
+					"value3": "value3",
+					"event": "Set if Character singing",
+					"index": 0
+				},
+				{
+					"value1": "bf",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing",
+					"index": 0
+				},
+				{
+					"value1": "gf",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing",
+					"index": 0
+				},
+				{
+					"value1": "dad",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Camera Follow",
+					"index": 0
+				},
+				{
+					"value1": "characters/curse1",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Change Sound",
+					"index": 0
+				},
+				{
+					"value1": "characters/nocurse",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Change Sound",
+					"index": 1
+				}
+			]
+		},
+		{
+			"characterName": "robo",
+			"line": "So uhhh I hope you don't mind but I'll need ya to sing and take\ncontrol of some characters in a BETADCIU of the song Malediction",
+			"events": [
+				{
+					"value1": "gf",
+					"value2": "true",
+					"value3": "value3",
+					"event": "Set if Character singing",
+					"index": 0
+				},
+				{
+					"value1": "bf",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing",
+					"index": 0
+				},
+				{
+					"value1": "dad",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing",
+					"index": 0
+				},
+				{
+					"value1": "gf",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Camera Follow",
+					"index": 0
+				},
+				{
+					"value1": "characters/robo",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Change Sound",
+					"index": 0
+				}
+			]
+		},
+		{
+			"characterName": "robo",
+			"line": "If you don't mind of course",
+			"events": []
+		},
+		{
+			"characterName": "curse",
+			"line": "Oh! Like a sorta-- possession or puppetry? Honestly my singing isn't\ngreat so I think it'd be nice--!",
+			"events": [
+				{
+					"value1": "dad",
+					"value2": "true",
+					"value3": "value3",
+					"event": "Set if Character singing",
+					"index": 0
+				},
+				{
+					"value1": "bf",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing",
+					"index": 0
+				},
+				{
+					"value1": "gf",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing",
+					"index": 0
+				},
+				{
+					"value1": "dad",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Camera Follow",
+					"index": 0
+				},
+				{
+					"value1": "characters/curse2",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Change Sound",
+					"index": 0
+				},
+				{
+					"value1": "characters/nocurse",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Change Sound",
+					"index": 1
+				}
+			]
+		},
+		{
+			"line": "O-oh fantastic! Pretty awesome actually, now how about you bf?",
+			"characterName": "robo",
+			"events": [
+				{
+					"value1": "gf",
+					"value2": "true",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "bf",
+					"value2": "false",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "dad",
+					"value2": "false",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "gf",
+					"value2": "value2",
+					"event": "Camera Follow",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "characters/robo",
+					"value2": "value2",
+					"event": "Change Sound",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "gf",
+					"value2": "singRIGHT",
+					"event": "Change Character Animation",
+					"index": 40,
+					"value3": "value3"
+				}
+			]
+		},
+		{
+			"line": "Beep da bop.",
+			"characterName": "bf",
+			"events": [
+				{
+					"value1": "bf",
+					"value2": "true",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "gf",
+					"value2": "false",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "dad",
+					"value2": "false",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "bf",
+					"value2": "singRIGHT",
+					"event": "Camera Follow",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "characters/bf",
+					"value2": "singRIGHT",
+					"event": "Change Sound",
+					"index": 0,
+					"value3": "value3"
+				}
+			]
+		},
+		{
+			"line": "Pretty awesome!",
+			"characterName": "robo",
+			"events": [
+				{
+					"value1": "characters/bf",
+					"value2": "singRIGHT",
+					"event": "Change Sound",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "gf",
+					"value2": "true",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "bf",
+					"value2": "false",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "dad",
+					"value2": "false",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "gf",
+					"value2": "singRIGHT",
+					"event": "Camera Follow",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "characters/robo",
+					"value2": "singRIGHT",
+					"event": "Change Sound",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "gf",
+					"value2": "singUP",
+					"event": "Change Character Animation",
+					"index": 0,
+					"value3": "value3"
+				}
+			]
+		},
+		{
+			"line": "and as one composer once said: it's Maledictioning time!",
+			"characterName": "robo",
+			"events": [
+				{
+					"value1": "gf",
+					"value2": "singDOWN",
+					"event": "Change Character Animation",
+					"index": 36,
+					"value3": "value3"
+				},
+				{
+					"value1": "5",
+					"value2": "5",
+					"event": "Wave On",
+					"index": 36,
+					"value3": "value3"
+				},
+				{
+					"value1": "5",
+					"value2": "5",
+					"event": "Wave Off",
+					"index": 56,
+					"value3": "value3"
+				}
+			]
+		},
+		{
+			"line": "God that joke was awful please excuse me-",
+			"characterName": "robo",
+			"events": [
+				{
+					"value1": "2.5",
+					"value2": "5",
+					"event": "Shake On",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "gf",
+					"value2": "sing",
+					"event": "Change Character Animation",
+					"index": 0,
+					"value3": "value3"
+				}
+			]
+		},
+		{
+			"line": "No you're fine! Let's start!",
+			"characterName": "curse",
+			"events": [
+				{
+					"value1": "dad",
+					"value2": "true",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "bf",
+					"value2": "false",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "gf",
+					"value2": "false",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "dad",
+					"value2": "5",
+					"event": "Camera Follow",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "characters/curse3",
+					"value2": "5",
+					"event": "Change Sound",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "characters/nocurse",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Change Sound",
+					"index": 1
+				}
+			]
+		},
+		{
+			"events": [
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "true",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "bf",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "dad",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Camera Follow"
+				},
+				{
+					"index": 0,
+					"value1": "characters/robo",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Change Sound"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "singLEFT",
+					"value3": "value3",
+					"event": "Change Character Animation"
+				}
+			],
+			"characterName": "robo",
+			"line": "A-Alright then!"
+		}
+	]
+}

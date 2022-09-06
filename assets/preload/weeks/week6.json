@@ -1,8 +1,14 @@
 {
 	"songs": [
-		["Senpai", "senpai-pixel", [255, 120, 191]],
-		["Roses", "senpai-pixel", [255, 120, 191]],
-		["Thorns", "spirit-pixel", [255, 120, 191]]
+		[
+			"malediction",
+			"malediction/icon-curse-happy",
+			[
+				146,
+				113,
+				253
+			]
+		]
 	],
 
 	"weekCharacters": [
@@ -18,5 +24,11 @@
 	"startUnlocked": true,
 
 	"hideStoryMode": false,
-	"hideFreeplay": false
+	"hideFreeplay": false,
+	"difficulties": "Normal",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	]
 }

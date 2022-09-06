@@ -306,6 +306,11 @@
 				104289.47368421,
 				[
 					[
+						"Change Character",
+						"bf",
+						"grey-playable"
+					],
+					[
 						"Do Hardcoded Event",
 						"8",
 						"20"
