@@ -1,0 +1,112 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Idle"
+		},
+		{
+			"offsets": [
+				74,
+				68
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "Hank",
+			"indices": [],
+			"name": "Hank"
+		},
+		{
+			"offsets": [
+				74,
+				68
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP-alt",
+			"indices": [],
+			"name": "Hank"
+		},
+		{
+			"offsets": [
+				84,
+				68
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hurt",
+			"indices": [],
+			"name": "Hank"
+		},
+		{
+			"offsets": [
+				-220,
+				50
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Sing Left"
+		},
+		{
+			"offsets": [
+				450,
+				-40
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Sing Right"
+		},
+		{
+			"offsets": [
+				-100,
+				-230
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Sing Down"
+		},
+		{
+			"offsets": [
+				-60,
+				140
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Sing Up"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/expurgation/EXTRICKY",
+	"position": [
+		-40,
+		140
+	],
+	"healthicon": "expurgation/extiky",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		25,
+		0
+	],
+	"playable": true,
+	"camera_position": [
+		-200,
+		-100
+	],
+	"sing_duration": 6.1,
+	"scale": 2
+}

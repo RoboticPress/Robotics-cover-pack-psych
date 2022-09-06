@@ -1,0 +1,79 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "GreyIdleNew"
+		},
+		{
+			"offsets": [
+				-6,
+				-14
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "GreyNewLeft"
+		},
+		{
+			"offsets": [
+				-13,
+				-11
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "GreyNewDown"
+		},
+		{
+			"offsets": [
+				5,
+				-9
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "GreyNewUp"
+		},
+		{
+			"offsets": [
+				9,
+				-10
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "GreyNewRight"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/atrocity/Grey",
+	"position": [
+		-140,
+		50
+	],
+	"healthicon": "atrocity/greyicon",
+	"flip_x": false,
+	"healthbar_colors": [
+		153,
+		102,
+		204
+	],
+	"playable": false,
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

@@ -415,6 +415,8 @@ class TextBox extends FlxSpriteGroup
 
 	public function goToNextDialogue()
 	{
+		if (thefunniSound != null)
+			thefunniSound.stop();
 		limitThing = 0;
 		fard = 0;
 		

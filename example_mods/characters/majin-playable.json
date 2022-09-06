@@ -8,71 +8,71 @@
 			],
 			"anim": "idle",
 			"fps": 24,
-			"name": "Idle",
+			"name": "SONICFUNIDLE instance 1",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				6,
-				-15
+				-96,
+				-129
 			],
 			"anim": "singLEFT",
 			"fps": 24,
-			"name": "Left",
+			"name": "SONICFUNLEFT instance 1",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-4,
-				-31
-			],
-			"anim": "singDOWN",
-			"fps": 24,
-			"name": "Down",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				20,
-				0
+				-85,
+				15
 			],
 			"anim": "singUP",
 			"fps": 24,
-			"name": "b",
+			"name": "SONICFUNUP instance 1",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				4,
-				-10
+				197,
+				-29
 			],
 			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "Right",
+			"name": "SONICFUNRIGHT instance 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				-140
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "SONICFUNDOWN instance 1",
 			"indices": []
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/atrocity/carey_night_fuck",
+	"image": "characters/knockout/SonicFunAssetsNEW",
 	"position": [
 		0,
-		-90
+		60
 	],
-	"healthicon": "atrocity/careyicon",
+	"healthicon": "knockout/majin",
 	"flip_x": false,
 	"healthbar_colors": [
-		204,
-		51,
-		51
+		0,
+		0,
+		215
 	],
-	"playable": false,
+	"playable": true,
 	"camera_position": [
 		0,
-		0
+		50
 	],
 	"sing_duration": 6.1,
 	"scale": 1

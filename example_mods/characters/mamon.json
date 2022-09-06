@@ -8,72 +8,71 @@
 			],
 			"anim": "idle",
 			"fps": 24,
-			"name": "Idle",
+			"name": "idle",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				6,
-				-15
+				-20,
+				-4
 			],
 			"anim": "singLEFT",
 			"fps": 24,
-			"name": "Left",
+			"name": "mamon l",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-4,
-				-31
+				-20,
+				-30
 			],
 			"anim": "singDOWN",
 			"fps": 24,
-			"name": "Down",
+			"name": "mamondown",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				20,
-				0
+				-20,
+				4
 			],
 			"anim": "singUP",
 			"fps": 24,
-			"name": "b",
+			"name": "mamonup",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				4,
-				-10
+				-13,
+				-4
 			],
 			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "Right",
+			"name": "mamonright",
 			"indices": []
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/atrocity/carey_night_fuck",
+	"image": "characters/malediction/mamon",
 	"position": [
-		0,
-		-90
+		50,
+		140
 	],
-	"healthicon": "atrocity/careyicon",
+	"healthicon": "malediction/mamon",
 	"flip_x": false,
 	"healthbar_colors": [
-		204,
-		51,
-		51
+		236,
+		96,
+		208
 	],
-	"playable": false,
 	"camera_position": [
-		0,
-		0
+		-50,
+		-20
 	],
-	"sing_duration": 6.1,
-	"scale": 1
+	"sing_duration": 4.00000000000001,
+	"scale": 1.2
 }

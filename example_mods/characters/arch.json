@@ -109,11 +109,11 @@
 		}
 	],
 	"no_antialiasing": false,
-	"image": "arch/arch",
+	"image": "characters/malediction/arch",
 	"position": [
-		0,0
+		0,-300
 	],
-	"healthicon": "arch",
+	"healthicon": "malediction/icon-arch",
 	"flip_x": false,
 	"healthbar_colors": [
 		102,
