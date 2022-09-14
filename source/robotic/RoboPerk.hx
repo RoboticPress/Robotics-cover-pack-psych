@@ -38,6 +38,11 @@ class RoboPerk extends FlxSpriteGroup
 			case 'botplay':
 				bg = new FlxSprite().loadGraphic(Paths.image('botpley', 'shared'));
 				add(bg);
+			case 'atrocity':
+				bg = new FlxSprite().loadGraphic(Paths.image('cover', 'shared'));
+				add(bg);
+				bg1 = new FlxSprite().loadGraphic(Paths.image('atrocity', 'shared'));
+				add(bg1);
 			case 'disabled':
 				bg = new FlxSprite().loadGraphic(Paths.image('badge', 'shared'));
 				add(bg);
@@ -52,7 +57,7 @@ class RoboPerk extends FlxSpriteGroup
 		floaty += (120/ClientPrefs.framerate);
 		switch (type)
 		{
-			case 'extra life' | 'extra health':
+			case 'extra life' | 'extra health' | 'atrocity':
 				bg.y = baseY - 30 * scale.y;
 				if (!flying)
 					bg1.y = baseY + Math.sin(floaty/30) * 20 * scale.y - 100 * scale.y;

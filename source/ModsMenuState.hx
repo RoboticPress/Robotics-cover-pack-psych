@@ -12,8 +12,8 @@ class ModsMenuState extends MusicBeatState
 {
 	var bg:FlxSprite;
 	var perks:FlxTypedSpriteGroup<RoboPerk>;
-	var perksNames:Array<String> = ['extra life', 'extra health', 'botplay'];
-	var curSelected:Int = 0;
+	var perksNames:Array<String> = ['extra life', 'extra health', 'botplay', 'atrocity'];
+	var curSelected:Int = 1;
 	var description:FlxText;
 	var coins:FlxText;
 	var tooltip:FlxText;
@@ -100,7 +100,7 @@ class ModsMenuState extends MusicBeatState
 						}
 				}
 			}
-			else if (FlxG.save.data.equipped != null)
+			else if (FlxG.save.data.equipped != null && perks.members[curSelected].type != 'atrocity')
 			{
 				if (!FlxG.save.data.equipped.contains(perks.members[curSelected].type))
 				{
@@ -128,27 +128,46 @@ class ModsMenuState extends MusicBeatState
 
 		for (i in 0...perks.length)
 		{
+			perks.members[i].baseX = -500;
 			perks.members[i].alpha = 0.4;
 			if (FlxG.save.data.bought != null && !FlxG.save.data.bought.contains(perks.members[curSelected].type))
 				perks.members[curSelected].color = 0xff5a5a5a;
 			else
 				perks.members[curSelected].color = 0xffffffff;
 		}
+		var nBefore = curSelected - 1;
+		var nAfter = curSelected + 1;
+		if (nBefore <= -1)
+			nBefore = perks.length - 1;
+		if (nAfter >= perks.length)
+			nAfter = 0;
+
+		perks.members[curSelected].baseX = -50 + 400;
+		perks.members[nBefore].baseX = -50;
+		perks.members[nAfter].baseX = -50 + 800;
 		perks.members[curSelected].alpha = 1;
 		tooltip.text = 'Press Space to buy this item for 1 Robo Coin\nNO REFUNDS!';
 		if (perks.members[curSelected].type == 'extra life')
 			tooltip.text = 'Press Space to buy this item for 2 Robo Coins\nNO REFUNDS!';
 		var equipped = 'locked';
+		var bought = 'not bought';
 		description.color = FlxColor.RED;
+		tooltip.visible = true;
 		if (FlxG.save.data.bought.contains(perks.members[curSelected].type))
 		{
 			equipped = 'not equipped';
+			if (perks.members[curSelected].type == 'atrocity')
+			{
+				description.color = FlxColor.WHITE;
+				tooltip.visible = false;
+			}
+			bought = 'bought';
 			tooltip.text = 'Press Space to equip this item';
 			if (FlxG.save.data.equipped.contains(perks.members[curSelected].type))
 			{
 				equipped = 'equipped';
 				tooltip.text = 'Press Space to unequip this item';
-				description.color = FlxColor.GREEN;
+				description.color = FlxColor.WHITE;
 			}
 		}
 		switch (perks.members[curSelected].type)
@@ -159,6 +178,8 @@ class ModsMenuState extends MusicBeatState
 				description.text = 'Extra Health\nGain 50% more max health\n\nThis perk is ' + equipped;
 			case 'botplay':
 				description.text = 'Robo Robo\nTurn botplay on for 8.6 seconds by pressing 3\n\nThis perk is ' + equipped;
+			case 'atrocity':
+				description.text = 'Atrocity\nProvides the ability to play Snow The Fox\'s Atrocity cover\n\nThis cover is ' + bought;
 		}
 	}
 }

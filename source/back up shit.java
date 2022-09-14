@@ -205,7 +205,6 @@ class PlayState extends MusicBeatState
 	public var combo:Int = 0;
 
 	private var healthBarBG:AttachedSprite;
-	var healthBarBGKnock:AttachedSprite;
 	public var healthBar:FlxBar;
 	var songPercent:Float = 0;
 
@@ -360,8 +359,6 @@ class PlayState extends MusicBeatState
 		var ccBackSpriteWidth:Int = 1;
 		var RoboBackSpriteWidth:Int = 1;
 		var songNameDistance:Float = 0;
-		var ccsongNameDistance:Float = 0;
-		var RobosongNameDistance:Float = 0;
 		var displaySongName:FlxText;
 		var displayArtistName:FlxText;
 		var ccdisplaySongName:FlxText;
@@ -745,33 +742,24 @@ class PlayState extends MusicBeatState
 		add(songBackSprite);
 		songBackSprite.cameras = [camHUD];
 
-		ccsongBackSprite = new FlxSprite(0, 300).makeGraphic(0, 125, FlxColor.WHITE);
+		ccsongBackSprite = new FlxSprite(0, 400).makeGraphic(0, 125, FlxColor.WHITE);
 		ccsongBackSprite.alpha = 0.8;
 		add(ccsongBackSprite);
 		ccsongBackSprite.cameras = [camHUD];
 
-		RobosongBackSprite = new FlxSprite(0, 425).makeGraphic(0, 125, FlxColor.WHITE);
+		RobosongBackSprite = new FlxSprite(0, 400).makeGraphic(0, 125, FlxColor.WHITE);
 		RobosongBackSprite.alpha = 0.8;
 		add(RobosongBackSprite);
 		RobosongBackSprite.cameras = [camHUD];
-		if (curStage != 'atrocity')
-		{
-			RobosongBackSprite.visible = false;
-			ccsongBackSprite.visible = false;
-		}
 		
 		displaySongName = new FlxText(0, songBackSprite.y - 40, 0, SONG.song.toUpperCase(), 40);
-		ccdisplaySongName = new FlxText(0, ccsongBackSprite.y - 40, 0, 'SNOW THE FOX', 40);
-		RobodisplaySongName = new FlxText(0, RobosongBackSprite.y - 40, 0, 'ROBOTIC PRESS', 40);
+		ccdisplaySongName = new FlxText(0, ccsongBackSprite.y - 40, 0, SONG.song.toUpperCase(), 40);
+		RobodisplaySongName = new FlxText(0, RobosongBackSprite.y - 40, 0, SONG.song.toUpperCase(), 40);
 		switch (curStage)
 		{
 			case 'jelly':
-				ccdisplaySongName.setFormat(Paths.font("Schluber.ttf"), 50, 0xD1149B, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.WHITE);
-				RobodisplaySongName.setFormat(Paths.font("Schluber.ttf"), 50, 0xD1149B, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.WHITE);
 				displaySongName.setFormat(Paths.font("Schluber.ttf"), 50, 0xD1149B, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.WHITE);
 			default:
-				ccdisplaySongName.setFormat(Paths.font("Friday Night Funkin Font.ttf"), 40, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
-				RobodisplaySongName.setFormat(Paths.font("Friday Night Funkin Font.ttf"), 40, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 				displaySongName.setFormat(Paths.font("Friday Night Funkin Font.ttf"), 40, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		}
 		displaySongName.alignment = "center";
@@ -781,69 +769,27 @@ class PlayState extends MusicBeatState
 
 		displaySongName.screenCenter(X);
 		displaySongName.x -= songNameDistance;
-		ccdisplaySongName.alignment = "center";
-		ccdisplaySongName.alpha = 0;
-		add(ccdisplaySongName);
-		ccdisplaySongName.cameras = [camHUD];
-
-		ccdisplaySongName.screenCenter(X);
-		ccdisplaySongName.x -= ccsongNameDistance;
-		RobodisplaySongName.alignment = "center";
-		RobodisplaySongName.alpha = 0;
-		add(RobodisplaySongName);
-		RobodisplaySongName.cameras = [camHUD];
-
-		RobodisplaySongName.screenCenter(X);
-		RobodisplaySongName.x -= RobosongNameDistance;
 		
 		iconSongName = new FlxSprite(0,0);
 		iconSongName.y = songBackSprite.y;
 		iconSongName.alpha = 0;
 		add(iconSongName);
 		iconSongName.cameras = [camHUD];
-		cciconSongName = new FlxSprite(0,0);
-		cciconSongName.y = ccsongBackSprite.y;
-		cciconSongName.alpha = 0;
-		add(cciconSongName);
-		cciconSongName.cameras = [camHUD];
-		RoboiconSongName = new FlxSprite(0,0);
-		RoboiconSongName.y = RobosongBackSprite.y;
-		RoboiconSongName.alpha = 0;
-		add(RoboiconSongName);
-		RoboiconSongName.cameras = [camHUD];
 		iconSongNameAgain = new FlxSprite(0,0);
 		iconSongNameAgain.y = songBackSprite.y;
 		iconSongNameAgain.alpha = 0;
 		add(iconSongNameAgain);
 		iconSongNameAgain.cameras = [camHUD];
 
-		cciconSongNameAgain = new FlxSprite(0,0);
-		cciconSongNameAgain.y = songBackSprite.y;
-		cciconSongNameAgain.alpha = 0;
-		add(cciconSongNameAgain);
-		cciconSongNameAgain.cameras = [camHUD];
-
-		RoboiconSongNameAgain = new FlxSprite(0,0);
-		RoboiconSongNameAgain.y = songBackSprite.y;
-		RoboiconSongNameAgain.alpha = 0;
-		add(RoboiconSongNameAgain);
-		RoboiconSongNameAgain.cameras = [camHUD];
-
 		var dumb = CoolUtil.coolTextFile(Paths.txt(SONG.song.toLowerCase().replace(' ', '-') + '/artist'));
 		displayArtistName = new FlxText(0, songBackSprite.y + 20, 0, dumb[0], 40);
-		ccdisplayArtistName = new FlxText(0, songBackSprite.y + 20, 0, dumb[1], 40);
-		RobodisplayArtistName = new FlxText(0, songBackSprite.y + 20, 0, dumb[2], 40);
 		
 		switch (curStage)
 		{
 			case 'jelly':
 				displayArtistName.setFormat(Paths.font("Schluber.ttf"), 20, FlxColor.PURPLE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.WHITE);
-				ccdisplayArtistName.setFormat(Paths.font("Schluber.ttf"), 20, FlxColor.PURPLE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.WHITE);
-				RobodisplayArtistName.setFormat(Paths.font("Schluber.ttf"), 20, FlxColor.PURPLE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.WHITE);
 			default:
 				displayArtistName.setFormat(Paths.font("Friday Night Funkin Font.ttf"), 20, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
-				ccdisplayArtistName.setFormat(Paths.font("Friday Night Funkin Font.ttf"), 20, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
-				RobodisplayArtistName.setFormat(Paths.font("Friday Night Funkin Font.ttf"), 20, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 
 		}
 		displayArtistName.alignment = "center";
@@ -852,18 +798,6 @@ class PlayState extends MusicBeatState
 		displayArtistName.cameras = [camHUD];
 
 		displayArtistName.screenCenter(X);
-		ccdisplayArtistName.alignment = "center";
-		ccdisplayArtistName.alpha = 0;
-		add(ccdisplayArtistName);
-		ccdisplayArtistName.cameras = [camHUD];
-
-		ccdisplayArtistName.screenCenter(X);
-		RobodisplayArtistName.alignment = "center";
-		RobodisplayArtistName.alpha = 0;
-		add(RobodisplayArtistName);
-		RobodisplayArtistName.cameras = [camHUD];
-
-		RobodisplayArtistName.screenCenter(X);
 
 
 		
@@ -2103,118 +2037,12 @@ class PlayState extends MusicBeatState
 		blammedLightsBlack = modchartSprites.get('blammedLightsBlack');
 		blammedLightsBlack.alpha = 0.0;
 
-		if (curStage == 'jelly')
-		{
-			{
-				ccsongBackSprite.color = FlxColor.fromRGB(247,163,149);
-				ccdisplaySongName.color = FlxColor.fromRGB(255, 255, 255);
-				if (curStage == 'jelly')
-				{
-					displaySongName.color = 0xD1149B;
-					ccdisplaySongName.color = 0xD1149B;
-					RobodisplaySongName.color = 0xD1149B;
-				}
-				var name:String = 'icons/atrocity/SnowTheFox';
-				if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-' + dad.healthIcon; //Older versions of psych engine's support
-				if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-face'; //Prevents crash from missing icon
-				var file:Dynamic = Paths.image(name);
-	
-				cciconSongName.loadGraphic(file); //Load stupidly first for getting the file size
-				cciconSongName.loadGraphic(file, true, Math.floor(cciconSongName.width / 2), Math.floor(cciconSongName.height)); //Then load it fr
-				cciconSongName.offset.x = (cciconSongName.width - 150) / 2;
-				cciconSongName.offset.y = (cciconSongName.width - 150) / 2;
-				cciconSongName.setGraphicSize(Std.int(cciconSongName.width * 0.8));
-				cciconSongName.updateHitbox();
-	
-				cciconSongName.animation.add('SnowTheFox', [0, 1], 0, false, false);
-				cciconSongName.animation.play('SnowTheFox');
-	
-				cciconSongName.antialiasing = ClientPrefs.globalAntialiasing;
-			}
-			{
-				if (curStage == 'jelly')
-				{
-					displaySongName.color = 0xD1149B;
-					ccdisplaySongName.color = 0xD1149B;
-					RobodisplaySongName.color = 0xD1149B;
-				}
-				var name:String = 'icons/' + dadAgain1.healthIcon;
-				if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-' + dadAgain1.healthIcon; //Older versions of psych engine's support
-				if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-face'; //Prevents crash from missing icon
-				var file:Dynamic = Paths.image(name);
-	
-				cciconSongNameAgain.loadGraphic(file); //Load stupidly first for getting the file size
-				cciconSongNameAgain.loadGraphic(file, true, Math.floor(cciconSongNameAgain.width / 2), Math.floor(cciconSongNameAgain.height)); //Then load it fr
-				cciconSongNameAgain.offset.x = (cciconSongNameAgain.width - 150) / 2;
-				cciconSongNameAgain.offset.y = (cciconSongNameAgain.width - 150) / 2;
-				cciconSongNameAgain.setGraphicSize(Std.int(cciconSongNameAgain.width * 0.8));
-				cciconSongNameAgain.updateHitbox();
-	
-				cciconSongNameAgain.animation.add(dadAgain1.healthIcon, [0, 1], 0, false, false);
-				cciconSongNameAgain.animation.play(dadAgain1.healthIcon);
-	
-				iconSongNameAgain.antialiasing = ClientPrefs.globalAntialiasing;
-			}
-			{
-				RobosongBackSprite.color = FlxColor.fromRGB(78,225,198);
-				RobodisplaySongName.color = FlxColor.fromRGB(255, 255, 255);
-				if (curStage == 'jelly')
-				{
-					displaySongName.color = 0xD1149B;
-					ccdisplaySongName.color = 0xD1149B;
-					RobodisplaySongName.color = 0xD1149B;
-				}
-				var name:String = 'icons/RoboVerse/robo-gf';
-				if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-' + dad.healthIcon; //Older versions of psych engine's support
-				if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-face'; //Prevents crash from missing icon
-				var file:Dynamic = Paths.image(name);
-	
-				RoboiconSongName.loadGraphic(file); //Load stupidly first for getting the file size
-				RoboiconSongName.loadGraphic(file, true, Math.floor(RoboiconSongName.width / 2), Math.floor(RoboiconSongName.height)); //Then load it fr
-				RoboiconSongName.offset.x = (RoboiconSongName.width - 150) / 2;
-				RoboiconSongName.offset.y = (RoboiconSongName.width - 150) / 2;
-				RoboiconSongName.setGraphicSize(Std.int(RoboiconSongName.width * 0.8));
-				RoboiconSongName.updateHitbox();
-	
-				RoboiconSongName.animation.add('robo-gf', [0, 1], 0, false, false);
-				RoboiconSongName.animation.play('robo-gf');
-	
-				RoboiconSongName.antialiasing = ClientPrefs.globalAntialiasing;
-			}
-			{
-				if (curStage == 'jelly')
-				{
-					displaySongName.color = 0xD1149B;
-					ccdisplaySongName.color = 0xD1149B;
-					RobodisplaySongName.color = 0xD1149B;
-				}
-				var name:String = 'icons/' + dadAgain1.healthIcon;
-				if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-' + dadAgain1.healthIcon; //Older versions of psych engine's support
-				if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-face'; //Prevents crash from missing icon
-				var file:Dynamic = Paths.image(name);
-	
-				cciconSongNameAgain.loadGraphic(file); //Load stupidly first for getting the file size
-				cciconSongNameAgain.loadGraphic(file, true, Math.floor(cciconSongNameAgain.width / 2), Math.floor(cciconSongNameAgain.height)); //Then load it fr
-				cciconSongNameAgain.offset.x = (cciconSongNameAgain.width - 150) / 2;
-				cciconSongNameAgain.offset.y = (cciconSongNameAgain.width - 150) / 2;
-				cciconSongNameAgain.setGraphicSize(Std.int(cciconSongNameAgain.width * 0.8));
-				cciconSongNameAgain.updateHitbox();
-	
-				cciconSongNameAgain.animation.add(dadAgain1.healthIcon, [0, 1], 0, false, false);
-				cciconSongNameAgain.animation.play(dadAgain1.healthIcon);
-	
-				iconSongNameAgain.antialiasing = ClientPrefs.globalAntialiasing;
-			}
-		}		
+		
 		{
 			songBackSprite.color = FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]);
 			displaySongName.color = FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]);
 			if (curStage == 'jelly')
-			{
 				displaySongName.color = 0xD1149B;
-				ccdisplaySongName.color = 0xD1149B;
-				RobodisplaySongName.color = 0xD1149B;
-			}
 			var name:String = 'icons/' + dad.healthIcon;
 			if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-' + dad.healthIcon; //Older versions of psych engine's support
 			if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-face'; //Prevents crash from missing icon
@@ -2236,11 +2064,7 @@ class PlayState extends MusicBeatState
 			songBackSprite.color = FlxColor.fromRGB(dadAgain1.healthColorArray[0], dadAgain1.healthColorArray[1], dadAgain1.healthColorArray[2]);
 			displaySongName.color = FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]);
 			if (curStage == 'jelly')
-			{
 				displaySongName.color = 0xD1149B;
-				ccdisplaySongName.color = 0xD1149B;
-				RobodisplaySongName.color = 0xD1149B;
-			}
 			var name:String = 'icons/' + dadAgain1.healthIcon;
 			if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-' + dadAgain1.healthIcon; //Older versions of psych engine's support
 			if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-face'; //Prevents crash from missing icon
@@ -2259,8 +2083,6 @@ class PlayState extends MusicBeatState
 			iconSongNameAgain.antialiasing = ClientPrefs.globalAntialiasing;
 		}
 		iconSongNameAgain.visible = false;
-		cciconSongNameAgain.visible = false;
-		RoboiconSongNameAgain.visible = false;
 		
 		var camPos:FlxPoint = new FlxPoint(girlfriendCameraOffset[0], girlfriendCameraOffset[1]);
 		if(gf != null)
@@ -2477,7 +2299,7 @@ class PlayState extends MusicBeatState
 		if (curStage == 'knockout')
 			add(healthBarBG);
 		healthBarBG.sprTracker = healthBar;
-		healthBarBGKnock = new AttachedSprite('knockout/cuphealthbar');
+		var healthBarBGKnock:AttachedSprite = new AttachedSprite('knockout/cuphealthbar');
 		if (curStage == 'knockout')
 		{
 			healthBarBGKnock.y = FlxG.height * 0.89;
@@ -5083,19 +4905,9 @@ class PlayState extends MusicBeatState
 					if (!bfDodgin)
 					{
 						if ((superCircleHitBox.x + superCircleHitBox.width > bfHitBox.x) && !(superCircleHitBox.x > bfHitBox.x + bfHitBox.width))
-						{
 							health = -86; //awesome number
-							bfDodgin = true;
-						}
 						if ((superHitBox.x + superHitBox.width > bfHitBox.x) && !(superHitBox.x > bfHitBox.x + bfHitBox.width))
-						{
 							health = -11.8; //also awesome number
-							superCuphead.y -= 375;
-							superCuphead.animation.play('Burst');
-							superMove = false;
-							superCupheadTiky.visible = false;
-							bfDodgin = true;
-						}
 					}
 					else
 					{
@@ -5638,26 +5450,14 @@ class PlayState extends MusicBeatState
 			}
 		}
 		songBackSprite.makeGraphic(songBackSpriteWidth, 125, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]));
-		ccsongBackSprite.makeGraphic(ccsongBackSpriteWidth, 125, FlxColor.fromRGB(255,255,255));
-		RobosongBackSprite.makeGraphic(RobosongBackSpriteWidth, 125, FlxColor.fromRGB(255,255,255));
+		ccsongBackSprite.makeGraphic(songBackSpriteWidth, 125, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]));
+		RobosongBackSprite.makeGraphic(songBackSpriteWidth, 125, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]));
 		displaySongName.screenCenter(X);
 
 		displaySongName.x -= songNameDistance;
 		iconSongName.x = songNameDistance * 2 + 20 + displaySongName.x + displaySongName.width - 131;
-		ccdisplaySongName.screenCenter(X);
-
-		ccdisplaySongName.x -= ccsongNameDistance;
-		cciconSongName.x = ccsongNameDistance * 2 + 20 + ccdisplaySongName.x + ccdisplaySongName.width - 131;
-		RobodisplaySongName.screenCenter(X);
-
-		RobodisplaySongName.x -= RobosongNameDistance;
-		RoboiconSongName.x = RobosongNameDistance * 2 + 20 + RobodisplaySongName.x + RobodisplaySongName.width - 131;
 		iconSongNameAgain.x = iconSongName.x - 50;
 		iconSongNameAgain.y = iconSongName.y;
-		cciconSongNameAgain.x = cciconSongName.x - 50;
-		cciconSongNameAgain.y = cciconSongName.y;
-		RoboiconSongNameAgain.x = RoboiconSongName.x - 50;
-		RoboiconSongNameAgain.y = RoboiconSongName.y;
 
 		camXAddition = 0;
 		camYAddition = 0;
@@ -6956,7 +6756,6 @@ class PlayState extends MusicBeatState
 				maxHealth /= 2;
 				health = maxHealth;
 				healthBarBG.scale.set(healthBarBG.scale.x * 0.5, 1);
-				healthBarBGKnock.scale.set(healthBarBGKnock.scale.x * 0.5, 1);
 				healthBarBG.screenCenter(X);
 				remove(healthBar);
 				healthBar = new FlxBar((healthBarBG.x + healthBarBG.width)/2  + 22, healthBarBG.y + 4, RIGHT_TO_LEFT, Std.int((healthBarBG.width)/2 - 8), Std.int(healthBarBG.height - 8), this,
@@ -7949,7 +7748,7 @@ class PlayState extends MusicBeatState
 									{
 										onComplete: function(twn:FlxTween)
 										{
-											FlxTween.tween(displaySongName, {y: songBackSprite.y + 30, alpha: 1}, 0.40, {
+											FlxTween.tween(displaySongName, {y: songBackSprite.y + 30, alpha: 1}, 0.80, {
 												ease: FlxEase.elasticInOut,
 												onComplete: function(twn:FlxTween)
 												{
@@ -7967,7 +7766,7 @@ class PlayState extends MusicBeatState
 														ease: FlxEase.elasticInOut
 													});
 													
-													new FlxTimer().start(2, function(tmr:FlxTimer)
+													new FlxTimer().start(4, function(tmr:FlxTimer)
 													{
 														FlxTween.tween(songBackSprite, {y: songBackSprite.y - 100, alpha: 0}, 0.5, {
 															ease: FlxEase.elasticInOut
@@ -8587,7 +8386,7 @@ class PlayState extends MusicBeatState
 							{
 								onComplete: function(twn:FlxTween)
 								{
-									FlxTween.tween(ccdisplaySongName, {y: ccsongBackSprite.y + 30, alpha: 1}, 0.40, {
+									FlxTween.tween(ccdisplaySongName, {y: ccsongBackSprite.y + 30, alpha: 1}, 0.80, {
 										ease: FlxEase.elasticInOut,
 										onComplete: function(twn:FlxTween)
 										{
@@ -8605,7 +8404,7 @@ class PlayState extends MusicBeatState
 												ease: FlxEase.elasticInOut
 											});
 											
-											new FlxTimer().start(2, function(tmr:FlxTimer)
+											new FlxTimer().start(4, function(tmr:FlxTimer)
 											{
 												FlxTween.tween(ccsongBackSprite, {y: ccsongBackSprite.y - 100, alpha: 0}, 0.5, {
 													ease: FlxEase.elasticInOut
@@ -8633,7 +8432,7 @@ class PlayState extends MusicBeatState
 							{
 								onComplete: function(twn:FlxTween)
 								{
-									FlxTween.tween(RobodisplaySongName, {y: RobosongBackSprite.y + 30, alpha: 1}, 0.40, {
+									FlxTween.tween(RobodisplaySongName, {y: RobosongBackSprite.y + 30, alpha: 1}, 0.80, {
 										ease: FlxEase.elasticInOut,
 										onComplete: function(twn:FlxTween)
 										{
@@ -8651,7 +8450,7 @@ class PlayState extends MusicBeatState
 												ease: FlxEase.elasticInOut
 											});
 											
-											new FlxTimer().start(2, function(tmr:FlxTimer)
+											new FlxTimer().start(4, function(tmr:FlxTimer)
 											{
 												FlxTween.tween(RobosongBackSprite, {y: RobosongBackSprite.y - 100, alpha: 0}, 0.5, {
 													ease: FlxEase.elasticInOut

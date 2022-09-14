@@ -23,6 +23,21 @@
 				]
 			],
 			[
+				15157.8947368421,
+				[
+					[
+						"Do Hardcoded Event",
+						"10",
+						""
+					],
+					[
+						"Do Hardcoded Event",
+						"11",
+						""
+					]
+				]
+			],
+			[
 				20131.5789473684,
 				[
 					[
@@ -1049,11 +1064,6 @@
 						"Do Hardcoded Event",
 						"8",
 						"34"
-					],
-					[
-						"dadAgain1 Singing",
-						"",
-						""
 					]
 				]
 			],
@@ -9964,6 +9974,26 @@
 				"mustHitSection": true,
 				"changeBPM": false,
 				"bpm": 190
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 190
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 190,
+				"changeBPM": false,
+				"mustHitSection": true
 			},
 			{
 				"sectionNotes": [],

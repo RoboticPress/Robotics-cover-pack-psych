@@ -55,6 +55,8 @@ class FreeplayState extends MusicBeatState
 	{
 		Paths.clearStoredMemory();
 		Paths.clearUnusedMemory();
+		if (FlxG.save.data.bought == null)
+			FlxG.save.data.bought = [];
 		NOMOREMOVE = false;
 		
 		persistentUpdate = true;
@@ -227,8 +229,15 @@ class FreeplayState extends MusicBeatState
 	}
 
 	function weekIsLocked(name:String):Bool {
-		var leWeek:WeekData = WeekData.weeksLoaded.get(name);
-		return (!leWeek.startUnlocked && leWeek.weekBefore.length > 0 && (!StoryMenuState.weekCompleted.exists(leWeek.weekBefore) || !StoryMenuState.weekCompleted.get(leWeek.weekBefore)));
+		if (name == 'week6')
+		{
+			return !(FlxG.save.data.bought.contains('atrocity'));
+		}
+		else
+		{
+			var leWeek:WeekData = WeekData.weeksLoaded.get(name);
+			return (!leWeek.startUnlocked && leWeek.weekBefore.length > 0 && (!StoryMenuState.weekCompleted.exists(leWeek.weekBefore) || !StoryMenuState.weekCompleted.get(leWeek.weekBefore)));
+		}
 	}
 
 	/*public function addWeek(songs:Array<String>, weekNum:Int, weekColor:Int, ?songCharacters:Array<String>)

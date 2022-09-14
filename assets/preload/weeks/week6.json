@@ -1,34 +1,32 @@
 {
 	"songs": [
 		[
-			"malediction",
-			"malediction/icon-curse-happy",
+			"Atrocity",
+			"atrocity/icon-skeleton",
 			[
-				146,
+				255,
 				113,
-				253
+				95
 			]
 		]
 	],
-
+	
 	"weekCharacters": [
-		"senpai",
+		"dad",
 		"bf",
 		"gf"
 	],
-	"weekBackground": "school",
+	"weekBackground": "stage",
 
-	"storyName": "hating simulator ft. moawling",
-	"weekBefore": "week5",
-	"weekName": "Week 6",
-	"startUnlocked": true,
-
-	"hideStoryMode": false,
+	"storyName": "jellybean vs skeletons",
 	"hideFreeplay": false,
-	"difficulties": "Normal",
+	"weekName": "Jelly maniac",
 	"freeplayColor": [
 		146,
 		113,
 		253
-	]
+	],
+	"hideStoryMode": false,
+	"weekBefore": "week5",
+	"startUnlocked": true
 }
