@@ -11,7 +11,7 @@
 	<SubTexture name="mods basic0006" x="0" y="202" width="428" height="202"/>
 	<SubTexture name="mods basic0007" x="0" y="202" width="428" height="202"/>
 	<SubTexture name="mods basic0008" x="0" y="202" width="428" height="202"/>
-	<SubTexture name="mods white0000" x="428" y="202" width="428" height="202" frameX="0" frameY="-1" frameWidth="430" frameHeight="203"/>
-	<SubTexture name="mods white0001" x="0" y="404" width="426" height="201" frameX="-2" frameY="0" frameWidth="430" frameHeight="203"/>
-	<SubTexture name="mods white0002" x="426" y="404" width="427" height="191" frameX="-3" frameY="-3" frameWidth="430" frameHeight="203"/>
+	<SubTexture name="mods white0000" x="428" y="202" width="472" height="219" frameX="0" frameY="-1" frameWidth="474" frameHeight="220"/>
+	<SubTexture name="mods white0001" x="0" y="421" width="470" height="218" frameX="-2" frameY="0" frameWidth="474" frameHeight="220"/>
+	<SubTexture name="mods white0002" x="470" y="421" width="471" height="208" frameX="-3" frameY="-3" frameWidth="474" frameHeight="220"/>
 </TextureAtlas>
