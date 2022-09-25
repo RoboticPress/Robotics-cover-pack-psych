@@ -1,0 +1,519 @@
+{
+	"dialogues": [
+		{
+			"events": [
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "true",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "bf",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "dad",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Camera Follow"
+				},
+				{
+					"index": 0,
+					"value1": "characters/robo",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Change Sound"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "singDOWN",
+					"value3": "value3",
+					"event": "Change Character Animation"
+				}
+			],
+			"characterName": "robo",
+			"line": "Oh hello there!"
+		},
+		{
+			"events": [
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "true",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "bf",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "dad",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Camera Follow"
+				},
+				{
+					"index": 0,
+					"value1": "characters/robo",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Change Sound"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "singDOWN",
+					"value3": "value3",
+					"event": "Change Character Animation"
+				},
+				{
+					"index": 35,
+					"value1": "5",
+					"value2": "1",
+					"value3": "value3",
+					"event": "Wave On"
+				},
+				{
+					"index": 39,
+					"value1": "5",
+					"value2": "1",
+					"value3": "value3",
+					"event": "Wave Off"
+				},
+				{
+					"index": 43,
+					"value1": "59ffe3",
+					"value2": "1",
+					"value3": "value3",
+					"event": "Text Color"
+				},
+				{
+					"index": 47,
+					"value1": "ffffff",
+					"value2": "1",
+					"value3": "value3",
+					"event": "Text Color"
+				}
+			],
+			"characterName": "robo",
+			"line": "Welcome to Robo's Cover Pack! I am Robo, a cyan gal created\nby Robotic Press!"
+		},
+		{
+			"events": [
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "true",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "bf",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "dad",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Camera Follow"
+				},
+				{
+					"index": 0,
+					"value1": "characters/robo",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Change Sound"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "singDOWN",
+					"value3": "value3",
+					"event": "Change Character Animation"
+				}
+			],
+			"characterName": "robo",
+			"line": "We're not the same person, don't get us mixed up lol."
+		},
+		{
+			"events": [
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "true",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "bf",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "dad",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Camera Follow"
+				},
+				{
+					"index": 0,
+					"value1": "characters/robo",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Change Sound"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "singDOWN",
+					"value3": "value3",
+					"event": "Change Character Animation"
+				}
+			],
+			"characterName": "robo",
+			"line": "Robotic told me that we should cover the song Milk,\ncurrently looking for the characters to put in the cover."
+		},
+		{
+			"events": [
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "true",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "bf",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "dad",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Camera Follow"
+				},
+				{
+					"index": 0,
+					"value1": "characters/robo",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Change Sound"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "singDOWN",
+					"value3": "value3",
+					"event": "Change Character Animation"
+				}
+			],
+			"characterName": "robo",
+			"line": "I wonder what characters I have here in the characters list..."
+		},
+		{
+			"events": [
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "true",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "bf",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "dad",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Camera Follow"
+				},
+				{
+					"index": 0,
+					"value1": "characters/robo",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Change Sound"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "singDOWN",
+					"value3": "value3",
+					"event": "Change Character Animation"
+				}
+			],
+			"characterName": "robo",
+			"line": "Garcello....\nCuphead...\nSans..."
+		},
+		{
+			"events": [
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "true",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "bf",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "dad",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Camera Follow"
+				},
+				{
+					"index": 0,
+					"value1": "characters/robo",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Change Sound"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "singDOWN",
+					"value3": "value3",
+					"event": "Change Character Animation"
+				}
+			],
+			"characterName": "robo",
+			"line": "Tabi...\nRose...\nNikusa..."
+		},
+		{
+			"events": [
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "true",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "bf",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "dad",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Camera Follow"
+				},
+				{
+					"index": 0,
+					"value1": "characters/robo",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Change Sound"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "singRIGHT",
+					"value3": "value3",
+					"event": "Change Character Animation"
+				}
+			],
+			"characterName": "robo",
+			"line": "Nikusa, Milk, hehehehehe"
+		},
+		{
+			"events": [
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "true",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "bf",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "dad",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Camera Follow"
+				},
+				{
+					"index": 0,
+					"value1": "characters/robo",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Change Sound"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "singRIGHT",
+					"value3": "value3",
+					"event": "Change Character Animation"
+				},
+				{
+					"index": 21,
+					"value1": "2.5",
+					"value2": "2.5",
+					"value3": "value3",
+					"event": "Wave On"
+				}
+			],
+			"characterName": "robo",
+			"line": "That might work actua-"
+		},
+		{
+			"events": [
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "true",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "bf",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "dad",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Camera Follow"
+				},
+				{
+					"index": 0,
+					"value1": "characters/robo",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Change Sound"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "singLEFT",
+					"value3": "value3",
+					"event": "Change Character Animation"
+				}
+			],
+			"characterName": "robo",
+			"line": "HOLY CRAP WAIT-"
+		}
+	]
+}
