@@ -1,77 +1,77 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "Fleetway Idle",
-			"indices": []
+			"indices": [],
+			"name": "Fleetway Idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "howfast",
+			"loop": false,
 			"fps": 24,
-			"name": "Fleetway HowFast",
-			"indices": []
+			"anim": "howfast",
+			"indices": [],
+			"name": "Fleetway HowFast"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				130,
 				-90
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "Fleetway Left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Fleetway Left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				-170
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "Fleetway Down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Fleetway Down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-6,
 				100
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "Fleetway Up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Fleetway Up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-50,
 				-133
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "Fleetway Right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Fleetway Right"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/knockout/Fleetway_Super_Sonic",
 	"position": [
-		-190,
-		-90
+		-300,
+		-350
 	],
 	"healthicon": "knockout/fleetway",
 	"flip_x": false,
