@@ -1,0 +1,553 @@
+{
+	"dialogues": [
+		{
+			"line": "YOU AGAIN?",
+			"characterName": "cuphead",
+			"events": [
+				{
+					"value1": "2.5",
+					"value2": "2.5",
+					"event": "Shake On",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "dad",
+					"value2": "true",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "bf",
+					"value2": "false",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "gf",
+					"value2": "false",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "dad",
+					"value2": "2.5",
+					"event": "Camera Follow",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "characters/cuphead",
+					"value2": "2.5",
+					"event": "Change Sound",
+					"index": 0,
+					"value3": "value3"
+				}
+			]
+		},
+		{
+			"line": "I THOUGHT YOU LEFT THIS PLACE BY THAT RED PORTAL",
+			"characterName": "cuphead",
+			"events": [
+				{
+					"value1": "dad",
+					"value2": "true",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "bf",
+					"value2": "false",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "gf",
+					"value2": "false",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "dad",
+					"value2": "2.5",
+					"event": "Camera Follow",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "characters/cuphead",
+					"value2": "2.5",
+					"event": "Change Sound",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "2.5",
+					"value2": "2.5",
+					"event": "Shake On",
+					"index": 0,
+					"value3": "value3"
+				}
+			]
+		},
+		{
+			"line": "And I brought 'em back",
+			"characterName": "Robo",
+			"events": [
+				{
+					"value1": "gf",
+					"value2": "true",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "bf",
+					"value2": "false",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "dad",
+					"value2": "false",
+					"event": "Set if Character singing",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "gf",
+					"value2": "2.5",
+					"event": "Camera Follow",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "characters/Robo",
+					"value2": "2.5",
+					"event": "Change Sound",
+					"index": 0,
+					"value3": "value3"
+				},
+				{
+					"value1": "gf",
+					"value2": "singDOWN",
+					"event": "Change Character Animation",
+					"index": 0,
+					"value3": "value3"
+				}
+			]
+		},
+		{
+			"events": [
+				{
+					"index": 0,
+					"value1": "dad",
+					"value2": "true",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "bf",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "dad",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Camera Follow"
+				},
+				{
+					"index": 0,
+					"value1": "characters/cuphead",
+					"value2": "value2",
+					"value3": "value3",
+					"event": "Change Sound"
+				},
+				{
+					"index": 0,
+					"value1": "2.5",
+					"value2": "2.5",
+					"value3": "value3",
+					"event": "Shake On"
+				}
+			],
+			"characterName": "cuphead",
+			"line": "WHHHYYYYYYYY?"
+		},
+		{
+			"events": [
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "true",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "bf",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "dad",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "2.5",
+					"value3": "value3",
+					"event": "Camera Follow"
+				},
+				{
+					"index": 0,
+					"value1": "characters/robo",
+					"value2": "2.5",
+					"value3": "value3",
+					"event": "Change Sound"
+				},
+				{
+					"index": 78,
+					"value1": "2.5",
+					"value2": "5",
+					"value3": "value3",
+					"event": "Wave Off"
+				},
+				{
+					"index": 70,
+					"value1": "2.5",
+					"value2": "5",
+					"value3": "value3",
+					"event": "Wave On"
+				}
+			],
+			"characterName": "robo",
+			"line": "Well basically I want you two to sing Knockout but this time\nit's in BETADCIU style"
+		},
+		{
+			"events": [
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "true",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "bf",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "dad",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "2.5",
+					"value3": "value3",
+					"event": "Camera Follow"
+				},
+				{
+					"index": 0,
+					"value1": "characters/robo",
+					"value2": "2.5",
+					"value3": "value3",
+					"event": "Change Sound"
+				},
+				{
+					"index": 12,
+					"value1": "gf",
+					"value2": "singLEFT",
+					"value3": "value3",
+					"event": "Change Character Animation"
+				}
+			],
+			"characterName": "robo",
+			"line": "and uhm.... Susan here will provide replacements for all the shots\nthat Cuphead does, for diversety!"
+		},
+		{
+			"events": [
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "true",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "bf",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "dad",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "2.5",
+					"value3": "value3",
+					"event": "Camera Follow"
+				},
+				{
+					"index": 0,
+					"value1": "characters/robo",
+					"value2": "2.5",
+					"value3": "value3",
+					"event": "Change Sound"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "singDOWN",
+					"value3": "value3",
+					"event": "Change Character Animation"
+				},
+				{
+					"index": 13,
+					"value1": "gf",
+					"value2": "singDOWN",
+					"value3": "value3",
+					"event": "Skip"
+				}
+			],
+			"characterName": "robo",
+			"line": "on the contra-"
+		},
+		{
+			"events": [
+				{
+					"index": 0,
+					"value1": "0.01",
+					"value2": "0.01",
+					"value3": "value3",
+					"event": "Camera Skake"
+				},
+				{
+					"index": 0,
+					"value1": "2.5",
+					"value2": "singDOWN",
+					"value3": "value3",
+					"event": "Shake On"
+				},
+				{
+					"index": 0,
+					"value1": "1.5",
+					"value2": "singDOWN",
+					"value3": "value3",
+					"event": "Change Letter Size"
+				},
+				{
+					"index": 0,
+					"value1": "4",
+					"value2": "singDOWN",
+					"value3": "value3",
+					"event": "Shake On"
+				},
+				{
+					"index": 0,
+					"value1": "dad",
+					"value2": "true",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "bf",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "dad",
+					"value2": "singDOWN",
+					"value3": "value3",
+					"event": "Camera Follow"
+				},
+				{
+					"index": 0,
+					"value1": "characters/cuphead",
+					"value2": "singDOWN",
+					"value3": "value3",
+					"event": "Change Sound"
+				}
+			],
+			"characterName": "cuphead",
+			"line": "DEAL!"
+		},
+		{
+			"events": [
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "true",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "bf",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "dad",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "singDOWN",
+					"value3": "value3",
+					"event": "Camera Follow"
+				},
+				{
+					"index": 0,
+					"value1": "characters/robo",
+					"value2": "singDOWN",
+					"value3": "value3",
+					"event": "Change Sound"
+				}
+			],
+			"characterName": "Robo",
+			"line": "but-"
+		},
+		{
+			"events": [
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "true",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "bf",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "dad",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "singDOWN",
+					"value3": "value3",
+					"event": "Camera Follow"
+				},
+				{
+					"index": 0,
+					"value1": "characters/robo",
+					"value2": "singDOWN",
+					"value3": "value3",
+					"event": "Change Sound"
+				}
+			],
+			"characterName": "Robo",
+			"line": "You know what? Nevermind!"
+		},
+		{
+			"events": [
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "true",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "bf",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "dad",
+					"value2": "false",
+					"value3": "value3",
+					"event": "Set if Character singing"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "singDOWN",
+					"value3": "value3",
+					"event": "Camera Follow"
+				},
+				{
+					"index": 0,
+					"value1": "characters/robo",
+					"value2": "singDOWN",
+					"value3": "value3",
+					"event": "Change Sound"
+				},
+				{
+					"index": 0,
+					"value1": "gf",
+					"value2": "singUP",
+					"value3": "value3",
+					"event": "Change Character Animation"
+				}
+			],
+			"characterName": "Robo",
+			"line": "COVER START!"
+		}
+	]
+}

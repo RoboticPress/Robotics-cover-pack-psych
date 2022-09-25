@@ -247,12 +247,12 @@
 					[
 						"Change Character",
 						"bf",
-						"selever"
+						"void-playable"
 					],
 					[
 						"Change Character",
 						"dad",
-						"sarv"
+						"yukichi"
 					]
 				]
 			],
@@ -427,13 +427,18 @@
 				]
 			],
 			[
-				50000,
+				49500,
 				[
 					[
 						"Change Character",
 						"dad",
 						"whitty"
-					],
+					]
+				]
+			],
+			[
+				50000,
+				[
 					[
 						"Change Character",
 						"bf",

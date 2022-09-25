@@ -1,0 +1,16 @@
+{
+	"dialogues": [
+		{
+			"events": [
+			],
+			"characterName": "cuphead",
+			"line": "OI, YA NEVER TOLD ME HE GETS NEW POWERS AS WELL"
+		},
+		{
+			"events": [
+			],
+			"characterName": "robo",
+			"line": "Well you kinda cut me midway so like, screw you I guess."
+		}
+	]
+}
