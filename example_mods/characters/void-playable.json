@@ -1,0 +1,178 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Void Idle"
+		},
+		{
+			"offsets": [
+				0,
+				-90
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "intro",
+			"loop": false,
+			"name": "Void Intro"
+		},
+		{
+			"offsets": [
+				-10,
+				-85
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "hey",
+			"loop": false,
+			"name": "Void PoseWink"
+		},
+		{
+			"offsets": [
+				-10,
+				-90
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "confused",
+			"loop": false,
+			"name": "Void Confused"
+		},
+		{
+			"offsets": [
+				0,
+				-90
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "seethe",
+			"loop": false,
+			"name": "Void Seethe"
+		},
+		{
+			"offsets": [
+				-10,
+				-90
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "wink",
+			"loop": false,
+			"name": "Void Wink"
+		},
+		{
+			"offsets": [
+				-17,
+				7
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "Void Up Note Chill"
+		},
+		{
+			"offsets": [
+				-70,
+				-50
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP-alt",
+			"loop": false,
+			"name": "Void Up Note Hype"
+		},
+		{
+			"offsets": [
+				-30,
+				-50
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"loop": false,
+			"name": "Void Right Note Hype"
+		},
+		{
+			"offsets": [
+				62,
+				7
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Void Right Note Chill"
+		},
+		{
+			"offsets": [
+				-20,
+				9
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Void Left Note Chill"
+		},
+		{
+			"offsets": [
+				-11,
+				8
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"loop": false,
+			"name": "Void Left Note Hype"
+		},
+		{
+			"offsets": [
+				-12,
+				5
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "Void Down Note Chill"
+		},
+		{
+			"offsets": [
+				-60,
+				70
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN-alt",
+			"loop": false,
+			"name": "Void Down Note Hype"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/malediction/void_assets",
+	"position": [
+		-40,
+		-150
+	],
+	"healthicon": "malediction/void",
+	"flip_x": false,
+	"healthbar_colors": [
+		116,
+		42,
+		166
+	],
+	"playable": true,
+	"camera_position": [
+		0,
+		90
+	],
+	"sing_duration": 6.1,
+	"scale": 1.3
+}

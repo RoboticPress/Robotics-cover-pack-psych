@@ -70,7 +70,7 @@
 	"no_antialiasing": false,
 	"image": "characters/knockout/lord x",
 	"position": [
-		0,
+		-400,
 		0
 	],
 	"healthicon": "knockout/LORD X ICONS",
@@ -81,7 +81,7 @@
 		89
 	],
 	"camera_position": [
-		0,
+		400,
 		0
 	],
 	"sing_duration": 6.1,
