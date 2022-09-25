@@ -1,6 +1,6 @@
 {
 	"storyName": "Daddy Dearest",
-	"difficulties": "Hard, alt, hard-alpha, alt-alpha",
+	"difficulties": "Normal",
 	"hideFreeplay": false,
 	"weekBackground": "stage",
 	"weekBefore": "tutorial",
@@ -12,8 +12,8 @@
 	],
 	"songs": [
 		[
-			"Gospel",
-			"lucisarv",
+			"Milk",
+			"milk/merg",
 			[
 				255,
 				33,
