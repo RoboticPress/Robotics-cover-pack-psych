@@ -99,14 +99,10 @@ class TextBox extends FlxSpriteGroup
 	var autoPlay:Bool = false;
 	var timeToSkip:Float = 4;
 	var currentFont:String = "Bsans";
-	var curCharName = 'charProperties.characterName';
-	var curIconName = 'charProperties.iconName';
-	var curIconColor = 'charProperties.color';
 
 	public function new(rectx:Float = 0, recty:Float = 0, theHeight:Int = 125, color:FlxColor = FlxColor.WHITE, letterSpeed:Float = 1, textmoment:String = '', startingIcon:String = 'robo-gf', theAutoPlay:Bool = false, theTimeToSkip:Float = 4) {
 		super();
-		if (!autoPlay)
-			y += 100;
+
 		if (textmoment != '')
 			typeThis = textmoment;
 		dad = PlayState.instance.dad;
@@ -117,7 +113,7 @@ class TextBox extends FlxSpriteGroup
 		thisThingsHeight = theHeight;
 		bg = new FlxSprite(rectx, recty);
 		bg.makeGraphic(FlxG.width, thisThingsHeight, color);
-		bg.alpha = 0.8;
+		bg.alpha = 0;
 		add(bg);
 		boxColor = color;
 
@@ -129,7 +125,7 @@ class TextBox extends FlxSpriteGroup
 		iconSongName.y = bg.y;
 		iconSongName.alpha = 0;
 		add(iconSongName);
-		daName = new FlxText(bg.x + 80, bg.y - 10, 0, 'ROBOOOOOOOOOOOOOOO', 24);
+		daName = new FlxText(bg.x + 80, bg.y - 10, 0, 'Robo', 24);
 		add(daName);
 		daName.alpha = 0;
 		skipText = new FlxText(bg.x + 80, bg.y + bg.height, 0, 'Press S to skip dialogue', 24);
@@ -147,15 +143,13 @@ class TextBox extends FlxSpriteGroup
 	var limitThing:Float = 0;
 	override function update(elapsed:Float)
 	{
-		if (FlxG.keys.justPressed.ANY && !theJ && !FlxG.keys.justPressed.S && !autoPlay && arrived)
+		if (FlxG.keys.justPressed.ANY && !theJ && !FlxG.keys.justPressed.S && !autoPlay)
 			goToNextDialogue();
 		if (FlxG.keys.justPressed.S && !autoPlay && !PlayState.dialogueEditing)
 			skipDialogue();
 		//if (events.length == 1)
 			//trace(events[0].index);
 		bg.makeGraphic(FlxG.width, thisThingsHeight, boxColor);
-		if (bg.alpha > 0.8)
-			bg.alpha = 0.8;
 		var ratio = iconSongName.height/iconSongName.width;
 		iconSongName.setGraphicSize(Std.int(bg.height/ratio), Std.int(bg.height));
 		iconSongName.x = 200 - iconSongName.width/2;
@@ -170,6 +164,8 @@ class TextBox extends FlxSpriteGroup
 			fard += letterSpeed * (120/ClientPrefs.framerate);
 		if (letterIndex < typeThis.length && arrived && fard >= limitThing)
 		{
+			if (!autoPlay)
+				thefunniSound.play(true);
 			limitThing += 1;
 			for (event in events)
 			{
@@ -277,16 +273,9 @@ class TextBox extends FlxSpriteGroup
 							FlxG.sound.list.add(thefunniSound);
 						case 'Change Font':
 							currentFont = event.value1;
-						case 'Skip':
-							if (!PlayState.dialogueEditing)
-								return goToNextDialogue();
-						case 'Do Hardcoded Event':
-							PlayState.instance.triggerEventNote('Do Hardcoded Event', event.value1, event.value2);
 					}
 				}
 			}
-			if (!autoPlay)
-				thefunniSound.play(true);
 			if (animationPlayDad)
 			{
 				if (PlayState.instance.betadciuMoment)
@@ -357,46 +346,32 @@ class TextBox extends FlxSpriteGroup
 	{
 		var finalY = bg.y;
 		bg.y += 100;
-		FlxTween.tween(bg, {y: finalY, alpha: 0.8}, 0.2, {
+		FlxTween.tween(bg, {y: finalY, alpha: 0.8}, 0.5, {
 			ease: FlxEase.quadInOut,
 			onComplete: function(twn:FlxTween)
 			{
 				arrived = true;
 			}
 		});
-		FlxTween.tween(iconSongName, {alpha: 1}, 0.2, {
+		FlxTween.tween(iconSongName, {alpha: 1}, 0.5, {
 			ease: FlxEase.quadInOut
 		});
-		FlxTween.tween(daName, {alpha: 1}, 0.2, {
+		FlxTween.tween(daName, {alpha: 1}, 0.5, {
 			ease: FlxEase.quadInOut
 		});
-		FlxTween.tween(skipText, {alpha: 1}, 0.2, {
+		FlxTween.tween(skipText, {alpha: 1}, 0.5, {
 			ease: FlxEase.quadInOut
 		});
 	}
 
 	public function changeHeight(value:Int, time:Float)
 	{
-		FlxTween.tween(this, {thisThingsHeight: value}, 0.2, {
+		FlxTween.tween(this, {thisThingsHeight: value}, 0.5, {
 			ease: FlxEase.quadInOut
 		});
 	}
 
 	public function clearText()
-	{
-		typeThis = '';
-		for (letter in letters)
-		{
-			FlxTween.tween(letter, {baseX: letter.baseX + 200, alpha: 0}, 0.2, {
-				ease: FlxEase.quadInOut,
-				onComplete: function(twn: FlxTween) {
-					letter.destroy();
-				}
-			});
-		}
-		letters = [];
-	}
-	public function clearText2()
 	{
 		typeThis = '';
 		for (letter in letters)
@@ -407,50 +382,19 @@ class TextBox extends FlxSpriteGroup
 	}
 
 
-	public function startText2(nerdText:String)
-	{
-		dontStartNewText = true;
-		clearText2();
-		FlxTween.tween(this, {alpha: 0, y: this.y + 100}, 0.2, {
-			ease: FlxEase.quadInOut
-		});
-		new FlxTimer().start(0.3, function(tmr:FlxTimer)
-		{
-			y -= 200;
-			daName.text = curCharName;
-			changeIcon2(curIconName);
-			changeBoxColor(curIconColor);
-			FlxTween.tween(this, {alpha: 1, y: this.y + 100}, 0.2, {
-				ease: FlxEase.quadInOut,
-				onComplete: function (twn:FlxTween) {
-					arrived = true;
-				}
-			});
-			currentFont = 'Bsans';
-			waveIntensity = 5;
-			waveDistance = 5;
-			shakeIntensity = 2.5;
-			dontStartNewText = false;
-			waveTheLetters = false;
-			shakeTheLetters = false;
-			sizeTheLetters = 0.5;
-			typeThis = nerdText.replace('\\n', '\n');
-			firstInTheLine = [];
-			letterLine = 0;
-			letterIndex = 0;
-			arrived = false;
-			startingLine = true;
-			//var letterOffset:Float = 20;
-			//var letterSpeed:Float = 30;
-			//var boxColor:FlxColor;
-		});
-	}
 	public function startText(nerdText:String)
 	{
 		dontStartNewText = true;
 		clearText();
-		new FlxTimer().start(0.3, function(tmr:FlxTimer)
+		FlxTween.tween(this, {alpha: 0, y: this.y + 100}, 0.5, {
+			ease: FlxEase.quadInOut
+		});
+		new FlxTimer().start(0.6, function(tmr:FlxTimer)
 		{
+			y -= 200;
+			FlxTween.tween(this, {alpha: 1, y: this.y + 100}, 0.5, {
+				ease: FlxEase.quadInOut
+			});
 			currentFont = 'Bsans';
 			waveIntensity = 5;
 			waveDistance = 5;
@@ -471,7 +415,6 @@ class TextBox extends FlxSpriteGroup
 		});
 	}
 
-	var lastChar = 'REEEEEEEEEEEEEEEEEEEE';
 	public function goToNextDialogue()
 	{
 		if (thefunniSound != null)
@@ -488,12 +431,7 @@ class TextBox extends FlxSpriteGroup
 			skipDialogue();
 			return;
 		}
-		trace(allDialogues[currentDialogue].characterName);
-		trace(lastChar);
-		if (allDialogues[currentDialogue].characterName.toLowerCase() == lastChar.toLowerCase())
-			startText(allDialogues[currentDialogue].line);
-		else
-			startText2(allDialogues[currentDialogue].line);
+		startText(allDialogues[currentDialogue].line);
 		events = allDialogues[currentDialogue].events;
 		
 		{
@@ -512,24 +450,17 @@ class TextBox extends FlxSpriteGroup
 					letterColor = FlxColor.WHITE;
 					soundToPlay = "characters/" + allDialogues[currentDialogue].characterName;
 					thefunniSound = new FlxSound().loadEmbedded(Paths.sound(soundToPlay));
-					curIconName = charProperties.iconName;
-					curIconColor = charProperties.color;
-					curCharName = charProperties.characterName;
-					if (allDialogues[currentDialogue].characterName.toLowerCase() == lastChar.toLowerCase())
-					{
-						trace('the');
-						trace(charProperties.characterName);
-						trace(daName.text);
-						daName.text = curCharName;
-						trace(charProperties.characterName);
-						trace(daName.text);
-						changeIcon(curIconName);
-						changeBoxColor(curIconColor);
-					}
+					trace('the');
+					trace(charProperties.characterName);
+					trace(daName.text);
+					daName.text = charProperties.characterName;
+					trace(charProperties.characterName);
+					trace(daName.text);
+					changeIcon(charProperties.iconName);
+					changeBoxColor(charProperties.color);
 				}
 			}
 		}
-		lastChar = allDialogues[currentDialogue].characterName;
 		currentDialogue++;
 	}
 
@@ -537,20 +468,20 @@ class TextBox extends FlxSpriteGroup
 	{
 		clearText();
 		
-		FlxTween.tween(bg, {y: bg.y - 100, alpha: 0}, 0.2, {
+		FlxTween.tween(bg, {y: bg.y - 100, alpha: 0}, 0.5, {
 			ease: FlxEase.quadInOut,
 			onComplete: function(twn:FlxTween)
 			{
 				this.destroy();
 			}
 		});
-		FlxTween.tween(iconSongName, {alpha: 0}, 0.2, {
+		FlxTween.tween(iconSongName, {alpha: 0}, 0.5, {
 			ease: FlxEase.quadInOut
 		});
-		FlxTween.tween(daName, {alpha: 0}, 0.2, {
+		FlxTween.tween(daName, {alpha: 0}, 0.5, {
 			ease: FlxEase.quadInOut
 		});
-		FlxTween.tween(skipText, {alpha: 0}, 0.2, {
+		FlxTween.tween(skipText, {alpha: 0}, 0.5, {
 			ease: FlxEase.quadInOut
 		});
 	}
@@ -568,27 +499,6 @@ class TextBox extends FlxSpriteGroup
 		});*/
 	}
 
-	public function changeIcon2 (theFunniName:String)
-	{
-		//songBackSprite.color = FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]);
-		//displaySongName.color = FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]);
-		var name:String = 'icons/' + theFunniName;
-		if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-' + dad.healthIcon; //Older versions of psych engine's support
-		if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-face'; //Prevents crash from missing icon
-		var file:Dynamic = Paths.image(name);
-
-		iconSongName.loadGraphic(file); //Load stupidly first for getting the file size
-		iconSongName.loadGraphic(file, true, Math.floor(iconSongName.width / 2), Math.floor(iconSongName.height)); //Then load it fr
-		iconSongName.offset.x = (iconSongName.width - 150) / 2;
-		iconSongName.offset.y = (iconSongName.width - 150) / 2;
-		iconSongName.setGraphicSize(Std.int(iconSongName.width * 0.8));
-		iconSongName.updateHitbox();
-
-		iconSongName.animation.add(dad.healthIcon, [0, 1], 0, false, false);
-		iconSongName.animation.play(dad.healthIcon);
-
-		iconSongName.antialiasing = ClientPrefs.globalAntialiasing;
-	}
 	public function changeIcon(theFunniName:String)
 	{
 		FlxTween.tween(iconSongName, {alpha: 0}, 0.2, {
@@ -596,7 +506,7 @@ class TextBox extends FlxSpriteGroup
 			onComplete: function(twn:FlxTween)
 			{
 
-				FlxTween.tween(iconSongName, {alpha: 1}, 0.2, {
+				FlxTween.tween(iconSongName, {alpha: 1}, 0.5, {
 					ease: FlxEase.quadInOut
 				});
 				//songBackSprite.color = FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]);

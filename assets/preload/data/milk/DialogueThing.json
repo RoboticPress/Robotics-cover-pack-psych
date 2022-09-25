@@ -174,7 +174,7 @@
 		},
 		{
 			"characterName": "robo",
-			"line": "Robotic told me that we should cover the song Milk,\ncurrently looking for the characters to put in the cover.",
+			"line": "Robotic told me that we should cover the song Milk,\nI am currently looking for the characters to put in the cover.",
 			"events": [
 				{
 					"value1": "gf",

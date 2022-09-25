@@ -95,6 +95,17 @@ class ChromaticAberrationEffect extends Effect
 
 }
 
+class BlackAndWhiteEffect extends Effect
+{
+	
+	public var shader:BAW;
+	public function new (threshhold:Float){
+		shader = new BAW();
+		shader.threshhold.value = [threshhold];
+	}
+	
+	
+}
 
 class ScanlineEffect extends Effect
 {
@@ -108,6 +119,33 @@ class ScanlineEffect extends Effect
 	
 }
 
+class BAW extends FlxShader
+{
+	@:glFragmentSource('
+		#pragma header
+		uniform float threshhold = 0.1;
+		void main()
+		{
+			vec4 texColor = texture2D(bitmap, openfl_TextureCoordv);
+			if (texColor.r > threshhold && texColor.g > threshhold && texColor.b > threshhold)
+			{
+				texColor.r = 1;
+				texColor.g = 1;
+				texColor.b = 1;
+			}
+			else
+			{
+				texColor.r = 0;
+				texColor.g = 0;
+				texColor.b = 0;
+			}
+			gl_FragColor = texColor;
+		}')
+	public function new()
+	{
+		super();
+	}
+}
 
 class Scanline extends FlxShader
 {
