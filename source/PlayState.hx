@@ -3901,8 +3901,8 @@ class PlayState extends MusicBeatState
 				dad.visible = true;
 				boyfriend.visible = true;
 				triggerEventNote("Change Character", "gf", "no-gf");
+				gf.x -= 150;
 			});
-			gf.x -= 150;
 		}
 		if (SONG.song.toLowerCase() == 'expurgation') // start the grem time
 		{
@@ -12215,8 +12215,8 @@ class PlayState extends MusicBeatState
 				}
 
 				if(unlock) {
-					Achievements.unlockAchievement(achievementName);
-					return achievementName;
+					//Achievements.unlockAchievement(achievementName);
+					//return achievementName;
 				}
 			}
 		}

@@ -20,3 +20,5 @@ unadded/*
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+assets/preload/music/freakyMenu.ogg.sfk
+assets/shared/music/UnnessecaryStory.ogg.sfk
