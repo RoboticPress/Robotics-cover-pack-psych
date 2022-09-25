@@ -9,81 +9,71 @@
 			"fps": 24,
 			"anim": "idle",
 			"loop": false,
-			"name": "LORD IDLE"
+			"name": "yukichi idle"
 		},
 		{
 			"offsets": [
-				-270,
-				-90
+				70,
+				0
 			],
 			"indices": [],
 			"fps": 24,
 			"anim": "singLEFT",
 			"loop": false,
-			"name": "LORD LEFT"
+			"name": "yukichi left"
 		},
 		{
 			"offsets": [
-				-360,
-				-120
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "singRIGHT",
-			"loop": false,
-			"name": "LORD RIGHT"
-		},
-		{
-			"offsets": [
-				-360,
-				-140
+				-158,
+				-66
 			],
 			"indices": [],
 			"fps": 24,
 			"anim": "singDOWN",
 			"loop": false,
-			"name": "LORD DOWN"
+			"name": "yukichi down"
 		},
 		{
 			"offsets": [
-				-340,
-				-10
+				-50,
+				30
 			],
 			"indices": [],
 			"fps": 24,
 			"anim": "singUP",
 			"loop": false,
-			"name": "LORD UP"
+			"name": "yukichi up"
 		},
 		{
 			"offsets": [
-				0,
-				0
+				-60,
+				-10
 			],
 			"indices": [],
 			"fps": 24,
-			"anim": "entrance",
+			"anim": "singRIGHT",
 			"loop": false,
-			"name": "entrance"
+			"name": "yukichi right"
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/knockout/lord x",
+	"image": "characters/malediction/yukichi_leader_assets",
 	"position": [
-		-400,
-		0
+		0,
+		100
 	],
-	"healthicon": "knockout/LORD X ICONS",
+	"healthicon": "malediction/yukichi",
 	"flip_x": false,
 	"healthbar_colors": [
-		35,
-		56,
-		89
+		255,
+		151,
+		240
 	],
+	"playable": false,
 	"camera_position": [
-		400,
+		0,
 		0
 	],
 	"sing_duration": 6.1,
-	"scale": 1
+	"scale": 0.8
 }

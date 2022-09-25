@@ -1,0 +1,79 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				-20
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Rose but hes normal this time i promise bounding box ver Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Rose but hes normal this time i promise bounding box ver Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-30,
+				-40
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Rose but hes normal this time i promise bounding box ver Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				62,
+				13
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Rose but hes normal this time i promise bounding box ver Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-49,
+				0
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Rose but hes normal this time i promise bounding box ver Right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/RoboVerse/Rose_but_hes_normal_this_time_i_promise_bounding_box_ver",
+	"position": [
+		0,
+		-230
+	],
+	"healthicon": "RoboVerse/rose",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		80,
+		140
+	],
+	"playable": false,
+	"camera_position": [
+		0,
+		190
+	],
+	"sing_duration": 6.1,
+	"scale": 0.6
+}
