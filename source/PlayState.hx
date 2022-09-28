@@ -11546,7 +11546,7 @@ class PlayState extends MusicBeatState
 
 		add(gramlan);
 
-		if (FlxG.save.data.downscroll)
+		if (ClientPrefs.downScroll)
 		{
 			gramlan.flipY = true;
 			gramlan.y -= 150;
@@ -11739,7 +11739,7 @@ class PlayState extends MusicBeatState
 				daSign.animation.addByPrefix('sign', 'Signature Stop Sign 3', 24, false);
 				daSign.x = FlxG.width - 780;
 				daSign.angle = -90;
-				if (FlxG.save.data.downscroll)
+				if (ClientPrefs.downScroll)
 					daSign.y = -395;
 				else
 					daSign.y = -980;

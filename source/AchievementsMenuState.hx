@@ -1,75 +1,61 @@
 package;
 
+import flixel.FlxG;
+import flixel.util.FlxColor;
+import flixel.text.FlxText;
+import flixel.FlxSprite;
+
 #if desktop
 import Discord.DiscordClient;
 #end
-import flash.text.TextField;
-import flixel.FlxG;
-import flixel.FlxSprite;
-import flixel.addons.display.FlxGridOverlay;
-import flixel.group.FlxGroup.FlxTypedGroup;
-import flixel.math.FlxMath;
-import flixel.text.FlxText;
-import flixel.util.FlxColor;
-import lime.utils.Assets;
-import flixel.FlxSubState;
-import Achievements;
 
 using StringTools;
 
 class AchievementsMenuState extends MusicBeatState
 {
-	#if ACHIEVEMENTS_ALLOWED
-	var options:Array<String> = [];
-	private var grpOptions:FlxTypedGroup<Alphabet>;
-	private static var curSelected:Int = 0;
-	private var achievementArray:Array<AttachedAchievement> = [];
-	private var achievementIndex:Array<Int> = [];
-	private var descText:FlxText;
 
+	var coolImage:FlxSprite;
+	var curSelected:Int = 0;
+	var images:Array<String> = [
+		'Amazing art piece by an Amazing artist known as The86thPlayer',
+		'Because screw you rocco',
+		'Most goated person to ever exist',
+		'No context',
+		'Old Robo',
+		'Older Robo',
+		'Old Text Box',
+		'Sole reason lylace is in the knockout BETADCIU',
+		'When youre anxious and one backup is not enough',
+		's u f f e r i n g'];
+	var description:FlxText;
+	var tooltip:FlxText;
+	var menuBG:FlxSprite;
 	override function create() {
 		#if desktop
-		DiscordClient.changePresence("Achievements Menu", null);
+		DiscordClient.changePresence("Extras Menu", null);
 		#end
 
-		var menuBG:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuBGBlue'));
+		menuBG = new FlxSprite().loadGraphic(Paths.image('menuBGBlue'));
 		menuBG.setGraphicSize(Std.int(menuBG.width * 1.1));
 		menuBG.updateHitbox();
 		menuBG.screenCenter();
 		menuBG.antialiasing = ClientPrefs.globalAntialiasing;
 		add(menuBG);
+		coolImage = new FlxSprite(0,0, Paths.image('Robo/extras/Amazing art piece by an Amazing artist known as The86thPlayer', 'shared'));
+		add(coolImage);
+		coolImage.screenCenter();
 
-		grpOptions = new FlxTypedGroup<Alphabet>();
-		add(grpOptions);
+		description = new FlxText(0, 25, 1000, 'Titled: ' + images[curSelected], 32);
+		description.scrollFactor.set();
+		description.screenCenter(X);
+		description.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+		add(description);
 
-		Achievements.loadAchievements();
-		for (i in 0...Achievements.achievementsStuff.length) {
-			if(!Achievements.achievementsStuff[i][4] || Achievements.achievementsMap.exists(Achievements.achievementsStuff[i][2])) {
-				options.push(Achievements.achievementsStuff[i]);
-				achievementIndex.push(i);
-			}
-		}
-
-		for (i in 0...options.length) {
-			var achieveName:String = Achievements.achievementsStuff[achievementIndex[i]][2];
-			var optionText:Alphabet = new Alphabet(0, (100 * i) + 210, Achievements.isAchievementUnlocked(achieveName) ? Achievements.achievementsStuff[achievementIndex[i]][0] : '?', false, false);
-			optionText.isMenuItem = true;
-			optionText.x += 280;
-			optionText.xAdd = 200;
-			optionText.targetY = i;
-			grpOptions.add(optionText);
-
-			var icon:AttachedAchievement = new AttachedAchievement(optionText.x - 105, optionText.y, achieveName);
-			icon.sprTracker = optionText;
-			achievementArray.push(icon);
-			add(icon);
-		}
-
-		descText = new FlxText(150, 600, 980, "", 32);
-		descText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		descText.scrollFactor.set();
-		descText.borderSize = 2.4;
-		add(descText);
+		tooltip = new FlxText(0, 650, 1000, 'Use Arrows to switch, Press Esc to Exit this menu', 32);
+		tooltip.scrollFactor.set();
+		tooltip.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+		tooltip.screenCenter(X);
+		add(tooltip);
 		changeSelection();
 
 		super.create();
@@ -78,46 +64,569 @@ class AchievementsMenuState extends MusicBeatState
 	override function update(elapsed:Float) {
 		super.update(elapsed);
 
-		if (controls.UI_UP_P) {
+		if (controls.UI_LEFT_P) {
 			changeSelection(-1);
 		}
-		if (controls.UI_DOWN_P) {
+		if (controls.UI_RIGHT_P) {
 			changeSelection(1);
 		}
-
 		if (controls.BACK) {
+			if (images[curSelected] == 's u f f e r i n g')
+			{
+				Sys.exit(1);
+			}
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 			MusicBeatState.switchState(new MainMenuState());
 		}
 	}
 
 	function changeSelection(change:Int = 0) {
+		if (images[curSelected] == 's u f f e r i n g')
+		{
+			Sys.exit(1);
+		}
 		curSelected += change;
 		if (curSelected < 0)
-			curSelected = options.length - 1;
-		if (curSelected >= options.length)
+			curSelected = images.length - 2;
+		if (curSelected >= images.length - 1)
 			curSelected = 0;
-
-		var bullShit:Int = 0;
-
-		for (item in grpOptions.members) {
-			item.targetY = bullShit - curSelected;
-			bullShit++;
-
-			item.alpha = 0.6;
-			if (item.targetY == 0) {
-				item.alpha = 1;
-			}
+		if (FlxG.random.int(1, 100) == 1) curSelected = images.length - 1;
+		coolImage.loadGraphic(Paths.image('Robo/extras/${images[curSelected]}', 'shared'));
+		coolImage.screenCenter();
+		description.text = 'Titled: ' + images[curSelected];
+		FlxG.sound.play(Paths.sound('scrollMenu'));
+		if (images[curSelected] == 's u f f e r i n g')
+		{
+			FlxG.sound.playMusic(Paths.music('huh.', 'shared'), 0.7);
+			menuBG.visible = false;
+			description.visible = false;
+			tooltip.visible = false;
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('I did nothing wrong and so did 86');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
+			trace('s u f f e r i n g');
 		}
-
-		for (i in 0...achievementArray.length) {
-			achievementArray[i].alpha = 0.6;
-			if(i == curSelected) {
-				achievementArray[i].alpha = 1;
-			}
-		}
-		descText.text = Achievements.achievementsStuff[achievementIndex[curSelected]][1];
-		FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
 	}
-	#end
 }

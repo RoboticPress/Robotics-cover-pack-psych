@@ -7,6 +7,9 @@ import flixel.group.FlxSpriteGroup.FlxTypedSpriteGroup;
 import flixel.FlxSprite;
 import robotic.RoboPerk;
 using StringTools;
+#if desktop
+import Discord.DiscordClient;
+#end
 
 class ModsMenuState extends MusicBeatState
 {
@@ -20,6 +23,9 @@ class ModsMenuState extends MusicBeatState
 
 	override function create()
 	{
+		#if desktop
+		DiscordClient.changePresence("Shop Menu", null);
+		#end
 		if (FlxG.save.data.bought == null)
 			FlxG.save.data.bought = [];
 		if (FlxG.save.data.equipped == null)
@@ -76,8 +82,10 @@ class ModsMenuState extends MusicBeatState
 			changeSelected(-1);
 			FlxG.sound.play(Paths.sound('scrollMenu'));
 		}
-		if (controls.BACK)
+		if (controls.BACK) {
+			FlxG.sound.play(Paths.sound('cancelMenu'));
 			MusicBeatState.switchState(new MainMenuState());
+		}
 		super.update(elapsed);
 
 		if (controls.ACCEPT)
