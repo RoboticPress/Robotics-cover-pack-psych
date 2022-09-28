@@ -28,5 +28,6 @@
 	],
 	"hideStoryMode": false,
 	"weekBefore": "week5",
+	"difficulties": "ice-cold",
 	"startUnlocked": true
 }
