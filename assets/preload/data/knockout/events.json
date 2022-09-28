@@ -722,7 +722,7 @@
 					[
 						"Change Character",
 						"bf",
-						"robo"
+						"robo-playble"
 					],
 					[
 						"Change Character",
@@ -807,13 +807,8 @@
 				]
 			],
 			[
-				129154.705882353,
+				129212.31617647,
 				[
-					[
-						"Flash",
-						"0xFFFFFFFF",
-						"2"
-					],
 					[
 						"Do Hardcoded Event",
 						"2",
