@@ -68,10 +68,12 @@ class ModsMenuState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-		if (FlxG.keys.justPressed.C)
-			FlxG.save.data.coins = 4;
-		if (FlxG.keys.justPressed.R)
-			FlxG.save.data.bought = [];
+		#if debug
+			if (FlxG.keys.justPressed.C)
+				FlxG.save.data.coins = 4;
+			if (FlxG.keys.justPressed.R)
+				FlxG.save.data.bought = [];
+		#end
 		if (controls.NOTE_RIGHT_P)
 		{
 			changeSelected(1);

@@ -580,6 +580,8 @@ class PlayState extends MusicBeatState
 	override public function create()
 	{
 		Paths.clearStoredMemory();
+		if (FlxG.save.data.equipped == null)
+			FlxG.save.data.equipped = [];
 		blackFuck = new FlxSprite().makeGraphic(1280,720, FlxColor.BLACK);
 		startCircle = new FlxSprite();
 		if (ClientPrefs.downScroll)
