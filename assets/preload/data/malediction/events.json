@@ -7,6 +7,16 @@
 		"player3": null,
 		"events": [
 			[
+				0,
+				[
+					[
+						"Do Hardcoded Event",
+						"8",
+						"0"
+					]
+				]
+			],
+			[
 				1875,
 				[
 					[

@@ -2602,7 +2602,7 @@ class PlayState extends MusicBeatState
 		if (curStage == 'auditorHell')
 			add(dumbasstext2);
 
-		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "", 32);
+		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
 		botplayTxt.setFormat(thefontj, 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		botplayTxt.scrollFactor.set();
 		botplayTxt.borderSize = 1.25;
@@ -2694,8 +2694,8 @@ class PlayState extends MusicBeatState
 				dadBETADCIU.y = dad.y;
 				add(boyfriendBETADCIU);
 				add(dadBETADCIU);
-				boyfriend.alpha = 0;
-				dad.alpha = 0;
+				boyfriend.alpha = 0.00001;
+				dad.alpha = 0.00001;
 				betadciuMoment = true;
 				boyfriendBETADCIU.visible = true;
 				dadBETADCIU.visible = true;
@@ -9185,7 +9185,8 @@ class PlayState extends MusicBeatState
 				}
 
 				FlxG.sound.music.stop();
-				if (RoboticFunctions.ifBeatenSong(PlayState.SONG.song))
+				var usedPractice:Bool = (ClientPrefs.getGameplaySetting('practice', false) || ClientPrefs.getGameplaySetting('botplay', false));
+				if (RoboticFunctions.ifBeatenSong(PlayState.SONG.song) && !usedPractice)
 					LoadingState.loadAndSwitchState(new FreeplayState());
 				else
 					LoadingState.loadAndSwitchState(new RoboCoin());
