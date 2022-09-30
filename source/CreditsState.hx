@@ -81,6 +81,15 @@ class CreditsState extends MusicBeatState
 		#end
 
 		var pisspoop:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
+			['Robo\'s Cover Pack'],
+			['Robotic Press',		'RoboticPress',		'Mod Owner, Creator of Robo and Susan, Coder and made all main covers and Composer of the mod\'s OST',		'https://www.youtube.com/channel/UCtHbCJI0TbonuJh_d7MB2Gw',	'00FFE5'],
+			['Robo Robotic',		'robo-gf',			'Moral Support, Main character of the mod',																	'https://twitter.com/PressRobotic',							'00FFE5'],
+			['The86thPlayer',		'rose',				'Moral Support, Creator of the character "Rose", art in Extras menu',										'https://twitter.com/The86thplayer',						'FF00C7'],
+			['MythicSpeed',			'mythic',			'Artist who drew Robo\'s Remastered and Re-Remastered Sprites',												'https://twitter.com/MythicSpeed',							'54D4DE'],
+			['Merg',				'merg',				'Providing his samples for the Milk cover and boosting the Milk cover video',								'https://www.youtube.com/c/MergYT',							'FF0000'],
+			['Snow the fox',		'SnowTheFox',		'Creator of the cameo "Atrocity But Everyone Sings It" cover',												'https://www.youtube.com/c/SnowTheFox',						'FFD2BC'],
+			['Members of the Discord Server','discord',	'These guys are pretty awesome they supported me all the way, you should join it lol',						'https://www.youtube.com/c/SnowTheFox',						'FFD2BC'],
+			['All other mods',		'robotic',			'Every mod that\'s used in the cover pack is creditted in the data folder of the cover it appeared in',		'https://discord.gg/kCBc7vhPyh',							'00FFE5	'],
 			['Psych Engine Team'],
 			['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',							'https://twitter.com/Shadow_Mario_',	'444444'],
 			['RiverOaken',			'riveroaken',		'Main Artist/Animator of Psych Engine',						'https://twitter.com/RiverOaken',		'C30085'],
@@ -139,6 +148,7 @@ class CreditsState extends MusicBeatState
 
 				if(curSelected == -1) curSelected = i;
 			}
+			optionText.color = 0xb5ffff;
 		}
 		
 		descBox = new AttachedSprite();

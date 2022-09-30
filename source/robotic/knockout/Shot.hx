@@ -23,7 +23,7 @@ class Shot extends FlxSprite
 				animation.addByPrefix('shot', 'BulletFX_H-Tween_03 instance 1', 24, false);
 		}
 		animation.play('shot');
-		FlxG.sound.play(Paths.sound('knockout/shootfunni/pea' + FlxG.random.int(0,5)));
+		FlxG.sound.play(Paths.sound('knockout/shootfunni/pea' + FlxG.random.int(0,5)), 0.6);
 	}
 	
 	override function update(elapsed:Float)

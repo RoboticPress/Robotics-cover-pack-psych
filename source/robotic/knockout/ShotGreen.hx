@@ -15,7 +15,7 @@ class ShotGreen extends FlxSprite
 
 		animation.addByPrefix('shot', 'GreenShit0' + FlxG.random.int(1,3) + ' instance 1', 24, false);
 		animation.play('shot');
-		FlxG.sound.play(Paths.sound('knockout/shootfunni/chaser' + FlxG.random.int(0,4)));
+		FlxG.sound.play(Paths.sound('knockout/shootfunni/chaser' + FlxG.random.int(0,4)), 0.8);
 	}
 	
 	override function update(elapsed:Float)

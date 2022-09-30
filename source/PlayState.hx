@@ -4,6 +4,7 @@ import robotic.knockout.GameOverSubstateCuphead;
 import robotic.RoboCoin;
 import robotic.RoboticFunctions;
 import flixel.addons.display.FlxBackdrop;
+import robotic.knockout.ShotGreenRose;
 import robotic.knockout.ShotGreenSelever;
 import robotic.knockout.ShotGreenYuri;
 import robotic.knockout.ShotGreenWell;
@@ -641,6 +642,8 @@ class PlayState extends MusicBeatState
 									cupheadShootAShotYuri(true);
 								case 'selever':
 									cupheadShootAShotSelever(true);
+								case 'rose-opponent':
+									cupheadShootAShotRose(true);
 							}
 							if (!gfAgain.animation.curAnim.name.startsWith('sing') && gfAgainSinging)
 								cupheadShootAShotSusan(true);
@@ -650,6 +653,7 @@ class PlayState extends MusicBeatState
 			}, 0);
 			hurtSound = new FlxSound().loadEmbedded(Paths.sound('knockout/shootfunni/hurt'));
 			dodgeSound = new FlxSound().loadEmbedded(Paths.sound('knockout/dodge'));
+			dodgeSound.volume = 0.8;
 			superCard = new FlxSprite(1050, 550 + 147);
 			superCard.frames = Paths.getSparrowAtlas('knockout/shootstuff/superCard');
 			superCard.animation.addByPrefix('filled', 'Card Filled instance 1', 24, false);
@@ -6877,6 +6881,21 @@ class PlayState extends MusicBeatState
 			add(shot);
 		}
 	}
+	public function cupheadShootAShotRose(isBlue:Bool = true)
+	{
+		if (isBlue)
+		{
+			var shot = new ShotSusan(gfAgain.x  + 200 + FlxG.random.float(-10, 10), gfAgain.y - 360 + FlxG.random.float(-10, 10), FlxColor.CYAN);
+			add(shot);
+			gfAgain.playAnim('DIE', true);
+			gfAgain.specialAnim = true;
+		}
+		else
+		{
+			var shot = new ShotGreenRose(dad.x  + 200, dad.y + 190);
+			add(shot);
+		}
+	}
 
 	public function cupheadAlert()
 	{
@@ -9914,6 +9933,8 @@ class PlayState extends MusicBeatState
 														cupheadShootAShotYuri(false);
 													case 'selever':
 														cupheadShootAShotSelever(false);
+													case 'rose-opponent':
+														cupheadShootAShotRose(false);
 												}
 												if (gfAgainSinging)
 													cupheadShootAShotSusan(false);
@@ -9982,6 +10003,8 @@ class PlayState extends MusicBeatState
 														cupheadShootAShotYuri(false);
 													case 'selever':
 														cupheadShootAShotSelever(false);
+													case 'rose-opponent':
+														cupheadShootAShotRose(false);
 												}
 												if (gfAgainSinging)
 													cupheadShootAShotSusan(false);
