@@ -8857,7 +8857,8 @@ class PlayState extends MusicBeatState
 			
 			case 'Flash':
 				trace('aaaaaaaaaaaaaa');
-				flashScreen(FlxColor.fromString(value1), Std.parseFloat(value2));
+				if (ClientPrefs.flashing)
+					flashScreen(FlxColor.fromString(value1), Std.parseFloat(value2));
 
 			case 'Cuphead super shot':
 				superType = 'normal';
