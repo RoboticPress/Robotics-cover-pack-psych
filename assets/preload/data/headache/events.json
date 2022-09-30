@@ -267,13 +267,18 @@
 				]
 			],
 			[
-				98000,
+				97875,
 				[
 					[
-						"hide DadAgain1",
+						"hide dadAgain1",
 						"",
 						""
-					],
+					]
+				]
+			],
+			[
+				98000,
+				[
 					[
 						"Change Character",
 						"dad",
